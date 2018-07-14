@@ -11,11 +11,11 @@ class Header extends Component {
 
         <nav>
             <ul>
-                <li className="first">
+                <li>
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Activities</a>
+                    <a href="#">Accomplishments</a>
                 </li>
                 <li>
                     <a href="#">Projects</a>
@@ -25,9 +25,6 @@ class Header extends Component {
                 </li>
                 <li>
                     <a href="#">Books</a>
-                </li>
-                <li className="last">
-                    <a href="#">More</a>
                 </li>
             </ul>
 
