@@ -12,7 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css",
+    "scss": "node-sass-chokidar --watch ./src/Assets/scss -o ./src/Assets/css",
     "eject": "react-scripts eject"
   }
 }
