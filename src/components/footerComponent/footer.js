@@ -14,13 +14,13 @@ class Footer extends Component {
 
             </li>
             <li>
-                <Link to="/">Accomplishments</Link>
+                <Link to="/Accomplishments">Accomplishments</Link>
             </li>
             <li>
                 <Link to="/Projects">Projects</Link>
             </li>
             <li>
-                <Link to="/">Interests</Link>
+                <Link to="/Interests">Interests</Link>
             </li>
             <li>
                 <Link to="/Bookshelf">Bookshelf</Link>
