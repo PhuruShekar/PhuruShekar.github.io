@@ -44,3 +44,53 @@ header {
         }
     }
 }
+
+main {
+    h1 {
+        font-size: 40px;
+    }   
+
+    p {
+        font-size: 20px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0; 
+    display: block;
+    width: 100%;
+    background: $darkGray;
+    color: $white;
+    height: 100px;
+
+    nav, nav ul, nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        @include translateY(-50%);
+
+        ul li {
+            list-style-type: none;
+            //display: inline-block;
+            margin-right: 10px;
+
+
+            &.last {
+                margin: 20;
+            }
+
+            a {
+                font-size: 10px;
+                line-height: normal;
+                color: $white;
+            }
+        }
+    }
+
+}
