@@ -11,7 +11,9 @@ body {
   font-size: 10px;
   color: #010000;
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -60,5 +62,39 @@ header {
         margin: 20; }
       header nav ul li a {
         font-size: 20px;
+        line-height: normal;
+        color: #ffffff; }
+
+main h1 {
+  font-size: 40px; }
+
+main p {
+  font-size: 20px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background: #333;
+  color: #ffffff;
+  height: 100px; }
+  footer nav, footer nav ul, footer nav ul li {
+    margin: 0;
+    padding: 0; }
+  footer nav {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    footer nav ul li {
+      list-style-type: none;
+      margin-right: 10px; }
+      footer nav ul li.last {
+        margin: 20; }
+      footer nav ul li a {
+        font-size: 10px;
         line-height: normal;
         color: #ffffff; }

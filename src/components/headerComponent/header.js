@@ -20,16 +20,16 @@ class Header extends Component {
 
                 </li>
                 <li>
-                    <a href="#">Accomplishments</a>
+                    <Link to="/">Accomplishments</Link>
                 </li>
                 <li>
                     <Link to="/Projects">Projects</Link>
                 </li>
                 <li>
-                    <a href="#">Interests</a>
+                    <Link to="/">Interests</Link>
                 </li>
                 <li>
-                    <a href="#">Books</a>
+                    <Link to="/Bookshelf">Bookshelf</Link>
                 </li>
             </ul>
 

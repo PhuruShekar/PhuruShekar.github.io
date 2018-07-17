@@ -9,6 +9,9 @@ import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import HomePage from './components/pages/homePage';
 import Projects from './components/pages/projects';
+import Bookshelf from './components/pages/bookShelf';
+
+
 // includes
 import'./Assets/css/default.css';
 
@@ -23,6 +26,7 @@ class App extends Component {
 
           <Route exact path="/" component={HomePage} />
           <Route exact path="/Projects" component={Projects} />
+          <Route exact path="/Bookshelf" component={Bookshelf} />
 
         <Footer />
       </div>

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-class Projects extends Component {
+class Bookshelf extends Component {
     render() {
         return (
             <div className="container-fluid">
                 <main>
                 <h1>
-                    Projects
+                    Bookshelf
                 </h1>
 
                 <p>
-                    This project is currently being built
+                    Books being read...
                 </p>
                 </main>
             </div>
@@ -18,4 +18,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default Bookshelf;
