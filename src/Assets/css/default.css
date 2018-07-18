@@ -33,6 +33,7 @@ a {
 header {
   position: relative;
   display: block;
+  left: 0px;
   width: 100%;
   background: #333;
   color: #ffffff;
