@@ -6,6 +6,10 @@ regular 400 italic
 bold 700
 bold 700 italic
 */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 10px;
