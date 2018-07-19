@@ -42,13 +42,13 @@ body {
 
 a {
     text-decoration: none;
-    @include transition(.3s ease-in-out);
+    @include transition(.4s ease-in-out);
     cursor: pointer;
 
 
     &:hover {
         color: $red;
-        @include transition(.3s ease-in-out);
+        @include transition(.4s ease-in-out);
     }
 
 }

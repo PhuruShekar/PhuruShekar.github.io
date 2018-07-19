@@ -21,15 +21,15 @@ body {
 
 a {
   text-decoration: none;
-  -webkit-transition: transition(0.3s ease-in-out);
-  -moz-transition: transition(0.3s ease-in-out);
-  transition: 0.3s ease-in-out;
+  -webkit-transition: transition(0.4s ease-in-out);
+  -moz-transition: transition(0.4s ease-in-out);
+  transition: 0.4s ease-in-out;
   cursor: pointer; }
   a:hover {
     color: #ff1755;
-    -webkit-transition: transition(0.3s ease-in-out);
-    -moz-transition: transition(0.3s ease-in-out);
-    transition: 0.3s ease-in-out; }
+    -webkit-transition: transition(0.4s ease-in-out);
+    -moz-transition: transition(0.4s ease-in-out);
+    transition: 0.4s ease-in-out; }
 
 .container-fluid {
   line-height: 24px; }
@@ -46,9 +46,9 @@ header {
     position: absolute;
     top: 50%;
     left: 15px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    -webkit-transition: transition(-50%);
+    -moz-transition: transition(-50%);
+    transition: -50%; }
   header nav, header nav ul, header nav ul li {
     margin: 0;
     padding: 0; }
@@ -69,6 +69,18 @@ header {
         font-size: 20px;
         line-height: normal;
         color: #ffffff; }
+  header .dropdown {
+    position: absolute;
+    top: 20%;
+    right: 10px; }
+    header .dropdown .Menu {
+      background-color: #333;
+      border-color: #ff1755; }
+    header .dropdown a {
+      line-height: normal;
+      color: #ff1755;
+      background-color: #333;
+      border-color: #ffffff; }
 
 main h1 {
   font-size: 40px; }
@@ -83,23 +95,17 @@ footer {
   width: 100%;
   background: #333;
   color: #ffffff;
-  height: 100px; }
+  height: 50px; }
   footer nav, footer nav ul, footer nav ul li {
     margin: 0;
     padding: 0; }
   footer nav {
     position: absolute;
-    top: 50%;
-    left: 15px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    footer nav ul li {
-      list-style-type: none;
-      margin-right: 10px; }
-      footer nav ul li.last {
-        margin: 20; }
-      footer nav ul li a {
-        font-size: 10px;
-        line-height: normal;
-        color: #ffffff; }
+    top: 30%;
+    left: 15px; }
+    footer nav.last {
+      margin: 20; }
+    footer nav a {
+      font-size: 10px;
+      line-height: normal;
+      color: #ffffff; }

@@ -8,31 +8,12 @@ class Footer extends Component {
     return (
         <footer>
         <nav>
-        <ul>
-            <li>
-            <Link to="/">Home</Link>
-
-            </li>
-            <li>
-                <Link to="/Accomplishments">Accomplishments</Link>
-            </li>
-            <li>
-                <Link to="/Projects">Projects</Link>
-            </li>
-            <li>
-                <Link to="/Interests">Interests</Link>
-            </li>
-            <li>
-                <Link to="/Bookshelf">Bookshelf</Link>
-            </li>
-        </ul>
 
           <p>
-            (c) 2018 Phuru Shekar
+            <strong> © </strong> 2018 Phurushotham (Phuru) Shekar
           </p>
 
-
-    </nav>
+        </nav>
         </footer>
     );
   }

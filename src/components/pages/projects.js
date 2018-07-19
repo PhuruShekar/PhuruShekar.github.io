@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ProgressBar} from 'react-bootstrap/lib';
 
 class Projects extends Component {
     render() {
@@ -10,8 +11,13 @@ class Projects extends Component {
                 </h1>
 
                 <p>
-                    This project is currently being built
+                    This project is currently being built...
                 </p>
+
+                <p>
+                    Building projects
+                </p>
+                <ProgressBar active bsStyle="success" now={"20"} label={"20%"} />
                 </main>
             </div>
         )
