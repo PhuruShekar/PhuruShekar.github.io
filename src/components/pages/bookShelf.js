@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ProgressBar} from 'react-bootstrap/lib';
 
 class Bookshelf extends Component {
     render() {
@@ -12,6 +13,7 @@ class Bookshelf extends Component {
                 <p>
                     Books being read...
                 </p>
+                <ProgressBar active bsStyle="success" now={"14"} label={"14%"} />
                 </main>
             </div>
         )

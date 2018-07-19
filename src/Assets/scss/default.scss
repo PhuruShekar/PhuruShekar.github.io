@@ -13,7 +13,7 @@ header {
         position: absolute;
         top: 50%;
         left: 15px;
-        @include translateY(-50%);
+        @include transition(-50%);
     }
 
     nav, nav ul, nav ul li {
@@ -44,6 +44,25 @@ header {
             }
         }
     }
+    .dropdown {
+        position: absolute;
+        top: 20%;
+        right: 10px;
+        
+        .Menu {
+            background-color: $darkGray;
+            border-color: $red;
+        }
+
+        a {
+            //font-size: 10px;
+            line-height: normal;
+            color: $red;
+            background-color: $darkGray;
+            border-color: $white;
+        }
+    }
+
 }
 
 main {
@@ -63,7 +82,7 @@ footer {
     width: 100%;
     background: $darkGray;
     color: $white;
-    height: 100px;
+    height: 50px;
 
     nav, nav ul, nav ul li {
         margin: 0;
@@ -72,16 +91,10 @@ footer {
 
     nav {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 15px;
-        @include translateY(-50%);
 
-        ul li {
-            list-style-type: none;
-            //display: inline-block;
-            margin-right: 10px;
-
-
+        
             &.last {
                 margin: 20;
             }
@@ -91,7 +104,6 @@ footer {
                 line-height: normal;
                 color: $white;
             }
-        }
     }
 
 }
