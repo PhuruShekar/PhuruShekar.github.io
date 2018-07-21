@@ -74,19 +74,33 @@ header {
     top: 20%;
     right: 10px; }
     header .dropdown .Menu {
-      background-color: #333;
       border-color: #ff1755; }
     header .dropdown a {
       line-height: normal;
-      color: #ff1755;
-      background-color: #333;
-      border-color: #ffffff; }
+      color: #ff1755; }
 
-main h1 {
-  font-size: 40px; }
+.overlay {
+  background-image: url(../img/coolmtn.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #cfcfcf; }
+  .overlay .me {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
-main p {
-  font-size: 20px; }
+main {
+  background-size: auto; }
+  main h1 {
+    font-size: 40px;
+    text-align: center; }
+  main p {
+    font-size: 20px; }
 
 footer {
   position: absolute;
