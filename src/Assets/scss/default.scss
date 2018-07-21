@@ -63,12 +63,12 @@ header {
 }
 
 .overlay {
-    background-image: url(../img/coolmtn.jpg);
+    background-image: url(../img/bgred.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #cfcfcf;
+    color:$darkGray;
  
     .me {
         width: 120px;
@@ -97,18 +97,14 @@ main {
 }
 
 footer {
-    position: absolute;
-    bottom: 0; 
+    position: relative;
+    bottom: 0px; 
     display: block;
     width: 100%;
     background: $darkGray;
     color: $white;
     height: 50px;
-
-    nav, nav ul, nav ul li {
-        margin: 0;
-        padding: 0;
-    }
+    left:0px;
 
     nav {
         position: absolute;

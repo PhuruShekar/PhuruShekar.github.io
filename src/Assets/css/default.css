@@ -80,12 +80,12 @@ header {
       color: #ff1755; }
 
 .overlay {
-  background-image: url(../img/coolmtn.jpg);
+  background-image: url(../img/bgred.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #cfcfcf; }
+  color: #333; }
   .overlay .me {
     width: 120px;
     height: 120px;
@@ -103,16 +103,14 @@ main {
     font-size: 20px; }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: 0px;
   display: block;
   width: 100%;
   background: #333;
   color: #ffffff;
-  height: 50px; }
-  footer nav, footer nav ul, footer nav ul li {
-    margin: 0;
-    padding: 0; }
+  height: 50px;
+  left: 0px; }
   footer nav {
     position: absolute;
     top: 30%;
