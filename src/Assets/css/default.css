@@ -80,12 +80,12 @@ header {
       color: #ff1755; }
 
 .overlay {
-  background-image: url(../img/bgred.png);
+  background-image: url(../img/sitebg2.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #333; }
+  color: #ffffff; }
   .overlay .me {
     width: 120px;
     height: 120px;
@@ -101,6 +101,8 @@ main {
     text-align: center; }
   main p {
     font-size: 20px; }
+  main a {
+    color: #ffffff; }
 
 footer {
   position: relative;
