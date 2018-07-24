@@ -63,12 +63,12 @@ header {
 }
 
 .overlay {
-    background-image: url(../img/bgred.png);
+    background-image: url(../img/sitebg2.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color:$darkGray;
+    color:$white;
  
     .me {
         width: 120px;
@@ -90,6 +90,10 @@ main {
 
     p {
         font-size: 20px;
+    }
+
+    a {
+        color: $white;
     }
 
    
