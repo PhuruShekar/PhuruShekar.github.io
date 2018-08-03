@@ -86,26 +86,26 @@ header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #ffffff; }
-  .overlay .me {
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  .overlay .intro {
-    text-align: center;
-    text-shadow: 5px; }
-  .overlay p {
-    text-align: center; }
 
 main {
   background-size: auto; }
+  main .me {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border-top: 50px;
+    display: block;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto; }
   main h1 {
     font-size: 40px;
-    text-align: center; }
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 2px 2px black; }
   main p {
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: center; }
   main a {
     color: #ffffff; }
 
