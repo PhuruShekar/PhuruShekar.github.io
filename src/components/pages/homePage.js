@@ -7,12 +7,12 @@ class HomePage extends Component {
     return (
         
         <div className="overlay">
-        <img src={me} className="me" />
+            <img src={me} className="me" />
 
             <main className="container-fluid">
 
-                <h1>
-                    Welcome!
+                <h1 className="intro">
+                    Hey! I'm Phurushotham (Phuru) Shekar.
                 </h1>
                
                 <p> 

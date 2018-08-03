@@ -80,7 +80,7 @@ header {
       color: #ff1755; }
 
 .overlay {
-  background-image: url(../img/androidwp.jpg);
+  background-image: url(../img/mtnpix.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -93,6 +93,11 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto; }
+  .overlay .intro {
+    text-align: center;
+    text-shadow: 5px; }
+  .overlay p {
+    text-align: center; }
 
 main {
   background-size: auto; }
