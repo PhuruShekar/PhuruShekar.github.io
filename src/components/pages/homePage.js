@@ -7,17 +7,14 @@ class HomePage extends Component {
     return (
         
         <div className="overlay">
-            <img src={me} className="me" />
 
             <main className="container-fluid">
+
+                <img src={me} className="me" />
 
                 <h1 className="intro">
                     Hey! I'm Phurushotham (Phuru) Shekar.
                 </h1>
-               
-                <p> 
-                    I'm Phurushotham
-                </p>
 
                 <p> 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet vestibulum odio, ut gravida arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse in lacus vel tortor gravida lobortis. Fusce id metus id neque cursus convallis. Suspendisse congue sapien a risus vestibulum varius. Sed vitae metus tempus nisi ornare suscipit. Nullam lacus libero, tristique eget velit sed, venenatis mattis diam. Suspendisse vehicula laoreet magna, ac convallis tellus tempus a. Vestibulum in pulvinar nisi. Sed nec molestie odio. Fusce aliquet iaculis enim, nec malesuada lectus. Phasellus ultricies eu ipsum ut laoreet.
