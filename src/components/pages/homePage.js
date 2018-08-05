@@ -33,25 +33,27 @@ class HomePage extends Component {
 
         </div>
 
-        
+
         <div className="whoami">
             <h1>
                 Who am I?
             </h1>
 
             <p>
-                I am an Electrical and Computer Engineering major (Computer Concentration) minoring in Computer Science at Rutgers University (Class of 2020)
+                I am an Electrical and Computer Engineering major (Computer Concentration) minoring in Computer Science<br/>
+
+                 Rutgers University Class of 2020
             </p>
 
             <p>
-                Extracurriculars: <br/>
-                Vice President and Technology Director of TEDxRutgers (link) <br/>
-                Member of Undergraduate Student Alliance of Computer Scientists (USACS)<br/>
-                Find out more about my activities and awards here!
+                <strong>Activities</strong> <br/>
+                Vice President and Director of Technology for <a href="http://tedxrutgers.com/">TEDxRutgers</a> <br/>
+                Member of the Rutgers <a href="http://usacs.rutgers.edu">Undergraduate Student Alliance of Computer Scientists (USACS) </a> <br/>
+                Find out more about my activities and awards  <Link to="/Accomplishments">here!</Link>
             </p>
 
             <p>
-                Some Projects I've worked on: <br/>
+                <strong>Some Projects I've worked on</strong> <br/>
                 This Website [ReactJS] <br/>
                 TEDxRutgers2018 Site (Will be live in November 2018) [HTML, CSS] <br/>
                 Gradian [AdobeXD, HTML, CSS, ReactJS] <br/>
