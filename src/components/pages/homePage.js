@@ -33,7 +33,7 @@ class HomePage extends Component {
 
         </div>
 
-        <div>
+        <div className="whoami">
 
             <h1>
             Who am I?
@@ -65,6 +65,12 @@ class HomePage extends Component {
 
         </div>
 
+        <div>
+            <div className="overlay">
+
+
+            </div>
+        </div>
 
     </div>
     );
