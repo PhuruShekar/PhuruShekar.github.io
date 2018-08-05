@@ -7,7 +7,7 @@ import {
     Link as Linky
   }   from 'react-router-dom' ;
 
-  import resume from '../../Assets/doc/Phuru Shekar resume.pdf';
+  import { Document, Page } from 'react-pdf'
   import { HashLink as Link } from 'react-router-hash-link';
 
 class HomePage extends Component {
@@ -76,7 +76,7 @@ class HomePage extends Component {
                     </h1>
                 
                     <ul>
-                        <li> <a href="/../../Assets/doc/Phuru Shekar resume.pdf"> Résumé </a> </li>
+                        <li> <Link to='/resume'> Resume</Link> </li>
                         <li> <a href="https://github.com/phurushekar"> Github </a> </li>
                         <li> <a href="https://devpost.com/1minPeru"> DevPost </a> </li>
                         <li> <a href="hhttps://www.instagram.com/iminperu/"> Instagram </a> </li>
