@@ -54,14 +54,11 @@ class HomePage extends Component {
 
             <p>
                 <strong>Some Projects I've worked on</strong> <br/>
-                This Website [ReactJS] <br/>
-                TEDxRutgers2018 Site (Will be live in November 2018) [HTML, CSS] <br/>
-                Gradian [AdobeXD, HTML, CSS, ReactJS] <br/>
-                You can find out more about my projects (here) <br/>
-                Projects are also found on Github (here)
-            </p>
-
-            <p>
+                This <a href="https://phurushekar.github.io"> Website </a>  [ReactJS, HTML, CSS] <br/>
+                <a href="https://tedxrutgers.github.io/2018conf"> TEDxRutgers2018 Site (Will be live in November 2018)</a> [HTML, CSS] <br/>
+                <a href="https://devpost.com/software/gradian-1qp0ac"> Gradian </a> [AdobeXD, HTML, CSS, ReactJS] <br/>
+                You can find out more about my projects <Link to="/Accomplishments">here</Link> <br/>
+                Projects can also be found on  <a href="https://github.com/phurushekar">Github</a>
             </p>
 
         </div>
