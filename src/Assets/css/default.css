@@ -177,6 +177,14 @@ main {
   text-shadow: 2px 2px black;
   border-top: 40px; }
 
+.contact ul {
+  align-content: center; }
+  .contact ul li {
+    font-size: 20px;
+    align-self: center; }
+    .contact ul li a {
+      color: #ffffff; }
+
 footer {
   position: relative;
   bottom: 0px;
@@ -198,4 +206,4 @@ footer {
       color: #ffffff; }
 
 .pdf {
-  align-self: center; }
+  box-align: center; }
