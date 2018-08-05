@@ -196,3 +196,6 @@ footer {
       font-size: 10px;
       line-height: normal;
       color: #ffffff; }
+
+.pdf {
+  align-self: center; }
