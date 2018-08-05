@@ -24,7 +24,9 @@ class HomePage extends Component {
                     <img src={me} className="me fade-in two" />
 
                     <h1 className="intro fade-in">
-                        Hey! I'm Phurushotham (Phuru) Shekar.
+                        Welcome! <br/><br/>
+                        I'm Phurushotham Shekar <br/> <br/>
+                        But I also go by Phuru 
                     </h1>
 
                 </main>
@@ -64,13 +66,13 @@ class HomePage extends Component {
         </div>
     
 
-        <div>
+        <div className="contact">
             <div className="overlay">
 
                 <p>
                     Social Media Links: <br/>
                     FB, LinkedIn, Instagram, Github
-                    </p>
+                </p>
 
             </div>
         </div>
