@@ -25,8 +25,8 @@ class HomePage extends Component {
 
                     <h1 className="intro fade-in">
                         Welcome! <br/><br/>
-                        I'm Phurushotham Shekar <br/> <br/>
-                        But I also go by Phuru 
+                        I'm Phurushotham (Phuru) Shekar <br/> <br/>
+                        Come take a look at what I'm up to!
                     </h1>
 
                 </main>
@@ -57,7 +57,7 @@ class HomePage extends Component {
             <p>
                 <strong>Some Projects I've worked on</strong> <br/>
                 This <a href="https://phurushekar.github.io"> Website </a>  [ReactJS, HTML, CSS] <br/>
-                <a href="https://tedxrutgers.github.io/2018conf"> TEDxRutgers2018 Site (Will be live in November 2018)</a> [HTML, CSS] <br/>
+                <a href="https://tedxrutgers.github.io/2018conf"> TEDxRutgers2018 Site </a> (Will be live in November 2018) [HTML, CSS] <br/>
                 <a href="https://devpost.com/software/gradian-1qp0ac"> Gradian </a> [AdobeXD, HTML, CSS, ReactJS] <br/>
                 You can find out more about my projects <Link to="/Accomplishments">here</Link> <br/>
                 Projects can also be found on  <a href="https://github.com/phurushekar">Github</a>
@@ -69,8 +69,11 @@ class HomePage extends Component {
         <div className="contact">
             <div className="overlay">
 
+
+                    <h1 className="intro">
+                    You can find me on
+                    </h1>
                 <p>
-                    Social Media Links: <br/>
                     FB, LinkedIn, Instagram, Github
                 </p>
 

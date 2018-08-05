@@ -79,14 +79,14 @@ header {
       line-height: normal;
       color: #ff1755; }
 
-.overlay {
+.main .overlay {
   background-image: url(../img/mtnpix.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 750px;
   color: #ffffff;
+  height: 750px;
   margin: 0px; }
 
 main {
@@ -162,6 +162,20 @@ main {
     text-align: center;
     margin-top: 30px;
     font-size: 20px; }
+
+.contact .overlay {
+  background-image: url(../img/mtnpix.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff; }
+
+.contact h1 {
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  border-top: 40px; }
 
 footer {
   position: relative;
