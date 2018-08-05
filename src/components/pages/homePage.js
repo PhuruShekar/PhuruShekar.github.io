@@ -15,7 +15,7 @@ class HomePage extends Component {
       
     <div>
 
-        <div id="tf-home">
+        <div className="main">
 
             <div className="overlay">
 
@@ -33,41 +33,47 @@ class HomePage extends Component {
 
         </div>
 
-        <div className="whoami">
 
+        <main>
+        <div className="whoami">
             <h1>
-            Who am I?
+                Who am I?
             </h1>
+
             <p>
                 I am an Electrical and Computer Engineering major (Computer Concentration) minoring in Computer Science at Rutgers University (Class of 2020)
             </p>
 
             <p>
-            Extracurriculars: <br/>
-            Vice President and Technology Director of TEDxRutgers (link)
-            <br/>
-            Member of Undergraduate Student Alliance of Computer Scientists (USACS)
-            <br/>
-            Find out more about my activities and awards here!
+                Extracurriculars: <br/>
+                Vice President and Technology Director of TEDxRutgers (link) <br/>
+                Member of Undergraduate Student Alliance of Computer Scientists (USACS)<br/>
+                Find out more about my activities and awards here!
             </p>
 
             <p>
-            Some Projects I've worked on: <br/>
-            This Website [ReactJS] <br/>
-            TEDxRutgers2018 Site (Will be live in November 2018) [HTML, CSS] <br/>
-            Gradian [AdobeXD, HTML, CSS, ReactJS] <br/>
-            You can find out more about my projects (here) <br/>
-            Projects are also found on Github (here)
+                Some Projects I've worked on: <br/>
+                This Website [ReactJS] <br/>
+                TEDxRutgers2018 Site (Will be live in November 2018) [HTML, CSS] <br/>
+                Gradian [AdobeXD, HTML, CSS, ReactJS] <br/>
+                You can find out more about my projects (here) <br/>
+                Projects are also found on Github (here)
             </p>
 
             <p>
             </p>
-
+            
         </div>
+        </main>
+    
 
         <div>
             <div className="overlay">
 
+                <p>
+                    Social Media Links: <br/>
+                    FB, LinkedIn, Instagram, Github
+                    </p>
 
             </div>
         </div>
