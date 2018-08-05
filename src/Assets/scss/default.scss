@@ -61,16 +61,17 @@ header {
     }
 
 }
-
+.main {
 .overlay {
     background-image: url(../img/mtnpix.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 750px;
     color:$white;
+    height: 750px;
     margin: 0px;
+}
 }
 main {
     margin: 0px;
@@ -150,6 +151,25 @@ main {
         margin-top: 30px;
         font-size: 20px;
     }
+}
+
+.contact {
+    .overlay {
+        background-image: url(../img/mtnpix.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color:$white;
+    }
+
+    h1 {
+        font-size: 35px;
+        text-align: center; 
+        text-shadow: 2px 2px black;
+        border-top: 40px;
+    }   
+
 }
 
 footer {

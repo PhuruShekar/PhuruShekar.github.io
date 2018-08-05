@@ -28,7 +28,7 @@ class Header extends Component {
 
                 </li>
                 <li>
-                    <Link to="/Accomplishments">Accomplishments</Link>
+                    <Link to="/Accomplishments">Activities</Link>
                 </li>
                 <li>
                     <Link to="/Projects">Projects</Link>
