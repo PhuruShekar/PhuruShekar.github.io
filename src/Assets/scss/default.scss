@@ -170,6 +170,17 @@ main {
         border-top: 40px;
     }   
 
+    ul {
+        align-content: center;
+        li {
+            font-size: 20px;
+            align-self: center;
+
+            a {
+                color: $white;
+            }
+        }
+    }
 }
 
 footer {
