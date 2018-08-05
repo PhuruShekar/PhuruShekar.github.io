@@ -70,9 +70,10 @@ header {
     background-repeat: no-repeat;
     height: 750px;
     color:$white;
+    margin: 0px;
 }
 main {
-
+    margin: 0px;
     background-size: auto;
 
     @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -120,7 +121,7 @@ main {
     h1 {
         font-size: 40px;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 50px;
         text-shadow: 2px 2px black;
     }   
 
@@ -132,18 +133,23 @@ main {
     a {
         color: $white;
     }
-
-    Route{
-        .fa-angle-down {
-            padding: 10px 15px;
-            color: #fff;
-            border: 2px solid #b4b4b4;
-            border-radius: 50%;
-            font-size: 24px;
-            margin-top: 100px;
-        }
-    }
     
+}
+
+.whoami {
+    color: $darkGray;
+
+    h1 {
+        font-size: 35px;
+        text-align: center;
+        border-top: 30px;
+    }   
+
+    p {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 20px;
+    }
 }
 
 footer {

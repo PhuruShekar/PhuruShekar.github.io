@@ -33,8 +33,7 @@ class HomePage extends Component {
 
         </div>
 
-
-        <main>
+        
         <div className="whoami">
             <h1>
                 Who am I?
@@ -62,9 +61,8 @@ class HomePage extends Component {
 
             <p>
             </p>
-            
+
         </div>
-        </main>
     
 
         <div>
