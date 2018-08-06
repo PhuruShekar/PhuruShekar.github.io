@@ -12,7 +12,6 @@ import Projects from './components/pages/projects';
 import Bookshelf from './components/pages/bookShelf';
 import Accomplishments from './components/pages/accomplishments';
 import Interests from './components/pages/interests';
-import Resume from './components/pages/resume';
 
 // includes
 import'./Assets/css/default.css';
@@ -31,7 +30,6 @@ class App extends Component {
           <Route exact path="/Bookshelf" component={Bookshelf} />
           <Route exact path="/Accomplishments" component={Accomplishments} />
           <Route exact path="/Interests" component={Interests} />
-          <Route exact path="/resume" component={Resume} />
 
         <Footer />
       </div>
