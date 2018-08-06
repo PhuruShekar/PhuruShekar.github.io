@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {ProgressBar} from 'react-bootstrap/lib';
 import me from '../../Assets/img/me.jpg';
+import doc from '../../Assets/doc/resumePS.pdf';
+
 import {
     HashRouter as Router,
     Route,
@@ -76,7 +78,7 @@ class HomePage extends Component {
                     </h1>
                 
                     <ul>
-                        <li> <Link to='/resume'> Resume</Link> </li>
+                        <li> <a href={doc} window>Résumé</a> </li>
                         <li> <a href="https://github.com/phurushekar"> Github </a> </li>
                         <li> <a href="https://devpost.com/1minPeru"> DevPost </a> </li>
                         <li> <a href="hhttps://www.instagram.com/iminperu/"> Instagram </a> </li>

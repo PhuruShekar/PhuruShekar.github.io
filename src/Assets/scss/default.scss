@@ -154,6 +154,7 @@ main {
 }
 
 .contact {
+    text-align: center;
     .overlay {
         background-image: url(../img/mtnpix.png);
         background-size: cover;
@@ -172,13 +173,19 @@ main {
 
     ul {
         align-content: center;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        /* For IE, the outcast */
+        zoom:1;
+        *display: inline;
         li {
             font-size: 20px;
             align-self: center;
+            float: left;
+            padding: 2px 5px;
+            display: inline;
 
-            a {
-                color: $white;
-            }
         }
     }
 }
@@ -211,8 +218,4 @@ footer {
     }
 
 
-}
-
-.pdf{
-    box-align: center;
 }
