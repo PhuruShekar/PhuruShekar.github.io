@@ -154,7 +154,8 @@ main {
 }
 
 .contact {
-    text-align: center;
+ 
+    
     .overlay {
         background-image: url(../img/mtnpix.png);
         background-size: cover;
@@ -171,22 +172,22 @@ main {
         border-top: 40px;
     }   
 
-    ul {
-        align-content: center;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        /* For IE, the outcast */
-        zoom:1;
-        *display: inline;
-        li {
-            font-size: 20px;
-            align-self: center;
-            float: left;
-            padding: 2px 5px;
-            display: inline;
+    p {
+        text-align: center;
+        font-size: 20px;
+        text-shadow: 1.5px 1.5px black;
+        margin-left: 20%;
+        margin-right: 20%;
 
-        }
+    }
+
+    a {
+        font-size: 20px;
+        color: $white;
+    }
+
+    a:hover {
+       color: $red;
     }
 }
 
