@@ -69,25 +69,27 @@ class HomePage extends Component {
         </div>
     
 
-        <div className="contact">
+        <div className="about">
             <div className="overlay">
 
-                <h1 className="intro">
+            <br/>
+                <h1>
                     Who am I?
                 </h1>
                 
-                <p>Now, with all of that boring résumé stuff out of the way, we can explore my interests.</p><br/><br/>
+                <br/>
+                <p>Now, with all of that boring résumé stuff out of the way, we can explore my interests.</p><br/>
 
-                <p>Some of my interests include reading, food and soccer. <br/><br/>
+                <p>Some of my interests include reading, making things and soccer. <br/><br/>
 
                 When school isn't in session, I try to read at least one book each week. You can check out my <Link to="/Bookshelf"><u>bookshelf</u> </Link>
                 to see what I've read and my thoughts them. In my bookshelf I also have a list of books that I'm hoping to read soon. <br/><br/>
 
-                I also love to cook and make little craft projects. Earlier this summer I made a (paper swan) out of 100+ little paper pieces.
-                The best part of cooking is ... eating afterwards. I often make stir-fry, pizza, and french omlettes at home (and empty the dish soon after too).<br/><br/>
+                I also love to make food and small craft projects. Earlier this summer I made a (paper swan) out of 100+ little paper pieces.
+                The best part of cooking is ... eating afterwards. I often make stir-fry, pizza, or french omlettes at home (and empty the dish soon after too).<br/><br/>
 
-                I also enjoy watching and playing soccer. I got into soccer in high school when I played for the high school team my freshman and sophomore years.
-                My joy of watching soccer hasn't diminished since then; I love waking up in the weekend to watch a Premier League game and follow the champions league.
+                I also enjoy watching and playing soccer. I got into soccer in high school when I played for my high school team during my freshman and sophomore years.
+                My joy of watching soccer hasn't diminished since then; I love waking up early in the weekends to watch the Premier League.
                 </p>
                 <br/><br/>
             </div>
