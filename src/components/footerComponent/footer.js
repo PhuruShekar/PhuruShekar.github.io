@@ -13,9 +13,9 @@ class Footer extends Component {
 
           <nav className="wrapper">
             <ul >
-              <li> <a target="_blank" href="https://facebook.com"><i class="fa fa-3x fa-google-plus"></i></a></li>
-              <li> <a target="_blank" href="your_url_here"><i class="fa fa-3x fa-facebook"></i></a></li>
-              <li><a target="_blank" href="your_url_here"><i class="fa fa-3x fa-twitter"></i></a></li>
+              <li> <a target="_blank" href="https://github.com/phurushekar"><i class="fa fa-3x fa-github"></i></a></li>
+              <li> <a target="_blank" href="https://facebook.com/iminperu"><i class="fa fa-3x fa-facebook"></i></a></li>
+              <li><a target="_blank" href="https://instagram.com/iminperu"><i class="fa fa-3x fa-instagram"></i></a></li>
               <li></li>
               <li></li>
             </ul>
