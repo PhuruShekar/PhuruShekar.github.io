@@ -16,8 +16,8 @@ class Footer extends Component {
               <li> <a target="_blank" href="https://github.com/phurushekar"><i class="fa fa-3x fa-github"></i></a></li>
               <li> <a target="_blank" href="https://facebook.com/iminperu"><i class="fa fa-3x fa-facebook"></i></a></li>
               <li><a target="_blank" href="https://instagram.com/iminperu"><i class="fa fa-3x fa-instagram"></i></a></li>
-              <li></li>
-              <li></li>
+              <li><a target="_blank" href="https://devpost.com/1minPeru"><i class="fa fa-3x fa-gg"></i></a></li>
+              <li><a target="_blank" href="https://instagram.com/iminperu"><i class="fa fa-3x fa-filepdf"></i></a></li>
             </ul>
 
           </nav>
