@@ -207,21 +207,6 @@ footer {
     footer nav ul li {
       list-style-type: none;
       display: inline-block;
-      margin-right: 10px; }
+      margin-right: 15px; }
       footer nav ul li.last {
         margin: 20; }
-      footer nav ul li .body {
-        text-align: center; }
-      footer nav ul li i .fa {
-        height: 30px;
-        width: 30px;
-        border: 2px solid #8c8c8c;
-        font-size: 20px;
-        padding: 4px 5px;
-        border-radius: 50%;
-        color: #8c8c8c;
-        transition: all 0.5s; }
-      footer nav ul li i .fa:hover {
-        background: #00DDFF;
-        border-color: #00DDFF;
-        color: #ffffff; }
