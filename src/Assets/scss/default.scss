@@ -48,15 +48,12 @@ header {
         position: absolute;
         top: 20%;
         right: 10px;
-        
-        .Menu {
-            border-color: $red;
-        }
+       
 
         a {
             //font-size: 10px;
             line-height: normal;
-            color: $red;
+            color: $brn;
         }
     }
 
@@ -186,7 +183,7 @@ main {
     }
 
     a:hover {
-       color: $red;
+       color: $brn;
     }
 }
 
@@ -210,12 +207,23 @@ footer {
         ul li {
             list-style-type: none;
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 20px;
 
             &.last {
-                margin: 20;
+                margin: 20px;
             }
-   
+            
+            &:hover {
+                @include rotate(360deg);
+            }
+            a{
+            font-size: 175%;
+            color: white;
+
+                &:hover {
+                    color: $brn;
+                }
+            }
         }
 
     }

@@ -26,7 +26,7 @@ a {
   transition: 0.4s ease-in-out;
   cursor: pointer; }
   a:hover {
-    color: #ff1755;
+    color: #D58A4E;
     -webkit-transition: transition(0.4s ease-in-out);
     -moz-transition: transition(0.4s ease-in-out);
     transition: 0.4s ease-in-out; }
@@ -73,11 +73,9 @@ header {
     position: absolute;
     top: 20%;
     right: 10px; }
-    header .dropdown .Menu {
-      border-color: #ff1755; }
     header .dropdown a {
       line-height: normal;
-      color: #ff1755; }
+      color: #D58A4E; }
 
 .main .overlay {
   background-image: url(../img/mtnpix.png);
@@ -189,7 +187,7 @@ main {
   color: #ffffff; }
 
 .about a:hover {
-  color: #ff1755; }
+  color: #D58A4E; }
 
 footer {
   position: relative;
@@ -207,6 +205,21 @@ footer {
     footer nav ul li {
       list-style-type: none;
       display: inline-block;
-      margin-right: 15px; }
+      margin-right: 20px; }
       footer nav ul li.last {
-        margin: 20; }
+        margin: 20px; }
+      footer nav ul li:hover {
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -webkit-transition-duration: 1s;
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(360deg), M12=-sin(360deg), M21=sin(360deg), M22=cos(360deg));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(360deg), M12=-sin(360deg), M21=sin(360deg), M22=cos(360deg))";
+        zoom: 1; }
+      footer nav ul li a {
+        font-size: 175%;
+        color: white; }
+        footer nav ul li a:hover {
+          color: #D58A4E; }

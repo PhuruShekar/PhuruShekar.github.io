@@ -86,10 +86,10 @@ class HomePage extends Component {
                 to see what I've read and my thoughts them. In my bookshelf I also have a list of books that I'm hoping to read soon. <br/><br/>
 
                 I also love to make food and small craft projects. Earlier this summer I made a (paper swan) out of 100+ little paper pieces.
-                The best part of cooking is ... eating afterwards. I often make stir-fry, pizza, or french omlettes at home (and empty the dish soon after too).<br/><br/>
+                I enjoy making food also since the best part of cooking is ... eating afterwards. I often make stir-fry, pizza, or french omlettes at home (and empty the dish soon after too).<br/><br/>
 
-                I also enjoy watching and playing soccer. I got into soccer in high school when I played for my high school team during my freshman and sophomore years.
-                My joy of watching soccer hasn't diminished since then; I love waking up early in the weekends to watch the Premier League.
+                Every weekend I try to watch a few games of soccer. I got into soccer in high school when I played for my high school team during my freshman and sophomore years.
+                My joy for the beautiful game hasn't diminished since then; I love waking up early in the weekends to watch the Premier League.
                 </p>
                 <br/><br/>
             </div>
