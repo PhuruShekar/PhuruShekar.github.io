@@ -5,6 +5,7 @@ $white: #ffffff;
 $lightGray: #e6e6e6;
 $darkGray: #333;
 $red: #ff1755;
+$brn: #D58A4E;
 
 /* mixins */
 
@@ -20,6 +21,18 @@ $red: #ff1755;
         transition: ($e);
 }
 
+ @mixin rotate($degrees) {
+    -moz-transform: rotate($degrees);  
+      -o-transform: rotate($degrees);  
+ -webkit-transform: rotate($degrees);
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+              zoom: 1;
+ }
+ 
 /* fonts - 
 regular 400
 regular 400 italic
@@ -47,7 +60,7 @@ a {
 
 
     &:hover {
-        color: $red;
+        color: $brn;
         @include transition(.4s ease-in-out);
     }
 
