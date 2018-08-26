@@ -105,8 +105,8 @@ main {
   }
 }
     .me {
-        width: 120px;
-        height: 120px;
+        width: 225px;
+        height: 225px;
         border-radius: 100%;
         border-top: 50px;
         display: block;
@@ -119,12 +119,12 @@ main {
     h1 {
         font-size: 40px;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 40px;
         text-shadow: 2px 2px black;
     }   
 
     p {
-        font-size: 20px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -136,18 +136,36 @@ main {
 
 .whoami {
     color: $darkGray;
-
+    margin-bottom: 50px;    
     h1 {
         font-size: 35px;
         text-align: center;
         margin-top: 30px;
     }   
+    .column {
+        float: left;
+        width: 40%;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30px;
+        font-size: 20px;
+        margin-right:10px; 
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-    p {
+    .centText {
         text-align: center;
         margin-top: 30px;
         font-size: 20px;
     }
+
 }
 
 .about {
