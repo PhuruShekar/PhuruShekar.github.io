@@ -6,9 +6,6 @@ import {
   import {
     BrowserView,
     MobileView,
-    isBrowser,
-    isMobile,
-    MobileOnlyView
   } from "react-device-detect";
 
 class Header extends Component {
