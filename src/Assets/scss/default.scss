@@ -151,6 +151,11 @@ main {
         margin-top: 30px;
         font-size: 20px;
         margin-right:10px; 
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
     }
     
     /* Clear floats after the columns */
@@ -170,6 +175,9 @@ main {
 
 .about {
   
+    .color {
+        color: $brn;
+    }
     .overlay {
         background-image: url(../img/mtnpix.png);
         background-size: cover;

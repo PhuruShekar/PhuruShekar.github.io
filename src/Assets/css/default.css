@@ -167,6 +167,10 @@ main {
     margin-top: 30px;
     font-size: 20px;
     margin-right: 10px; }
+    .whoami .column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
   .whoami .row:after {
     content: "";
     display: table;
@@ -175,6 +179,9 @@ main {
     text-align: center;
     margin-top: 30px;
     font-size: 20px; }
+
+.about .color {
+  color: #D58A4E; }
 
 .about .overlay {
   background-image: url(../img/mtnpix.png);

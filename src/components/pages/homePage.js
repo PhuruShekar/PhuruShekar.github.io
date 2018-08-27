@@ -59,25 +59,31 @@ class HomePage extends Component {
             <div className="row">
             <p className = "column">
                 <strong>Activities</strong> <br/>
-                Vice President and Director of Technology for <a href="http://tedxrutgers.com/">TEDxRutgers</a> <br/>
-                Member of the Rutgers <a href="http://usacs.rutgers.edu">Undergraduate Student Alliance of Computer Scientists (USACS) </a> <br/>
-                Find out more about my activities and awards  <Link to="/Accomplishments">here!</Link>
-            </p>
+               <ul>
+               <li> Vice President and Director of Technology for <a href="http://tedxrutgers.com/">TEDxRutgers</a> </li>
+                <li>Member of the Rutgers <a href="http://usacs.rutgers.edu">Undergraduate Student Alliance of Computer Scientists (USACS) </a></li>
+                <li>Find out more about my activities and awards  <Link to="/Accomplishments">here!</Link></li>
+                <li></li>
+                </ul>
+                </p>
 
             <p className="column">
                 <strong>Some Projects I've worked on</strong> <br/>
-                This <a href="https://phurushekar.github.io"> Website </a>  [ReactJS, HTML, CSS] <br/>
-                <a href="https://tedxrutgers.github.io/2018conf"> TEDxRutgers2018 Site </a> (Will be live in November 2018) [HTML, CSS] <br/>
-                <a href="https://devpost.com/software/gradian-1qp0ac"> Gradian </a> [AdobeXD, HTML, CSS, ReactJS] <br/>
-                You can find out more about my projects <Link to="/Projects">here</Link> <br/>
-                Projects can also be found on  <a href="https://github.com/phurushekar">Github</a>
+                <ul>
+                <li>This <a href="https://phurushekar.github.io"> Website </a>  [ReactJS, HTML, CSS] </li>
+                <li><a href="https://tedxrutgers.github.io/2018conf"> TEDxRutgers2018 Site </a> (live Nov. 2018) [HTML, CSS] </li>
+                <li><a href="https://devpost.com/software/gradian-1qp0ac"> Gradian </a> [AdobeXD, HTML, CSS, ReactJS] </li>
+                <li>You can find out more about my projects <Link to="/Projects">here</Link></li>
+                <li>Projects can also be found on  <a href="https://github.com/phurushekar">Github</a></li>
+                <li></li>
+                </ul>
             </p>
             </div>
             </BrowserView>
 
             <MobileView>
             <p className="centText">
-            <strong>Activities</strong> <br/>
+            <strong className="color">Activities</strong> <br/>
             Vice President and Director of Technology for <a href="http://tedxrutgers.com/">TEDxRutgers</a> <br/>
             Member of the Rutgers <a href="http://usacs.rutgers.edu">Undergraduate Student Alliance of Computer Scientists (USACS) </a> <br/>
             Find out more about my activities and awards  <Link to="/Accomplishments">here!</Link>
@@ -92,6 +98,8 @@ class HomePage extends Component {
             Projects can also be found on  <a href="https://github.com/phurushekar">Github</a>
         </p>
             </MobileView>
+
+            <p className="centText">While you're here, feel free to take a look at my <a href={doc} window>Résumé</a>. </p>
         </div>
     
 
@@ -100,7 +108,7 @@ class HomePage extends Component {
 
             <br/>
                 <h1>
-                    Who am I?
+                    <strong className="color">So cool!</strong><br/> How can I learn more?
                 </h1>
                 
                 <br/>
