@@ -13,7 +13,7 @@ class Bookshelf extends Component {
                 <p>
                     Books being read...
                 </p>
-                <ProgressBar active bsStyle="success" now={"14"} label={"14%"} />
+                <ProgressBar active bsStyle="success" now={"42"} label={"42%"} />
                 </main>
             </div>
         )

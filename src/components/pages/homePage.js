@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {ProgressBar, Tab} from 'react-bootstrap/lib';
 import me from '../../Assets/img/me.jpg';
-import doc from '../../Assets/doc/Phurushotham Shekar Resume Aug.pdf';
+import doc from '../../Assets/doc/ResumePS.pdf';
 
 import {
     HashRouter as Router,
