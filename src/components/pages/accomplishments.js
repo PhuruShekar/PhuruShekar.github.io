@@ -17,7 +17,7 @@ class Accomplishments extends Component {
                 <p>
                 Accomplishing as many things as possible...
                 </p>
-                <ProgressBar active bsStyle="success" now={"10"} label={"10%"} />
+                <ProgressBar active bsStyle="warning" now={"99"} label={"99%"} />
                 </main>
             </div>
         )

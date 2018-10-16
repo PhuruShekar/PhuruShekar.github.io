@@ -17,7 +17,7 @@ class Projects extends Component {
                 <p>
                     Building projects
                 </p>
-                <ProgressBar active bsStyle="success" now={"20"} label={"20%"} />
+                <ProgressBar active bsStyle="success" now={"55"} label={"55%"} />
                 </main>
             </div>
         )
