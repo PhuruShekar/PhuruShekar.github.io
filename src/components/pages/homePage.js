@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ProgressBar, Tab} from 'react-bootstrap/lib';
+//import {ProgressBar, Tab} from 'react-bootstrap/lib';
 import me from '../../Assets/img/me.jpg';
 import doc from '../../Assets/doc/ResumePS.pdf';
 
@@ -9,7 +9,7 @@ import {
     Link as Linky
   }   from 'react-router-dom' ;
 
-  import { Document, Page } from 'react-pdf'
+  //import { Document, Page } from 'react-pdf'
   import { HashLink as Link } from 'react-router-hash-link';
 
   import {
@@ -29,7 +29,7 @@ class HomePage extends Component {
 
                 <main className="container-fluid">
 
-                    <img src={me} className="me fade-in two" />
+                    <img src={me} alt="profile pic" className="me fade-in two" />
 
                     <h1 className="intro fade-in">
                         Welcome! <br/><br/>
