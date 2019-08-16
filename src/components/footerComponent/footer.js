@@ -10,7 +10,7 @@ class Footer extends Component {
     return (
         <footer>
           <p>
-            <strong> &copy; </strong> 2018 Phurushotham (Phuru) Shekar
+            <strong> &copy; </strong> 2019 Phurushotham (Phuru) Shekar
           </p>
 
           <nav className="wrapper">
@@ -20,7 +20,7 @@ class Footer extends Component {
               <li> <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/iminperu">    <FontAwesomeIcon icon={['fab', 'facebook-f']} /></a></li>
               <li><a target="_blank" rel="noopener noreferrer" href="https://instagram.com/iminperu">    <FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
               <li><a target="_blank" rel="noopener noreferrer" href="https://devpost.com/1minPeru">     <FontAwesomeIcon icon={['fab', 'dochub']}/></a></li>
-              <li><a target="_blank" rel="noopener noreferrer" href={doc} window>    <FontAwesomeIcon icon="edit" /></a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href={doc} window>Résumé</a></li>
             </ul>
 
           </nav>

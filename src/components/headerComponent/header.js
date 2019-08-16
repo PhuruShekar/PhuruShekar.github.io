@@ -34,7 +34,7 @@ class Header extends Component {
                     <Link to="/Interests">Interests</Link>
                 </li>
                 <li>
-                    <Link to="/Bookshelf">Bookshelf</Link>
+                    <a href="https://bookshelf.website/phurushekar" target="_blank">Bookshelf</a>
                 </li>
             </ul>
         </nav>
