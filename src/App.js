@@ -22,7 +22,7 @@ import Accomplishments from './components/pages/accomplishments';
 import Interests from './components/pages/interests';
 
 // includes
-import'./Assets/css/default.css';
+import'./Assets/scss/default.css';
 
 library.add(fab, faPenFancy, faEdit)
 

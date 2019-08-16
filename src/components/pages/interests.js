@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {ProgressBar} from 'react-bootstrap/lib';
 
 class Interests extends Component {
     render() {
@@ -17,7 +16,6 @@ class Interests extends Component {
                 <p>
                     Creating interest
                 </p>
-                <ProgressBar active bsStyle="warning" now={"80"} label={"80%"} />
                 </main>
             </div>
         )

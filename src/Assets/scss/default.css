@@ -1,0 +1,310 @@
+/* vars */
+/* mixins */
+/* fonts - 
+regular 400
+regular 400 italic
+bold 700
+bold 700 italic
+*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  color: #010000;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: transition(0.4s ease-in-out);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #D58A4E;
+  -webkit-transition: transition(0.4s ease-in-out);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.container-fluid {
+  line-height: 24px;
+}
+
+header {
+  position: relative;
+  display: block;
+  left: 0px;
+  width: 100%;
+  background: #333;
+  color: #ffffff;
+  height: 60px;
+}
+
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transition: transition(-50%);
+  transition: -50%;
+}
+
+header nav, header nav ul, header nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+header nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header nav ul li.last {
+  margin: 20;
+}
+
+header nav ul li a {
+  font-size: 20px;
+  line-height: normal;
+  color: #ffffff;
+}
+
+header .dropdown {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
+
+header .dropdown a {
+  line-height: normal;
+  color: #D58A4E;
+}
+
+.main .overlay {
+  background-image: url(../img/mtnpix.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  height: 100vh;
+  margin: 0px;
+}
+
+main {
+  margin: 0px;
+  background-size: 100vh;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main .fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+main .fade-in .one {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+main .fade-in .two {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+main .me {
+  width: 225px;
+  height: 225px;
+  border-radius: 100%;
+  border-top: 50px;
+  display: block;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 2px 2px black;
+}
+
+main p {
+  font-size: 30px;
+  text-align: center;
+}
+
+main a {
+  color: #ffffff;
+}
+
+.whoami {
+  color: #333;
+  margin-bottom: 50px;
+  /* Clear floats after the columns */
+}
+
+.whoami h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.whoami .column {
+  float: left;
+  width: 40%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.whoami .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.whoami .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.whoami .centText {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.about .color {
+  color: #D58A4E;
+}
+
+.about .overlay {
+  background-image: url(../img/mtnpix.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.about h1 {
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  margin-top: 30px;
+}
+
+.about p {
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1.5px 1.5px black;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.about a {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.about a:hover {
+  color: #D58A4E;
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  background: #333;
+  color: #ffffff;
+  height: 50px;
+  left: 0px;
+}
+
+footer nav {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+
+footer nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer nav ul li.last {
+  margin: 20px;
+}
+
+footer nav ul li:hover {
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(360deg), M12=-sin(360deg), M21=sin(360deg), M22=cos(360deg));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(360deg), M12=-sin(360deg), M21=sin(360deg), M22=cos(360deg))";
+  zoom: 1;
+}
+
+footer nav ul li a {
+  font-size: 175%;
+  color: white;
+}
+
+footer nav ul li a:hover {
+  color: #D58A4E;
+}
+/*# sourceMappingURL=default.css.map */
