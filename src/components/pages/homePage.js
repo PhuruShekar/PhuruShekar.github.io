@@ -65,7 +65,22 @@ class HomePage extends Component {
                 <li>Find out more about my activities and awards  <Link to="/Accomplishments">here!</Link></li>
                 <li></li>
                 </ul>
-                </p>
+            </p>
+
+
+            <p className="column">
+                <strong>Experience</strong> <br/>
+               
+                Web Developer Intern at Rutgers University Student Affairs Marketing &amp; Communications Divison <br/><br/>
+                (May 2019 - Present)
+                 <br/><br/>
+
+                <ul>
+                    <li>Created a website template to demo new Student Affairs divisional websites [SCSS, Bootstrap]</li>
+                    <li>Maintained and updated websites for all current divisonal websites [Wordpress]</li>
+                    <li>Transferring the current Student Affairs Websites from Wordpress to Drupal</li>
+                </ul>
+            </p>
 
             <p className="column">
                 <strong>Some Projects I've worked on</strong> <br/>
@@ -108,7 +123,7 @@ class HomePage extends Component {
 
             <br/>
                 <h1>
-                    <strong className="color">So cool!</strong><br/> How can I learn more?
+                    <strong className="color">So cool!</strong><br/><br/>  How can I learn more?
                 </h1>
                 
                 <br/>
