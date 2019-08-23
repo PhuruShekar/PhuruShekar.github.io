@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {ProgressBar} from 'react-bootstrap/lib';
 
-class Accomplishments extends Component {
+class Experience extends Component {
     render() {
         return (
             <div className="container-fluid">
                 <main>
                 <h1>
-                    Accomplishments
+                    Experience
                 </h1>
 
                 <p>
@@ -24,4 +24,4 @@ class Accomplishments extends Component {
     }
 }
 
-export default Accomplishments;
+export default Experience;
