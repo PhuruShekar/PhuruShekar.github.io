@@ -3,7 +3,7 @@ import {
     Link
   }   from 'react-router-dom' ;
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import doc from '../../Assets/doc/ResumePS.pdf';
+  import doc from '../../Assets/doc/Phuru_Shekar_Resume.pdf';
 
 class Footer extends Component {
   render() {

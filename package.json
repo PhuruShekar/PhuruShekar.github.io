@@ -6,10 +6,11 @@
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "*",
     "@fortawesome/free-solid-svg-icons": "*",
+    "bootstrap": "^3.4.1",
     "file-loader": "^4.2.0",
     "gh-pages": "^2.1.1",
     "image-webpack-loader": "^5.0.0",
-    "react-bootstrap": "*",
+    "react-bootstrap": "^0.32.4",
     "react-scripts": "^3.1.1",
     "tunnel-agent": "*"
   },

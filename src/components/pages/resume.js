@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.noworker';
-import doc from '../../Assets/doc/ResumePS.pdf';
+import doc from '../../Assets/doc/Phuru_Shekar_Resume.pdf';
 
 class Resume extends Component {
   state = {
