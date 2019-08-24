@@ -23,7 +23,13 @@ class Header extends Component {
               <Link to="/Projects">Projects</Link>
             </NavItem>
             <NavItem eventKey={4}>
-              <a href="https://bookshelf.website/phurushekar">Bookshelf</a>
+              <a
+                href="https://bookshelf.website/phurushekar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bookshelf
+              </a>
             </NavItem>
             <NavItem eventKey={5}>
               <a target="_blank" rel="noopener noreferrer" href={doc} window>
