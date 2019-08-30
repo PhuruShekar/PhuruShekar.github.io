@@ -1,62 +1,12 @@
 @import "_config.scss";
 
-header {
-    position: relative; 
-    display: block;
-    left: 0px;
-    width: 100%;
-    background:$darkGray;
-    color: $white;
-    height: 60px;
+.nav {
+    background: $lightGray;
+    color: $darkGray;
 
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        @include transition(-50%);
+    a {
+        color: $darkGray;
     }
-
-    nav, nav ul, nav ul li {
-        margin: 0;
-        padding: 0;
-    }
-
-    nav {
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        @include translateY(-50%);
-
-        ul li {
-            list-style-type: none;
-            display: inline-block;
-            margin-right: 10px;
-
-
-            &.last {
-                margin: 20;
-            }
-
-            a {
-                font-size: 20px;
-                line-height: normal;
-                color: $white;
-            }
-        }
-    }
-    .dropdown {
-        position: absolute;
-        top: 20%;
-        right: 10px;
-       
-
-        a {
-            //font-size: 10px;
-            line-height: normal;
-            color: $brn;
-        }
-    }
-
 }
 .main {
 .overlay {
@@ -211,45 +161,7 @@ main {
     }
 }
 
-
-
-footer {
-    position: relative;
-    bottom: 0px; 
-    display: block;
-    width: 100%;
-    background: $darkGray;
-    color: $white;
-    height: 50px;
-    left:0px;
-
-    nav {
-        position: absolute;
-        top: 30%;
-        right: 15px;
-
-        ul li {
-            list-style-type: none;
-            display: inline-block;
-            margin-right: 20px;
-
-            &.last {
-                margin: 20px;
-            }
-            
-            &:hover {
-                @include rotate(360deg);
-            }
-            a{
-            font-size: 175%;
-            color: white;
-
-                &:hover {
-                    color: $brn;
-                }
-            }
-        }
-
-    }
+.foot {
+    margin-bottom: 0;
 
 }

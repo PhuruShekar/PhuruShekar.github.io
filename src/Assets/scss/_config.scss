@@ -42,15 +42,13 @@ bold 700 italic
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-size: 16px;
 }
 body {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 10px;
     color: $black;
     font-weight: 400;
     font-style: normal;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 a {
