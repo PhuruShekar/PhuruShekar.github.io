@@ -6,7 +6,7 @@ import doc from "../../Assets/doc/Phuru_Shekar_Resume.pdf";
 class Header extends Component {
   render() {
     return (
-      <Navbar bg="dark" variant="dark" expand="md" fixedTop>
+      <Navbar className="nav"  fixedTop>
         <Navbar.Brand>
           <Link to="/">Phuru</Link>
         </Navbar.Brand>
@@ -16,25 +16,16 @@ class Header extends Component {
             <NavItem eventKey={1}>
               <Link to="/">Home</Link>
             </NavItem>
-            <NavItem eventKey={2}>
-              <Link to="/Experience">Experience</Link>
+            <NavItem 
+              eventKey={2}  
+              href="https://bookshelf.website/phurushekar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+                <a>Bookshelf</a>
             </NavItem>
-            <NavItem eventKey={3}>
-              <Link to="/Projects">Projects</Link>
-            </NavItem>
-            <NavItem eventKey={4}>
-              <a
-                href="https://bookshelf.website/phurushekar"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Bookshelf
-              </a>
-            </NavItem>
-            <NavItem eventKey={5}>
-              <a target="_blank" rel="noopener noreferrer" href={doc} window>
-                Résumé
-              </a>
+            <NavItem eventKey={3} href={doc} window target="_blank">
+                <a>Résumé</a>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
