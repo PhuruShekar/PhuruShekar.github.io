@@ -23,6 +23,7 @@
 .overlay {
     height: 100vh;
 }
+
 }
 main {
     margin: 0px;
@@ -73,19 +74,37 @@ main {
     h1 {
         font-size: 40px;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 50px;
         text-shadow: 2px 2px black;
     }   
+
+  
 
     p {
         font-size: 30px;
         text-align: center;
+        margin-top: 100px;
     }
 
     a {
         color: $white;
     }
-    
+
+    @media all and (max-width: 577px) {
+        h1 {
+            margin-top: 35px;
+        }
+
+        .me {
+            margin-top: 75px;  
+            width: 150px;
+            height: 150px;
+        }
+
+        p {
+            margin-top: 40px;
+        }
+    }
 }
 
 .whoami {
@@ -95,35 +114,21 @@ main {
         font-size: 35px;
         text-align: center;
         margin-top: 100px;
-        margin-bottom: 30px;
     }   
-    .column {
-        float: left;
-        width: 40%;
-        text-align: center;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 50px;
-        font-size: 20px;
-        margin-right:10px; 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-          }
+
+    h2 {
+        margin-top: 30px;
     }
     
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+    h3 {
+        margin-top: 30px;
     }
 
-    .centText {
-        text-align: center;
-    }
+}
 
+.message {
+    margin-top: 40px;
+    font-size: 1.5em;
 }
 
 .about {
