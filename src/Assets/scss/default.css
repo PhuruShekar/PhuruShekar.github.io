@@ -121,57 +121,56 @@ main .me {
 main h1 {
   font-size: 40px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   text-shadow: 2px 2px black;
 }
 
 main p {
   font-size: 30px;
   text-align: center;
+  margin-top: 100px;
 }
 
 main a {
   color: #ffffff;
 }
 
+@media all and (max-width: 577px) {
+  main h1 {
+    margin-top: 35px;
+  }
+  main .me {
+    margin-top: 75px;
+    width: 150px;
+    height: 150px;
+  }
+  main p {
+    margin-top: 40px;
+  }
+}
+
 .whoami {
   color: #333;
   margin-bottom: 50px;
-  /* Clear floats after the columns */
 }
 
 .whoami h1 {
   font-size: 35px;
   text-align: center;
   margin-top: 100px;
-  margin-bottom: 30px;
 }
 
-.whoami .column {
-  float: left;
-  width: 40%;
-  text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 50px;
-  font-size: 20px;
-  margin-right: 10px;
+.whoami h2 {
+  margin-top: 30px;
 }
 
-.whoami .column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.whoami h3 {
+  margin-top: 30px;
 }
 
-.whoami .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.whoami .centText {
-  text-align: center;
+.message {
+  margin-top: 40px;
+  font-size: 1.5em;
 }
 
 .about .overlay {

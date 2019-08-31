@@ -18,11 +18,13 @@ class HomePage extends Component {
               <img src={me} alt="profile pic" className="me fade-in two" />
 
               <h1 className="intro fade-in">
-                Welcome! <br />
-                <br />
-                I'm Phurushotham (Phuru) Shekar <br /> <br />
+                Welcome! 
               </h1>
-              <p>Come take a look at what I'm up to!</p>
+              <h1 className="intro fade-in">
+                I'm Phurushotham (Phuru) Shekar 
+              </h1>
+
+              <p className="intro fade-in">Come take a look at what I'm up to!</p>
             </main>
           </div>
         </div>
@@ -57,7 +59,7 @@ class HomePage extends Component {
                 </Col>
             </Row>
           </Grid>
-          <p className="text-center">
+          <p className="text-center message">
             While you're here, feel free to take a look at my{" "}
             <a href={doc} window>
               Résumé
@@ -125,12 +127,12 @@ class HomePage extends Component {
                     <h2 className="text-center"><a href="https://github.com/phurushekar/wearther" target="_blank">Wea(r)ther</a></h2>
                     <h3>Personal Project - Current</h3>
                     <p>Cross-platform mobile app that displays the weather and recommends clothing based on the weather.</p>
-                    <p><strong>Tech Used:</strong> React Native, Redux, Dark Sky API, Google Location API</p>
+                    <p><strong>Tech Used:</strong> React Native, Redux</p>
                   </Col>
                   <Col md={6} className = "proj">
                     <h2 className="text-center"><a href="https://www.ibm.com/employment/vault/" target="_blank">IBM Vault Challenge 2018</a></h2>
                     <h3>Winner: 64 of 300+ (Top 2%)</h3>
-                    <p>‣	Solved 6 challenges that required parsing website code, cracking cyphers and editing given code in order to decode and identify the passwords for each level.</p>
+                    <p>Solved 6 challenges that required parsing website code, cracking cyphers and editing given code in order to decode and identify the passwords for each level.</p>
                     <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
                   </Col>
                 </Row>
@@ -145,7 +147,7 @@ class HomePage extends Component {
                     <h2 className="text-center"><a href="https://devpost.com/software/hackprinceton-njw1bq" target="_blank">LiveNote</a></h2>
                     <h3>Hack Princeton - Fall 2017</h3>
                     <p>Collaborative note taking application that merges notes from multiple students in real-time during lecture to allow students to transcribe all of the information given in lecture.</p>
-                    <p><strong>Tech Used:</strong> JavaScript, Microsoft Linguistics API</p>
+                    <p><strong>Tech Used:</strong> JavaScript</p>
                   </Col>
                 </Row>
               </Grid>
