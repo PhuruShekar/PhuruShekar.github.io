@@ -8,7 +8,7 @@
         color: $darkGray;
     }
 }
-.main {
+
 .overlay {
     background-image: url(../img/mtnpix.png);
     background-size: cover;
@@ -16,8 +16,12 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     color:$white;
-    height: 100vh;
     margin: 0px;
+}
+
+.main {
+.overlay {
+    height: 100vh;
 }
 }
 main {
@@ -91,6 +95,7 @@ main {
         font-size: 35px;
         text-align: center;
         margin-top: 100px;
+        margin-bottom: 30px;
     }   
     .column {
         float: left;
@@ -123,16 +128,12 @@ main {
 
 .about {
   
+    .overlay {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     .color {
         color: $brn;
-    }
-    .overlay {
-        background-image: url(../img/mtnpix.png);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        color:$white;
     }
 
     h1 {
@@ -140,28 +141,50 @@ main {
         text-align: center; 
         text-shadow: 2px 2px black;
         margin-top: 30px;
+        margin-bottom: 30px;
     }   
 
-    p {
-        text-align: center;
-        font-size: 20px;
-        text-shadow: 1.5px 1.5px black;
-        margin-left: 20%;
-        margin-right: 20%;
+}
 
-    }
-
-    a {
-        font-size: 20px;
-        color: $white;
-    }
-
-    a:hover {
-       color: $brn;
+.list {
+    padding-right: 20px;
+   
+    ul{
+        list-style: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+        li {
+            background-color: $lightGray;
+            margin: 10px 10px 10px 10px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            color: $darkGray;
+            font-size: 1em;
+            font-weight: bold;
+        }
     }
 }
 
+.projects {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+   .proj {
+       margin-top: 20px;
+      
+   }
+
+}
 .foot {
     margin-bottom: 0;
-
 }
