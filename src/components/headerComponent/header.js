@@ -7,11 +7,13 @@ class Header extends Component {
   render() {
     return (
       <Navbar className="nav"  fixedTop>
+        <Navbar.Header>
         <Navbar.Brand>
           <Link to="/">Phuru</Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse >
           <Nav pullRight>
             <NavItem eventKey={1}>
               <Link to="/">Home</Link>
