@@ -139,7 +139,7 @@ class HomePage extends Component {
                 <Row>
                   <Col md={6} className = "proj">
                     <h2 className="text-center"><a href="https://devpost.com/software/gradian-1qp0ac" target="_blank">Gradian</a></h2>
-                    <h3>Best Education Hack + Top 10 @ PennApps - January 2018</h3>
+                    <h3>Best Education Hack + Top 10 (of 135 teams) @ PennApps - January 2018</h3>
                     <p>Web and Mobile app to increase in-class student and professor interactions by allowing students to ask anonymous questions, give live feedback and answer in-class quizzes.</p>
                     <p><strong>Tech Used:</strong> React Native, React, AdobeXD</p>
                   </Col>

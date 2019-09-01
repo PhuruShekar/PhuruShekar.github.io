@@ -10,46 +10,49 @@ class Footer extends Component {
   render() {
     return (
         <Navbar className="nav foot">
+          <Navbar.Header>
            <Navbar.Brand>
-             <Navbar.Link href="https://github.com/PhuruShekar/PhuruShekar.github.io"> <strong> &copy; </strong> 2019 Phurushotham (Phuru) Shekar</Navbar.Link>
+             <a><Navbar.Link href="https://github.com/PhuruShekar/PhuruShekar.github.io"> <strong> &copy; </strong> 2019 Phurushotham (Phuru) Shekar</Navbar.Link></a>
            </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-foot" />
+          </Navbar.Header>
           <Navbar.Collapse id="basic-navbar-foot">
             <Nav pullRight>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://github.com/phurushekar"
+                className = "icon"
               >
-                <FontAwesomeIcon icon={['fab', 'github']} />
+                <a><FontAwesomeIcon icon={['fab', 'github']} /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://linkedin.com/in/phurushotham-shekar"
               >
-                <FontAwesomeIcon icon={['fab', 'linkedin-in']}/>
+                <a><FontAwesomeIcon icon={['fab', 'linkedin-in']}/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://facebook.com/iminperu"
               >
-                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                <a><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://instagram.com/iminperu"
               >
-                <FontAwesomeIcon icon={['fab', 'instagram']} />
+                <a><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://devpost.com/1minPeru"
               >
-                <FontAwesomeIcon icon={['fab', 'dochub']}/>
+                <a><FontAwesomeIcon icon={['fab', 'dochub']}/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
@@ -57,7 +60,7 @@ class Footer extends Component {
                 href={doc} 
                 window
               >
-                Résumé
+                <a>Résumé</a>
               </NavItem>
             </Nav>
           </Navbar.Collapse>

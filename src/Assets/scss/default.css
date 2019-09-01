@@ -40,11 +40,14 @@ a:hover {
 
 .nav {
   background: #e6e6e6;
-  color: #333;
 }
 
 .nav a {
   color: #333;
+}
+
+.nav a:hover {
+  color: #D58A4E;
 }
 
 .overlay {
@@ -158,10 +161,12 @@ main a {
   font-size: 35px;
   text-align: center;
   margin-top: 100px;
+  color: gray;
 }
 
 .whoami h2 {
   margin-top: 30px;
+  color: #D58A4E;
 }
 
 .whoami h3 {
@@ -218,6 +223,7 @@ main a {
 
 .projects h1 {
   margin-bottom: 30px;
+  color: gray;
 }
 
 .projects a {

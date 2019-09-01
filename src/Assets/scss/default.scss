@@ -2,10 +2,14 @@
 
 .nav {
     background: $lightGray;
-    color: $darkGray;
+   
 
     a {
         color: $darkGray;
+
+        &:hover {
+            color: $brn;
+        }
     }
 }
 
@@ -114,10 +118,12 @@ main {
         font-size: 35px;
         text-align: center;
         margin-top: 100px;
+        color: gray;
     }   
 
     h2 {
         margin-top: 30px;
+        color: $brn;
     }
     
     h3 {
@@ -178,10 +184,12 @@ main {
 
     h1 {
         margin-bottom: 30px;
+        color: gray;
     }
 
     a {
         text-decoration: underline;
+     
     }
 
    .proj {
@@ -190,6 +198,10 @@ main {
    }
 
 }
+
+
 .foot {
     margin-bottom: 0;
+
+    
 }
