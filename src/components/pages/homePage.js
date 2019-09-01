@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Col, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import me from "../../Assets/img/me.jpg";
 import doc from "../../Assets/doc/Phuru_Shekar_Resume.pdf";
 
@@ -8,6 +9,8 @@ import { HashRouter as Router, Route, Link as Linky } from "react-router-dom";
 //import { Document, Page } from 'react-pdf'
 import { HashLink as Link } from "react-router-hash-link";
 
+const email1 = "phurus";
+const email2 = "hotham";
 class HomePage extends Component {
   render() {
     return (
@@ -16,7 +19,24 @@ class HomePage extends Component {
           <div className="overlay">
             <main className="container-fluid">
               <img src={me} alt="profile pic" className="me fade-in two" />
-
+              <ul className="social text-center">
+                <li><a  target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://github.com/phurushekar"><FontAwesomeIcon icon={['fab', 'github']} /></a></li>
+                <li><a   target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://linkedin.com/in/phurushotham-shekar"><FontAwesomeIcon icon={['fab', 'linkedin-in']}/></a></li>
+                <li><a
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 href="https://facebook.com/IminPeru"><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a></li>
+                <li><a   target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://instagram.com/iminperu"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
+                <li><a  target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://devpost.com/phurushekar"><FontAwesomeIcon icon={['fab', 'dochub']}/></a></li>
+              </ul>
               <h1 className="intro fade-in">
                 Welcome! 
               </h1>
@@ -39,11 +59,12 @@ class HomePage extends Component {
                 <h3>Rutgers University - New Brunswick</h3>
                 <p>Class of 2020</p>
                 <p><strong>Major:</strong> Electrical and Computer Engineering (Computer Concentration)</p>
-                <p><strong>Minor:</strong>Computer Science</p>
+                <p><strong>Minor:</strong> Computer Science</p>
               </Col>
               <Col md={6}>
                   <h2 className="text-center">Experience</h2>
                   <h3>Web Developer Intern</h3>
+                  <h4>May 2019 - Present</h4>
                   <h4>Rutgers University Student Affairs Marketing &amp; Communications Division</h4>
                 </Col>
             </Row>
@@ -51,11 +72,14 @@ class HomePage extends Component {
             <Row>
                 <Col md={6}>
                     <h3>TEDxRutgers</h3>
-                    <h4>President</h4>
+                    <h4>President (Spring 2019 - Present)</h4>
+                    <h4>Vice-President (Spring 2018 - Spring 2019)</h4>
+                    <h4>Technology Director ( Spring 2017- Spring 2019)</h4>
                 </Col>
                 <Col md={6}>
                     <h3>Undergraduate Student Alliance of Computer Scientists (USACS)</h3>
-                    <h4>HackRU Organizer | Mentor</h4>
+                    <h4>HackRU Volunteer and Hacker Experience Organizer ( Fall 2018 - Present)</h4>
+                    <h4>Mentor ( Spring 2019 - Present)</h4>
                 </Col>
             </Row>
           </Grid>
@@ -100,6 +124,22 @@ class HomePage extends Component {
                            <li>AfterEffects</li>
                        </ul>
                    </Col>
+               </Row>
+               <Row className="text-center list">
+               <h2>Coursework</h2>
+                   <ul>
+                       <li>Data Structures</li>
+                       <li>Software Engineering</li>
+                       <li>Systems Programming</li>
+                       <li>Computer Architecture</li>  
+
+                   </ul>
+                   <h3>Current</h3>
+                   <ul>
+                      <li>Algorithms</li>
+                      <li>Machine Learning for Engineers</li>
+                      <li>Information and Network Security</li>
+                   </ul>
                </Row>
            </Grid>
           </div>
@@ -152,6 +192,22 @@ class HomePage extends Component {
                 </Row>
               </Grid>
           </div>
+        </div>
+        <div className="overlay form">
+          <h1 className="text-center">Contact Me</h1>
+          <h3 className="text-center"> Fill out the form below or reach out through my socials to contact me!</h3>
+        <form id="fs-frm" className="contact" name="contact-form" accept-charset="utf-8" action={`https://formspree.io/${email1}${email2}@gmail.com`} method="post">
+          <fieldset id="fs-frm-inputs" className="flexfield" >
+            <label for="full-name">Your Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="" />
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required=""/>
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Enter your message here!" required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
+          </fieldset>
+          <input className="submit" type="submit" value="Submit" />
+        </form>
         </div>
       </div>
     );

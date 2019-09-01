@@ -36,7 +36,7 @@ class Footer extends Component {
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://facebook.com/iminperu"
+                href="https://facebook.com/IminPeru"
               >
                 <a><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
               </NavItem>
@@ -50,7 +50,7 @@ class Footer extends Component {
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://devpost.com/1minPeru"
+                href="https://devpost.com/phurushekar"
               >
                 <a><FontAwesomeIcon icon={['fab', 'dochub']}/></a>
               </NavItem>
