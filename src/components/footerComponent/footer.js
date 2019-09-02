@@ -24,35 +24,35 @@ class Footer extends Component {
                 href="https://github.com/phurushekar"
                 className = "icon"
               >
-                <a><FontAwesomeIcon icon={['fab', 'github']} /></a>
+                <a><FontAwesomeIcon icon={['fab', 'github']} alt="github" /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://linkedin.com/in/phurushotham-shekar"
               >
-                <a><FontAwesomeIcon icon={['fab', 'linkedin-in']}/></a>
+                <a><FontAwesomeIcon icon={['fab', 'linkedin-in']} alt="linkedin"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://facebook.com/IminPeru"
               >
-                <a><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
+                <a><FontAwesomeIcon icon={['fab', 'facebook-f']} alt="facebook" /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://instagram.com/iminperu"
               >
-                <a><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+                <a><FontAwesomeIcon icon={['fab', 'instagram']} alt="instagram"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://devpost.com/phurushekar"
               >
-                <a><FontAwesomeIcon icon={['fab', 'dochub']}/></a>
+                <a><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
