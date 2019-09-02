@@ -10,7 +10,7 @@ class Header extends Component {
       <Navbar className="nav"  fixedTop>
         <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/"><img src={logo} height="150%" width="auto" /></Link>
+          <Link to="/"><img src={logo} height="150%" width="auto" alt="logo PS" /></Link>
         </Navbar.Brand>
         <Navbar.Toggle />
         </Navbar.Header>
@@ -27,7 +27,7 @@ class Header extends Component {
             >
                 <a>Bookshelf</a>
             </NavItem>
-            <NavItem eventKey={3} href={doc} window target="_blank">
+            <NavItem eventKey={3} href={doc} window target="_blank" rel="noopener noreferrer">
                 <a>Résumé</a>
             </NavItem>
           </Nav>

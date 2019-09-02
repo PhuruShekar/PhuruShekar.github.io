@@ -205,10 +205,6 @@ main a {
   margin-bottom: 30px;
 }
 
-.list {
-  padding-right: 20px;
-}
-
 .list h2 {
   text-shadow: 2px 2px black;
 }
@@ -221,6 +217,7 @@ main a {
   list-style: none;
   margin-left: 20px;
   margin-right: 20px;
+  padding-left: 0px;
 }
 
 .list ul li {

@@ -22,20 +22,20 @@ class HomePage extends Component {
               <ul className="social text-center">
                 <li><a  target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://github.com/phurushekar"><FontAwesomeIcon icon={['fab', 'github']} /></a></li>
+                href="https://github.com/phurushekar"><FontAwesomeIcon icon={['fab', 'github']} alt="github"/></a></li>
                 <li><a   target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://linkedin.com/in/phurushotham-shekar"><FontAwesomeIcon icon={['fab', 'linkedin-in']}/></a></li>
+                href="https://linkedin.com/in/phurushotham-shekar"><FontAwesomeIcon icon={['fab', 'linkedin-in']} alt="linkedin"/></a></li>
                 <li><a
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 href="https://facebook.com/IminPeru"><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a></li>
+                 href="https://facebook.com/IminPeru"><FontAwesomeIcon icon={['fab', 'facebook-f']} alt="facebook" /></a></li>
                 <li><a   target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://instagram.com/iminperu"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
+                href="https://instagram.com/iminperu"><FontAwesomeIcon icon={['fab', 'instagram']} alt="instagram" /></a></li>
                 <li><a  target="_blank" 
                 rel="noopener noreferrer" 
-                href="https://devpost.com/phurushekar"><FontAwesomeIcon icon={['fab', 'dochub']}/></a></li>
+                href="https://devpost.com/phurushekar"><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost" /></a></li>
               </ul>
               <h1 className="intro fade-in">
                 Welcome! 
@@ -150,13 +150,13 @@ class HomePage extends Component {
               <Grid>
                 <Row>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://devpost.com/software/brewba" target="_blank">Brewba</a></h2>
+                    <h2 className="text-center"><a href="https://devpost.com/software/brewba" target="_blank" rel="noopener noreferrer">Brewba</a></h2>
                     <h3>BitCamp 2019</h3>
                     <p>Automated bubble tea machine with a conveyer belt system to dispense each part of the beverage into the cup.</p>
                     <p><strong>Tech Used:</strong> Arduino, IOT devices, Duct Tape</p>
                   </Col>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank">Minerva</a></h2>
+                    <h2 className="text-center"><a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank" rel="noopener noreferrer">Minerva</a></h2>
                     <h3>Term Project – Software Engineering (ECE:452)</h3>
                     <p>Mobile and web system to increase Professor and Student communication by adding in-class quizzes, questions and feedback to the features offered in existing learning management systems.</p>
                     <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
@@ -164,13 +164,13 @@ class HomePage extends Component {
                 </Row>
                 <Row>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://github.com/phurushekar/wearther" target="_blank">Wea(r)ther</a></h2>
+                    <h2 className="text-center"><a href="https://github.com/phurushekar/wearther" target="_blank" rel="noopener noreferrer">Wea(r)ther</a></h2>
                     <h3>Personal Project - Current</h3>
                     <p>Cross-platform mobile app that displays the weather and recommends clothing based on the weather.</p>
                     <p><strong>Tech Used:</strong> React Native, Redux</p>
                   </Col>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://www.ibm.com/employment/vault/" target="_blank">IBM Vault Challenge 2018</a></h2>
+                    <h2 className="text-center"><a href="https://www.ibm.com/employment/vault/" target="_blank" rel="noopener noreferrer">IBM Vault Challenge 2018</a></h2>
                     <h3>Winner: 64 of 300+ (Top 2%)</h3>
                     <p>Solved 6 challenges that required parsing website code, cracking cyphers and editing given code in order to decode and identify the passwords for each level.</p>
                     <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
@@ -178,13 +178,13 @@ class HomePage extends Component {
                 </Row>
                 <Row>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://devpost.com/software/gradian-1qp0ac" target="_blank">Gradian</a></h2>
+                    <h2 className="text-center"><a href="https://devpost.com/software/gradian-1qp0ac" target="_blank" rel="noopener noreferrer">Gradian</a></h2>
                     <h3>Best Education Hack + Top 10 (of 135 teams) @ PennApps - January 2018</h3>
                     <p>Web and Mobile app to increase in-class student and professor interactions by allowing students to ask anonymous questions, give live feedback and answer in-class quizzes.</p>
                     <p><strong>Tech Used:</strong> React Native, React, AdobeXD</p>
                   </Col>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://devpost.com/software/hackprinceton-njw1bq" target="_blank">LiveNote</a></h2>
+                    <h2 className="text-center"><a href="https://devpost.com/software/hackprinceton-njw1bq" target="_blank" rel="noopener noreferrer">LiveNote</a></h2>
                     <h3>Hack Princeton - Fall 2017</h3>
                     <p>Collaborative note taking application that merges notes from multiple students in real-time during lecture to allow students to transcribe all of the information given in lecture.</p>
                     <p><strong>Tech Used:</strong> JavaScript</p>
