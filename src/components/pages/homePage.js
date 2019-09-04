@@ -43,7 +43,6 @@ class HomePage extends Component {
               <h1 className="intro fade-in">
                 I'm Phurushotham (Phuru) Shekar 
               </h1>
-
               <p className="intro fade-in">Come take a look at what I'm up to!</p>
             </main>
           </div>
