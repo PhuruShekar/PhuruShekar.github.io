@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0d3ba4ab.chunk.css",
-    "main.js": "/static/js/main.2ae0f78d.chunk.js",
-    "main.js.map": "/static/js/main.2ae0f78d.chunk.js.map",
+    "main.js": "/static/js/main.174a43a3.chunk.js",
+    "main.js.map": "/static/js/main.174a43a3.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.9438f410.js",
     "runtime~main.js.map": "/static/js/runtime~main.9438f410.js.map",
     "static/js/2.208b1834.chunk.js": "/static/js/2.208b1834.chunk.js",
     "static/js/2.208b1834.chunk.js.map": "/static/js/2.208b1834.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.49c2c6617adc542ce14ee5e26ab12362.js": "/precache-manifest.49c2c6617adc542ce14ee5e26ab12362.js",
+    "precache-manifest.d6933499b66d40ba71283b67c6ea160c.js": "/precache-manifest.d6933499b66d40ba71283b67c6ea160c.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.0d3ba4ab.chunk.css.map": "/static/css/main.0d3ba4ab.chunk.css.map",
-    "static/media/Phuru_Shekar_Resume.pdf": "/static/media/Phuru_Shekar_Resume.222cd593.pdf",
+    "static/media/Phuru_Shekar_Resume.pdf": "/static/media/Phuru_Shekar_Resume.21fad29e.pdf",
     "static/media/me.jpg": "/static/media/me.6f5f8071.jpg",
     "static/media/default.css": "/static/media/mtnpix.5038045b.png"
   }
