@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Col, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import me from "../../Assets/img/me.jpg";
 import doc from "../../Assets/doc/Phuru_Shekar_Resume.pdf";
 
@@ -36,6 +37,9 @@ class HomePage extends Component {
                 <li><a  target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://devpost.com/phurushekar"><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost" /></a></li>
+                 <li><a   target="_blank" 
+                rel="noopener noreferrer" 
+                href={`mailto:${email1}${email2}@gmail.com`}><FontAwesomeIcon icon={faEnvelope} alt="email" /></a></li>
               </ul>
               <h1 className="intro fade-in">
                 Welcome! 
@@ -102,8 +106,7 @@ class HomePage extends Component {
                    <ul>
                        <li>Java</li>
                        <li>JavaScript</li>
-                       <li>React.js</li>
-                       <li>React Native</li>
+                       <li>HTML/CSS</li>
                        <li>C</li>
                        <li>MATLAB</li>  
                    </ul>
@@ -114,13 +117,14 @@ class HomePage extends Component {
                            <li>Git</li>
                            <li>Node.js</li>
                            <li>Unix Terminal</li>
-                           <li>MongoDB</li>
+                           <li>React.js</li>
+                           <li>React Native</li>
                            <li>Drupal</li>
                            <li>Wordpress</li>
                            <li>Bootstrap</li>
+                           <li>MongoDB</li>
                            <li>Adobe XD</li>
                            <li>Photoshop</li>
-                           <li>AfterEffects</li>
                        </ul>
                    </Col>
                </Row>
@@ -138,6 +142,7 @@ class HomePage extends Component {
                       <li>Algorithms</li>
                       <li>Machine Learning for Engineers</li>
                       <li>Information and Network Security</li>
+                      <li>Digital System Design</li>
                    </ul>
                </Row>
            </Grid>
