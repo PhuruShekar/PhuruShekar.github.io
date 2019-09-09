@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {
-    Link
-  }   from 'react-router-dom' ;
   import { Navbar, Nav, NavItem } from "react-bootstrap";
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
   import doc from '../../Assets/doc/Phuru_Shekar_Resume.pdf';
+
+  const email1="phuru";
+  const email2="shotham";
 
 class Footer extends Component {
   render() {
@@ -53,6 +54,13 @@ class Footer extends Component {
                 href="https://devpost.com/phurushekar"
               >
                 <a><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost"/></a>
+              </NavItem>
+              <NavItem 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                href={`mailto:${email1}${email2}@gmail.com`}
+              >
+                <a><FontAwesomeIcon icon={faEnvelope} alt="email"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
