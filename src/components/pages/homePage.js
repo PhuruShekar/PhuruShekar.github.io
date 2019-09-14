@@ -108,6 +108,7 @@ class HomePage extends Component {
                        <li>JavaScript</li>
                        <li>HTML/CSS</li>
                        <li>C</li>
+                       <li>Python</li>
                        <li>MATLAB</li>  
                    </ul>
                    </Col>
@@ -135,6 +136,8 @@ class HomePage extends Component {
                        <li>Software Engineering</li>
                        <li>Systems Programming</li>
                        <li>Computer Architecture</li>  
+                       <li>Digital Logic Design</li>
+                       <li>Linear Systems and Signals</li>
 
                    </ul>
                    <h3>Current</h3>
