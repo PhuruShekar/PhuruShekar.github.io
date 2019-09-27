@@ -13,7 +13,7 @@ class Footer extends Component {
         <Navbar className="nav foot">
           <Navbar.Header>
            <Navbar.Brand>
-             <a><Navbar.Link href="https://github.com/PhuruShekar/PhuruShekar.github.io"> <strong> &copy; </strong> 2019 Phurushotham (Phuru) Shekar</Navbar.Link></a>
+             <a href="https://github.com/PhuruShekar/PhuruShekar.github.io"><Navbar.Link href="https://github.com/PhuruShekar/PhuruShekar.github.io"> <strong> &copy; </strong> 2019 Phurushotham (Phuru) Shekar</Navbar.Link></a>
            </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-foot" />
           </Navbar.Header>
@@ -25,42 +25,54 @@ class Footer extends Component {
                 href="https://github.com/phurushekar"
                 className = "icon"
               >
-                <a><FontAwesomeIcon icon={['fab', 'github']} alt="github" /></a>
+                <a target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://github.com/phurushekar"><FontAwesomeIcon icon={['fab', 'github']} alt="github" /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://linkedin.com/in/phurushotham-shekar"
               >
-                <a><FontAwesomeIcon icon={['fab', 'linkedin-in']} alt="linkedin"/></a>
+                <a target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://linkedin.com/in/phurushotham-shekar"><FontAwesomeIcon icon={['fab', 'linkedin-in']} alt="linkedin"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://facebook.com/IminPeru"
               >
-                <a><FontAwesomeIcon icon={['fab', 'facebook-f']} alt="facebook" /></a>
+                <a  target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://facebook.com/IminPeru"><FontAwesomeIcon icon={['fab', 'facebook-f']} alt="facebook" /></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://instagram.com/iminperu"
               >
-                <a><FontAwesomeIcon icon={['fab', 'instagram']} alt="instagram"/></a>
+                <a target="_blank"
+                rel="noopener noreferrer" 
+                href="https://instagram.com/iminperu"><FontAwesomeIcon icon={['fab', 'instagram']} alt="instagram"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://devpost.com/phurushekar"
               >
-                <a><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost"/></a>
+                <a   target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://devpost.com/phurushekar"><FontAwesomeIcon icon={['fab', 'dochub']} alt="devpost"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 href={`mailto:${email1}${email2}@gmail.com`}
               >
-                <a><FontAwesomeIcon icon={faEnvelope} alt="email"/></a>
+                <a   target="_blank" 
+                rel="noopener noreferrer" 
+                href={`mailto:${email1}${email2}@gmail.com`}><FontAwesomeIcon icon={faEnvelope} alt="email"/></a>
               </NavItem>
               <NavItem 
                 target="_blank" 
@@ -68,7 +80,9 @@ class Footer extends Component {
                 href={doc} 
                 window
               >
-                <a>Résumé</a>
+                <a target="_blank" 
+                rel="noopener noreferrer" 
+                href={doc} >Résumé</a>
               </NavItem>
             </Nav>
           </Navbar.Collapse>

@@ -5,11 +5,6 @@ import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import me from "../../Assets/img/me.jpg";
 import doc from "../../Assets/doc/Phuru_Shekar_Resume.pdf";
 
-import { HashRouter as Router, Route, Link as Linky } from "react-router-dom";
-
-//import { Document, Page } from 'react-pdf'
-import { HashLink as Link } from "react-router-hash-link";
-
 const email1 = "phurus";
 const email2 = "hotham";
 class HomePage extends Component {
@@ -133,6 +128,7 @@ class HomePage extends Component {
                <h2>Coursework</h2>
                    <ul>
                        <li>Data Structures</li>
+                       <li>Linear Algebra</li>
                        <li>Software Engineering</li>
                        <li>Systems Programming</li>
                        <li>Computer Architecture</li>  
