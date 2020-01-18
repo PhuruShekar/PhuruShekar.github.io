@@ -128,20 +128,23 @@ class HomePage extends Component {
                <h2>Coursework</h2>
                    <ul>
                        <li>Data Structures</li>
+                       <li>Algorithms</li>
                        <li>Linear Algebra</li>
                        <li>Software Engineering</li>
                        <li>Systems Programming</li>
                        <li>Computer Architecture</li>  
-                       <li>Digital Logic Design</li>
+                       <li>Machine Learning for Engineers</li>
+                       <li>Information and Network Security</li>
+                       <li>Digital System Design</li>
                        <li>Linear Systems and Signals</li>
 
                    </ul>
                    <h3>Current</h3>
                    <ul>
-                      <li>Algorithms</li>
-                      <li>Machine Learning for Engineers</li>
-                      <li>Information and Network Security</li>
-                      <li>Digital System Design</li>
+                      <li>Databases</li>
+                      <li>Hardware Security</li>
+                      <li>Computer Systems</li>
+                      <li>Capstone: Senior Design Project</li>
                    </ul>
                </Row>
            </Grid>
