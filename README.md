@@ -1,4 +1,4 @@
-# PhuruShekar.github.io
+# PhuruShekar.com
 My Personal Site
 
-Creating this site with React!
+The site is made with React and Reacct-Bootstrap!
