@@ -133,7 +133,7 @@ class HomePage extends Component {
                        <li>Software Engineering</li>
                        <li>Systems Programming</li>
                        <li>Computer Architecture</li>  
-                       <li>Machine Learning for Engineers</li>
+                       <li>Machine Learning</li>
                        <li>Information and Network Security</li>
                        <li>Digital System Design</li>
                        <li>Linear Systems and Signals</li>
@@ -142,9 +142,9 @@ class HomePage extends Component {
                    <h3>Current</h3>
                    <ul>
                       <li>Databases</li>
-                      <li>Hardware Security</li>
+                      <li>Smart Grids</li>
                       <li>Computer Systems</li>
-                      <li>Capstone: Senior Design Project</li>
+                      <li>Senior Design Capstone Project</li>
                    </ul>
                </Row>
            </Grid>
@@ -155,29 +155,30 @@ class HomePage extends Component {
             <h1 className="text-center">Projects</h1>
               <Grid>
                 <Row>
+                <Col md={6} className = "proj">
+                    <h2 className="text-center"><a href="https://github.com/Joshssiegel/Hark" target="_blank" rel="noopener noreferrer">hARk</a></h2>
+                    <h3>Senior Capstone Design Project - Current</h3>
+                    <p>An AR App and Wearable Device system to help the hearing impaired see and feel sound.</p>
+                    <p>We're currently working on this, be sure to check out our completed project in late April!</p>
+                    <p><strong>Tech Used:</strong> Python, Java for Android</p>
+                  </Col>
                   <Col md={6} className = "proj">
                     <h2 className="text-center"><a href="https://devpost.com/software/brewba" target="_blank" rel="noopener noreferrer">Brewba</a></h2>
                     <h3>BitCamp 2019</h3>
                     <p>Automated bubble tea machine with a conveyer belt system to dispense each part of the beverage into the cup.</p>
                     <p><strong>Tech Used:</strong> Arduino, IOT devices, Duct Tape</p>
                   </Col>
-                  <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank" rel="noopener noreferrer">Minerva</a></h2>
-                    <h3>Term Project – Software Engineering (ECE:452)</h3>
-                    <p>Mobile and web system to increase Professor and Student communication by adding in-class quizzes, questions and feedback to the features offered in existing learning management systems.</p>
-                    <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
-                  </Col>
                 </Row>
                 <Row>
                   <Col md={6} className = "proj">
-                    <h2 className="text-center"><a href="https://github.com/phurushekar/wearther" target="_blank" rel="noopener noreferrer">Wea(r)ther</a></h2>
-                    <h3>Personal Project - Current</h3>
-                    <p>Cross-platform mobile app that displays the weather and recommends clothing based on the weather.</p>
-                    <p><strong>Tech Used:</strong> React Native, Redux</p>
+                    <h2 className="text-center"><a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank" rel="noopener noreferrer">Minerva</a></h2>
+                    <h3>Term Project – Software Engineering</h3>
+                    <p>Mobile and web system to increase Professor and Student communication by adding in-class quizzes, questions and feedback to the features offered in existing learning management systems.</p>
+                    <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
                   </Col>
                   <Col md={6} className = "proj">
                     <h2 className="text-center"><a href="https://www.ibm.com/employment/vault/" target="_blank" rel="noopener noreferrer">IBM Vault Challenge 2018</a></h2>
-                    <h3>Winner: 64 of 300+ (Top 2%)</h3>
+                    <h3>Winner: 64 of 3000+ (Top 2%)</h3>
                     <p>Solved 6 challenges that required parsing website code, cracking cyphers and editing given code in order to decode and identify the passwords for each level.</p>
                     <p><strong>Tech Used:</strong> React Native, React.js, MongoDB</p>
                   </Col>
