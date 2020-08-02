@@ -1,50 +1,51 @@
 {
-    "name":"phurushekar.github.io",
-    "version":"1.1.1",
-    "private":true,
-    "homepage":"https://phurushekar.com",
-    "devDependencies":{
-        "@fortawesome/fontawesome-svg-core":"*",
-        "@fortawesome/free-solid-svg-icons":"*",
-        "bootstrap":"*","file-loader":"*",
-        "gh-pages":"*",
-        "image-webpack-loader":"*",
-        "react-bootstrap":"*",
-        "react-scripts":"*",
-        "tunnel-agent":"*"
+    "name": "phurushekar.github.io",
+    "version": "1.1.1",
+    "private": true,
+    "homepage": "https://phurushekar.com",
+    "devDependencies": {
+        "@fortawesome/fontawesome-svg-core": "*",
+        "@fortawesome/free-solid-svg-icons": "*",
+        "bootstrap": "*",
+        "file-loader": "*",
+        "gh-pages": "*",
+        "image-webpack-loader": "*",
+        "react-scripts": "*",
+        "tunnel-agent": "*"
     },
-        "dependencies":{
-            "@fortawesome/free-brands-svg-icons":"*",
-            "@fortawesome/free-regular-svg-icons":"*",
-            "@fortawesome/react-fontawesome":"*",
-            "node-sass-chokidar":"*",
-            "react":"*",
-            "react-device-detect":"*",
-            "react-dom":"*",
-            "react-pdf":"*",
-            "react-router-dom":"*",
-            "react-router-hash-link":"*"
-            },
-            "scripts":{
-                "predeploy":"npm run build",
-                "deploy":"gh-pages -b master -d build",
-                "start":"react-scripts start",
-                "build":"react-scripts build",
-                "test":"echo \"Error: no test specified\" && exit 1",
-                "scss":"node-sass-chokidar --watch ./src/Assets/scss -o ./src/Assets/css",
-                "eject":"react-scripts eject",
-                "update:packages":"node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
-                },
-                "browserslist":{
-                    "production":[
-                    ">0.2%",
-                    "not dead",
-                    "not op_mini all"
-                    ],
-                    "development":[
-                        "last 1 chrome version",
-                        "last 1 firefox version",
-                        "last 1 safari version"
-                    ]
-                }
-    } 
+    "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "*",
+        "@fortawesome/free-regular-svg-icons": "*",
+        "@fortawesome/react-fontawesome": "*",
+        "node-sass-chokidar": "*",
+        "react": "*",
+        "react-bootstrap": "^0.33.1",
+        "react-device-detect": "*",
+        "react-dom": "*",
+        "react-pdf": "*",
+        "react-router-dom": "*",
+        "react-router-hash-link": "*"
+    },
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -b master -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "node-sass-chokidar --watch ./src/Assets/scss -o ./src/Assets/css",
+        "eject": "react-scripts eject",
+        "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
