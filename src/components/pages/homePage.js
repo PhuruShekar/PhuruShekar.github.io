@@ -297,7 +297,7 @@ class HomePage extends Component {
                     and identify the passwords for each level.
                   </p>
                   <p>
-                    <strong>Tech Used:</strong> React Native, React.js, MongoDB
+                    <strong>Tech Used:</strong> HTML, JavaScript
                   </p>
                 </Col>
               </Row>
