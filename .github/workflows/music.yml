@@ -1,0 +1,46 @@
+# Once a day: pull my Last.fm listening into music.json and publish it on the `data` branch,
+# where the Music tab reads it. Nothing is committed to gh-pages or master, so releasing with
+# `git push origin gh-pages:master` keeps working. Explained in docs/music-pipeline.html.
+name: Music
+
+on:
+  schedule:
+    - cron: '17 9 * * *' # 09:17 UTC every day; off the hour, when GitHub's queue is quieter
+  workflow_dispatch: # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write # to push the data branch
+
+concurrency: music
+
+jobs:
+  music:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pull from Last.fm
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_USER: pshekr
+        run: node .github/scripts/music.mjs
+
+      # One commit holding only music.json, force-pushed, so the branch never grows.
+      - name: Publish to the data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir out && mv music.json out/ && cd out
+          git init -q -b data
+          git add music.json
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -qm "music.json for $(date -u +%F)"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Music pipeline</title>
+  <meta name="description" content="How the Music tab on phurushekar.com gets its data: a daily GitHub Action, the data branch, and the live Last.fm call. For Phuru only; not linked from the site.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Geist:wght@400;500&display=swap">
+  <style>
+    /* Same role tokens as the site (docs/DESIGN.md B2). */
+    :root {
+      color-scheme: light;
+      --bg: #fffdf8; --tile: #e8f2ec; --field: #173b2a; --text: #1d2621; --text-muted: #5c6a62;
+      --primary: #2f6b4f; --action: #b25a17; --highlight: #fbbf24; --on-field: #fffdf8; --peach: #ffc89a; --focus: #b25a17;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #0d2419; --tile: #173b2a; --field: #1f4a36; --text: #e8f2ec; --text-muted: #a9bfb2;
+        --primary: #6ee7b7; --action: #f4a261; --on-field: #e8f2ec; --focus: #f4a261;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1.125rem/1.6 'Geist', system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+    main { max-width: 72rem; margin: 0 auto; padding: clamp(40px, 8vw, 96px) clamp(16px, 4vw, 32px) 96px; }
+    h1, h2 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; color: var(--primary); text-wrap: balance; margin: 0; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: .95; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.05; letter-spacing: -0.02em; margin: clamp(56px, 8vw, 96px) 0 20px; }
+    h3 { font: 500 1.125rem/1.3 'Geist', system-ui, sans-serif; margin: 28px 0 8px; }
+    p, li { max-width: 68ch; }
+    p { margin: 0 0 14px; }
+    a { color: var(--action); text-underline-offset: 3px; }
+    a:hover { color: var(--text); text-decoration-thickness: 3px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    code { font: .9em/1.4 ui-monospace, Consolas, monospace; background: var(--tile); padding: .1em .35em; }
+    pre { background: var(--tile); padding: 16px 20px; overflow-x: auto; margin: 0 0 16px; }
+    pre code { background: none; padding: 0; font-size: .875rem; line-height: 1.55; }
+    .lede { font-size: 1.375rem; line-height: 1.45; max-width: 52ch; margin-top: 24px; }
+    .small { font-size: .9375rem; color: var(--text-muted); }
+    ol, ul { padding-left: 1.4em; }
+    li + li { margin-top: 8px; }
+    .flow { background: var(--field); color: var(--on-field); margin: 32px 0 0; padding: clamp(20px, 3vw, 40px); }
+    .flow svg { display: block; width: 100%; height: auto; }
+    .flow figcaption { margin-top: 16px; font-size: .9375rem; max-width: 72ch; }
+    table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; }
+    th, td { text-align: left; vertical-align: top; padding: 12px 16px 12px 0; }
+    th { font-weight: 500; }
+    tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--tile) 60%, transparent); }
+    tbody td:first-child, tbody th:first-child { padding-left: 12px; }
+    thead th:first-child { padding-left: 12px; }
+    .wide { overflow-x: auto; }
+    .two { display: grid; gap: 24px 48px; }
+    @media (min-width: 900px) { .two { grid-template-columns: 1fr 1fr; } }
+    .two > div > h3:first-child { margin-top: 0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>How the Music tab gets its data</h1>
+  <p class="lede">Once a day a GitHub Action asks Last.fm for my top five tracks and writes them to <code>music.json</code>. The site reads that file. “Last played” is the only part fetched live, straight from Last.fm, when someone opens the tab.</p>
+  <p class="small">For me only. This page lives in <code>docs/</code>, which <code>_config.yml</code> keeps off phurushekar.com, and nothing links to it.</p>
+
+  <figure class="flow">
+    <svg viewBox="0 0 960 330" role="img" aria-labelledby="flow-t flow-d">
+      <title id="flow-t">Two paths into the Music tab</title>
+      <desc id="flow-d">Daily path: GitHub Actions at 09:17 UTC calls the Last.fm API with the secret key, writes music.json, and force-pushes it to the data branch; the Music tab reads it from raw.githubusercontent.com. Live path: when a visitor opens the tab, their browser calls the Last.fm API with the public page key for the last played track.</desc>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ffc89a"/></marker>
+      </defs>
+      <g font-family="Geist, system-ui, sans-serif" font-size="15" fill="#fffdf8">
+        <text x="0" y="22" fill="#ffc89a" font-weight="500">Once a day</text>
+        <g stroke="#ffc89a" stroke-width="2" fill="none">
+          <rect x="0" y="40" width="190" height="78"/><rect x="250" y="40" width="190" height="78"/>
+          <rect x="500" y="40" width="190" height="78"/><rect x="750" y="40" width="210" height="78"/>
+          <path d="M190 79h56M440 79h56M690 79h56" marker-end="url(#arrow)"/>
+          <path d="M855 118v92" marker-end="url(#arrow)"/>
+        </g>
+        <text x="16" y="72" font-weight="500">GitHub Actions</text><text x="16" y="96" opacity=".8">09:17 UTC, music.yml</text>
+        <text x="266" y="72" font-weight="500">Last.fm API</text><text x="266" y="96" opacity=".8">secret key</text>
+        <text x="516" y="72" font-weight="500">music.json</text><text x="516" y="96" opacity=".8">top 5 + last played</text>
+        <text x="766" y="72" font-weight="500">data branch</text><text x="766" y="96" opacity=".8">one commit, force-pushed</text>
+        <text x="0" y="192" fill="#ffc89a" font-weight="500">When someone opens the tab</text>
+        <g stroke="#ffc89a" stroke-width="2" fill="none">
+          <rect x="0" y="210" width="190" height="78"/><rect x="250" y="210" width="190" height="78"/>
+          <rect x="750" y="214" width="210" height="78" fill="#fffdf8" stroke="#fffdf8"/>
+          <path d="M246 249h-52" marker-end="url(#arrow)"/>
+          <path d="M440 249h306" marker-end="url(#arrow)" stroke-dasharray="6 6"/>
+        </g>
+        <text x="16" y="242" font-weight="500">Last.fm API</text><text x="16" y="266" opacity=".8">public page key</text>
+        <text x="266" y="242" font-weight="500">Visitor’s browser</text><text x="266" y="266" opacity=".8">script.js showMusic()</text>
+        <text x="460" y="236" opacity=".8">last played, live</text>
+        <text x="766" y="246" fill="#173b2a" font-weight="500">Music tab</text><text x="766" y="270" fill="#173b2a">reads both</text>
+      </g>
+    </svg>
+    <figcaption>The top path runs whether or not anyone visits. The bottom path runs only when someone opens the Music tab, so a visitor who never does sends nothing to Last.fm.</figcaption>
+  </figure>
+
+  <h2>The daily run, step by step</h2>
+  <ol>
+    <li><strong>09:17 UTC.</strong> GitHub starts <code>.github/workflows/music.yml</code>. Scheduled workflows only run from the repository’s default branch, which is <code>gh-pages</code>, so the file has to be pushed there. The odd minute avoids the top of the hour, when GitHub’s queue is busiest; a run can still start a few minutes late.</li>
+    <li><strong>Checkout.</strong> It checks out only <code>.github/scripts</code>, the one folder it needs.</li>
+    <li><strong>Pull from Last.fm.</strong> <code>node .github/scripts/music.mjs</code> makes two calls with the key from the <code>LASTFM_API_KEY</code> secret:
+      <ul>
+        <li><code>user.getrecenttracks</code>, limit 1: what I played last, or what’s playing right now.</li>
+        <li><code>user.gettoptracks</code>, period <code>1month</code>, limit 5. Last.fm’s “1month” means the last 30 days, not the calendar month, so the tab says “last 30 days”.</li>
+      </ul>
+      It writes the answer to <code>music.json</code>. If either call fails, the script throws, the run goes red, nothing is pushed, and GitHub emails me.</li>
+    <li><strong>Publish.</strong> A fresh git repository is made around that one file, committed as <code>github-actions[bot]</code> and force-pushed to the <code>data</code> branch. The branch only ever holds one commit, so it never grows.</li>
+    <li><strong>Read.</strong> When the Music tab opens, <code>script.js</code> fetches <code>https://raw.githubusercontent.com/PhuruShekar/PhuruShekar.github.io/data/music.json</code>. GitHub caches raw files for about five minutes, so a new file can take that long to show up.</li>
+  </ol>
+
+  <h2>Why a separate <code>data</code> branch</h2>
+  <p>I make changes on <code>gh-pages</code> and release with <code>git push origin gh-pages:master</code>. If the Action committed <code>music.json</code> to either branch every day, my local <code>gh-pages</code> would always be behind, and the release push would be refused until I pulled. A branch that only the Action writes to stays out of the way: my release flow is unchanged and the music updates without a release.</p>
+  <p>The cost is one cross-origin request to raw.githubusercontent.com, made only when someone opens the Music tab. The alternative was switching GitHub Pages to deploy from an Action, which would also have changed how every release goes out.</p>
+
+  <h2>Two keys, and why one of them is public</h2>
+  <div class="two">
+    <div>
+      <h3>The Action’s key: secret</h3>
+      <p>Stored as the repository secret <code>LASTFM_API_KEY</code> (Settings → Secrets and variables → Actions). It never appears in the repository or in logs; GitHub masks it.</p>
+    </div>
+    <div>
+      <h3>The page’s key: public on purpose</h3>
+      <p>“Last played” has to be asked for from the visitor’s browser, so that key is in <code>script.js</code> (<code>LASTFM_KEY</code>) where anyone can read it. A Last.fm API key on its own can only read public data, such as my scrobbles. It can’t post, scrobble or change my account; that needs the separate shared secret, which neither path uses.</p>
+      <p>It’s a second key made just for the page, so if anyone abuses it I can delete it at <a href="https://www.last.fm/api/accounts">last.fm/api/accounts</a> without breaking the Action.</p>
+    </div>
+  </div>
+  <p>While <code>LASTFM_KEY</code> is empty, the page skips the live call and shows the last-played track from <code>music.json</code> instead, marked “from the daily update”.</p>
+
+  <h2>What’s in music.json</h2>
+<pre><code>{
+  "user": "pshekr",
+  "updated": "2026-10-21T09:17:42.000Z",   // when the Action ran; the page shows its age
+  "period": "1month",                      // Last.fm's rolling 30 days
+  "recent": {                              // fallback for "last played"
+    "track": "…", "artist": "…", "url": "https://www.last.fm/music/…",
+    "nowPlaying": false,
+    "playedAt": "2026-10-21T08:55:00.000Z"
+  },
+  "top": [                                 // most played first, up to 5
+    { "track": "…", "artist": "…", "url": "…", "plays": 42 }
+  ]
+}</code></pre>
+
+  <h2>When something breaks</h2>
+  <div class="wide">
+    <table>
+      <thead><tr><th scope="col">What fails</th><th scope="col">What visitors see</th><th scope="col">What I do</th></tr></thead>
+      <tbody>
+        <tr><td>Last.fm is down at 09:17</td><td>Yesterday’s top five, with “updated 1 day ago”</td><td>Nothing; tomorrow’s run catches up. Or press Run workflow.</td></tr>
+        <tr><td>Last.fm is down when a visitor opens the tab</td><td>Last played from <code>music.json</code>, marked “from the daily update”</td><td>Nothing</td></tr>
+        <tr><td>raw.githubusercontent.com is down, or the data branch doesn’t exist yet</td><td>“Couldn’t load my top tracks”, a Try again button and a link to Last.fm</td><td>Run the workflow once (below)</td></tr>
+        <tr><td>The secret is missing or the key was deleted</td><td>An ever-older “updated … ago”</td><td>Red runs and emails; make a new key and update the secret</td></tr>
+        <tr><td>No commits to the repository for 60 days</td><td>Same: an ever-older date</td><td>GitHub turns scheduled workflows off in public repos with no activity for 60 days. Re-enable it on the Actions tab</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>One-time setup</h2>
+  <ol>
+    <li>Make two API keys at <a href="https://www.last.fm/api/account/create">last.fm/api/account/create</a>, one called “phurushekar.com Action” and one “phurushekar.com page”. The callback URL can stay empty.</li>
+    <li>Add the Action’s key as a repository secret named <code>LASTFM_API_KEY</code>.</li>
+    <li>Paste the page’s key into <code>const LASTFM_KEY = ''</code> in <code>script.js</code>.</li>
+    <li>Commit and push <code>gh-pages</code> (the workflow has to be on the default branch to be scheduled), then release with <code>git push origin gh-pages:master</code>.</li>
+    <li>Actions tab → Music → Run workflow, to make the <code>data</code> branch now instead of tomorrow morning.</li>
+    <li>Check it: open the raw URL above, then the Music tab on the site.</li>
+  </ol>
+
+  <h2>Running and checking it</h2>
+  <ul>
+    <li><strong>Run now:</strong> Actions → Music → Run workflow. The log’s last line says how many tracks it found and what played last.</li>
+    <li><strong>See the file:</strong> the raw URL above, or the <code>data</code> branch on GitHub.</li>
+    <li><strong>Change the time:</strong> the <code>cron</code> line in <code>music.yml</code> is in UTC. <code>17 9 * * *</code> is 2:17 a.m. in Seattle in summer, 1:17 a.m. in winter.</li>
+    <li><strong>Change the user:</strong> <code>LASTFM_USER</code> in <code>music.yml</code> and <code>LASTFM_USER</code> in <code>script.js</code>.</li>
+  </ul>
+
+  <h2>Saying it out loud</h2>
+  <p>“My site is static, with no server. For the music section, a scheduled GitHub Action runs once a day as a free cron job: it calls the Last.fm API with a key kept in GitHub Secrets, writes a small JSON file, and force-pushes it to a branch that only holds data. The page reads that file, so visitors never wait on Last.fm for the top tracks. The one live piece, the last song I played, is fetched from the browser only when someone opens the tab, and if Last.fm doesn’t answer, the page falls back to the daily copy and shows how old it is.”</p>
+</main>
+</body>
+</html>
