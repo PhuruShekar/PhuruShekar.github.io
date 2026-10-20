@@ -4,93 +4,294 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phuru Shekar · Software Engineer</title>
-  <meta name="description" content="Phurushotham (Phuru) Shekar is a Software Development Engineer at AWS IoT, working on the frontend of the AWS IoT Core console.">
-  <meta name="theme-color" content="#2f6b4f">
+  <meta name="description" content="Phurushotham (Phuru) Shekar is a Software Development Engineer at AWS IoT, building the AWS IoT Core console.">
+  <meta name="author" content="Phurushotham (Phuru) Shekar">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fffdf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d2419" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://phurushekar.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Phuru Shekar">
   <meta property="og:url" content="https://phurushekar.com/">
   <meta property="og:title" content="Phuru Shekar · Software Development Engineer">
-  <meta property="og:description" content="Software Development Engineer at AWS IoT, working on the frontend of the AWS IoT Core console.">
+  <meta property="og:description" content="Software Development Engineer at AWS IoT, building the AWS IoT Core console.">
   <meta property="og:image" content="https://phurushekar.com/assets/me.jpg">
+  <meta property="og:image:alt" content="Portrait of Phuru Shekar">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="favicon.ico">
+  <script>
+    // Theme before first paint: a saved choice wins, otherwise the OS decides (CSS).
+    document.documentElement.classList.add('js');
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Geist:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script data-goatcounter="https://phurushekar.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <a class="skip" href="#journey">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <span id="new-tab" hidden>Opens in a new tab</span>
 
-  <header class="banner">
-    <div class="top wrap">
-      <a href="#top"><img src="assets/logo.png" alt="PS logo" class="logo" width="256" height="256"></a>
-      <nav aria-label="Main">
-        <a href="#journey">Journey</a>
-        <a href="#projects">Projects</a>
-        <a href="assets/Phuru_Shekar_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
-      </nav>
-    </div>
-    <div class="intro wrap" id="top">
-      <img class="photo" src="assets/me.jpg" alt="Phuru Shekar" width="750" height="750">
-      <h1>Phurushotham (Phuru) Shekar</h1>
-      <p>Software Development Engineer at <b>AWS IoT</b>.<br>For the past 5 years I've been a part of the <b>AWS IoT Core</b> console team.</p>
-      <div class="social">
-        <a href="https://github.com/phurushekar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/phurushotham-shekar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://devpost.com/phurushekar" target="_blank" rel="noopener" aria-label="Devpost"><i class="fa-brands fa-dochub"></i></a>
-        <a href="https://instagram.com/iminperu" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://facebook.com/IminPeru" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="mailto:phurushotham@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-      </div>
-    </div>
+  <header class="top">
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="Phuru Shekar, back to top" width="256" height="256"></a>
+    <nav aria-label="Main">
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#explore">Explore</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" aria-pressed="false" data-goatcounter-click="theme-toggle">Dark</button>
   </header>
 
-  <main class="wrap">
-    <section id="journey">
-      <h2><small>The path so far</small>Journey</h2>
-      <ol class="timeline">
-        <li class="now"><div class="when">Oct 2021 – Present</div><h3>Software Development Engineer, AWS IoT</h3><p>Building the frontend of the AWS IoT Core console.</p></li>
-        <li><div class="when">2020</div><h3>Graduated from Rutgers University – New Brunswick</h3><p>Electrical &amp; Computer Engineering (Computer Concentration), Minor in Computer Science.</p></li>
-        <li><div class="when">May 2019 – May 2020</div><h3>Web Developer Intern</h3><p>Rutgers University Student Affairs Marketing &amp; Communications Division.</p></li>
-        <li><div class="when">2017 – 2020</div><h3>TEDxRutgers</h3><p>Technology Director, then Vice-President, then President.</p></li>
-        <li><div class="when">2018 – 2020</div><h3>USACS</h3><p>HackRU Volunteer and Hacker Experience Organizer, then Mentor.</p></li>
-      </ol>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="name">
+      <div class="hero-in wrap">
+        <img class="photo" src="assets/me.jpg" alt="Portrait of Phuru Shekar" width="750" height="750" fetchpriority="high">
+        <h1 id="name">Phuru Shekar</h1>
+        <p class="lede">Software Development Engineer at AWS IoT, building the AWS IoT Core console. I’ve worked on its frontend since October 2021, mostly in TypeScript and React.</p>
+        <p class="actions">
+          <a class="btn" href="assets/Phuru_Shekar_Resume.pdf" data-goatcounter-click="link-resume">Résumé (PDF)</a>
+          <a href="mailto:phurushotham@gmail.com" data-goatcounter-click="link-email">Email</a>
+          <a href="https://github.com/phurushekar" target="_blank" rel="noopener" aria-describedby="new-tab" data-goatcounter-click="link-github">GitHub</a>
+          <a href="https://linkedin.com/in/phurushotham-shekar" target="_blank" rel="noopener" aria-describedby="new-tab" data-goatcounter-click="link-linkedin">LinkedIn</a>
+        </p>
+      </div>
+      <canvas id="ascii" aria-hidden="true"></canvas>
     </section>
 
-    <section id="projects">
-      <h2><small>Things I've built</small>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <a href="https://github.com/Joshssiegel/Hark" target="_blank" rel="noopener"><b>hARk</b><span>Senior Capstone</span><p>AR app and wearable device that help the hearing impaired see and feel sound.</p></a>
-          <a class="demo" href="https://www.youtube.com/watch?v=BrCxUXlMGhM" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch the demo</a>
+    <section class="field" id="journey" aria-labelledby="journey-h">
+      <div class="wrap">
+        <h2 id="journey-h">Journey</h2>
+        <ol class="timeline">
+          <li class="now">
+            <p class="when">Oct 2021 – now</p>
+            <div><h3>Software Development Engineer, AWS IoT</h3><p>Building the frontend of the AWS IoT Core console.</p></div>
+          </li>
+          <li>
+            <p class="when">2020</p>
+            <div><h3>Rutgers University – New Brunswick</h3><p>Graduated in Electrical &amp; Computer Engineering (Computer Concentration), minor in Computer Science.</p></div>
+          </li>
+          <li>
+            <p class="when">May 2019 – May 2020</p>
+            <div><h3>Web Developer Intern</h3><p>Rutgers University Student Affairs Marketing &amp; Communications Division.</p></div>
+          </li>
+          <li>
+            <p class="when">2018 – 2020</p>
+            <div><h3>USACS</h3><p>HackRU volunteer and Hacker Experience Organizer, then mentor.</p></div>
+          </li>
+          <li>
+            <p class="when">2017 – 2020</p>
+            <div><h3>TEDxRutgers</h3><p>Technology Director, then Vice-President, then President.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="projects wrap" id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+      <p class="intro">Six things I built with teams at Rutgers and at hackathons, 2017 to 2020. Open one for the story; each has its own link.</p>
+      <div class="tiles">
+        <article class="tile feature" id="hark" aria-labelledby="hark-h">
+          <div class="tile-in">
+            <h3 id="hark-h">hARk</h3>
+            <p class="meta">Senior capstone, Rutgers · 2020</p>
+            <p class="line">An AR app and a wearable device that help people who are hard of hearing see and feel sound.</p>
+            <ul class="links">
+              <li><a href="https://www.youtube.com/watch?v=BrCxUXlMGhM" target="_blank" rel="noopener" aria-describedby="new-tab">Demo video</a></li>
+              <li><a href="https://github.com/Joshssiegel/Hark" target="_blank" rel="noopener" aria-describedby="new-tab">GitHub</a></li>
+            </ul>
+            <div class="more" id="hark-more">
+              <p>The phone shows what’s being said and where sounds come from; the wearable turns them into touch. The code splits into speech-to-text, a sound classifier, a direction finder and a server that ties them together.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile" id="gradian" aria-labelledby="gradian-h">
+          <div class="tile-in">
+            <picture class="shot">
+              <source type="image/webp" srcset="assets/gradian-1-600.webp 600w, assets/gradian-1-1200.webp 1200w" sizes="(min-width: 1024px) 36vw, (min-width: 640px) 46vw, 96px">
+              <img src="assets/gradian-1-600.jpg" srcset="assets/gradian-1-600.jpg 600w, assets/gradian-1-1200.jpg 1200w" sizes="(min-width: 1024px) 36vw, (min-width: 640px) 46vw, 96px" width="600" height="400" loading="lazy" alt="Gradian’s student app on three phones: buttons to go slower or faster, quiet down or speak up, rate the lecture, and ask a question.">
+            </picture>
+            <h3 id="gradian-h">Gradian</h3>
+            <p class="meta">PennApps 2018 · <strong>Winner, Best Education Hack</strong></p>
+            <p class="line">Anonymous questions, live feedback and in-class quizzes.</p>
+            <ul class="links">
+              <li><a href="https://devpost.com/software/gradian-1qp0ac" target="_blank" rel="noopener" aria-describedby="new-tab">Devpost</a></li>
+            </ul>
+            <div class="more" id="gradian-more">
+              <p>Students rate a lecture’s volume and pace from a phone app while professors run warm-up questions with a built-in clicker. The web app gives students a live transcript, then a summary of key points and further reading when the lecture ends.</p>
+              <picture class="shot">
+                <source type="image/webp" srcset="assets/gradian-2-600.webp 600w, assets/gradian-2-1200.webp 1200w" sizes="(min-width: 1024px) 36vw, 92vw">
+                <img src="assets/gradian-2-600.jpg" srcset="assets/gradian-2-600.jpg 600w, assets/gradian-2-1200.jpg 1200w" sizes="(min-width: 1024px) 36vw, 92vw" width="600" height="400" loading="lazy" alt="Gradian’s professor remote: previous and next slide, live feedback icons, a private student question, and a four-option quiz with a Start button.">
+              </picture>
+              <p class="small">React, React Native, Redux, Firebase, Python and the Google Web Speech API. With Jeane Carlos, Ali Afzal and Aram Baghdassarian.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile" id="ibm-vault" aria-labelledby="ibm-vault-h">
+          <div class="tile-in">
+            <h3 id="ibm-vault-h">IBM Vault Challenge</h3>
+            <p class="meta">2018 · <strong>Winner, top 2% of 3,000+</strong></p>
+            <p class="line">Six levels of ciphers, hidden site code and passwords.</p>
+            <ul class="links">
+              <li><a href="https://www.ibm.com/employment/vault/" target="_blank" rel="noopener" aria-describedby="new-tab">IBM Vault</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tile" id="brewba" aria-labelledby="brewba-h">
+          <div class="tile-in">
+            <h3 id="brewba-h">Brewba</h3>
+            <p class="meta">Bitcamp 2019</p>
+            <p class="line">An automated bubble tea machine on a conveyor belt.</p>
+            <ul class="links">
+              <li><a href="https://devpost.com/software/brewba" target="_blank" rel="noopener" aria-describedby="new-tab">Devpost</a></li>
+            </ul>
+            <div class="more" id="brewba-more">
+              <p>A cup rides the belt past four stations: boba mix drops in, a coffee pot adds hot water, tapioca pearls fall in, and a stirrer drops for you to mix. A Python script starts the run over USB, an Arduino Uno drives the motors, and a Wemo smart plug switches the coffee pot on.</p>
+              <p class="small">Arduino and Python. With Ali Mohamad and Diane Tran.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile" id="minerva" aria-labelledby="minerva-h">
+          <div class="tile-in">
+            <h3 id="minerva-h">Minerva</h3>
+            <p class="meta">Software Engineering term project, Rutgers</p>
+            <p class="line">Quizzes, questions and feedback on top of existing learning management systems.</p>
+            <ul class="links">
+              <li><a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank" rel="noopener" aria-describedby="new-tab">GitHub</a></li>
+            </ul>
+            <div class="more" id="minerva-more">
+              <p>The repository is the mobile half of the system: a React Native app built with Expo that shares a MongoDB database with the web half through the MongoDB Stitch API.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile" id="livenote" aria-labelledby="livenote-h">
+          <div class="tile-in">
+            <h3 id="livenote-h">LiveNote</h3>
+            <p class="meta">HackPrinceton 2017</p>
+            <p class="line">Classmates’ lecture notes merged into one document in real time.</p>
+            <ul class="links">
+              <li><a href="https://devpost.com/software/hackprinceton-njw1bq" target="_blank" rel="noopener" aria-describedby="new-tab">Devpost</a></li>
+            </ul>
+            <div class="more" id="livenote-more">
+              <p>Everyone types their own notes and LiveNote builds a master copy from all of them; the more you add or fix, the more of the master you can see. Azure’s Linguistics API splits sentences into phrases, our own algorithm merges them back, and Socket.io hands each person a part of the master to edit.</p>
+              <p class="small">Node.js, Express, Socket.io, MySQL, Quill and Azure. With Kelvin Liu and Ezra Ablaza.</p>
+            </div>
+          </div>
+        </article>
+
+        <p class="elsewhere">More of my code is on <a href="https://github.com/phurushekar" target="_blank" rel="noopener" aria-describedby="new-tab" data-goatcounter-click="link-github">GitHub</a> and more hackathon projects on <a href="https://devpost.com/phurushekar" target="_blank" rel="noopener" aria-describedby="new-tab">Devpost</a>.</p>
+      </div>
+    </section>
+
+    <section class="skills" id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <h2 id="skills-h">Skills</h2>
+        <dl>
+          <div>
+            <dt>Frontend</dt>
+            <dd>TypeScript, React (<a href="#gradian">Gradian</a>, <a href="#minerva">Minerva</a>), HTML and CSS (this site, by hand), Node (<a href="#livenote">LiveNote</a>)</dd>
+          </div>
+          <div>
+            <dt>AWS</dt>
+            <dd>IoT Core, CloudWatch, S3, Lambda, CDK</dd>
+          </div>
+          <div>
+            <dt>For fun</dt>
+            <dd>Photography and Lightroom, cooking, rating food</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Explore (P5): opt-in, after everything important. Without JS the tab row is a row of
+         jump links and every panel shows; script.js turns it into tabs (#explore/<tab>). -->
+    <section class="explore wrap" id="explore" aria-labelledby="explore-h">
+      <h2 id="explore-h">Explore</h2>
+      <p class="intro">Off the clock: where I eat, where I hike, what I photograph and what I’m listening to.</p>
+      <div class="tabs">
+        <a href="#explore-food" data-tab="food" data-label="Food"><span>Food</span></a>
+        <a href="#explore-hikes" data-tab="hikes" data-label="Hikes"><span>Hikes</span></a>
+        <a href="#explore-photography" data-tab="photography" data-label="Photography"><span>Photography</span></a>
+        <a href="#explore-music" data-tab="music" data-label="Music"><span>Music</span></a>
+      </div>
+      <p class="vh" role="status" id="explore-status"></p>
+
+      <!-- Food and Hikes read places.json (format: docs/explore-content.md). -->
+      <div class="panel" id="explore-food">
+        <h3 class="panel-h">Food</h3>
+        <p class="panel-intro">Favorite restaurants in places I’ve been, rated out of 10. Every place I’ve rated is on <a href="https://beliapp.co/app/pshek" target="_blank" rel="noopener" aria-describedby="new-tab">Beli (@pshek)</a>.</p>
+        <div class="places" data-type="food">
+          <div class="map" role="region" aria-label="Map of the restaurants in the list"><p class="map-note">Loading the map…</p></div>
+          <ul class="place-list" aria-label="Restaurants"></ul>
+          <div class="state" data-empty="No restaurants written up here yet." data-error="Couldn’t load my restaurants." data-link="https://beliapp.co/app/pshek" data-link-text="See every rating on Beli"></div>
         </div>
-        <a href="https://github.com/rutgerssoftwareengineering/Minerva" target="_blank" rel="noopener"><b>Minerva</b><span>Software Engineering term project</span><p>Quizzes, questions and feedback on top of existing LMSs.</p></a>
-        <a href="https://devpost.com/software/brewba" target="_blank" rel="noopener"><b>Brewba</b><span>BitCamp 2019</span><p>Automated bubble tea machine on a conveyor belt.</p></a>
-        <a href="https://devpost.com/software/gradian-1qp0ac" target="_blank" rel="noopener"><b>Gradian</b><span>PennApps 2018 · Best Education Hack</span><p>Anonymous questions, live feedback and in-class quizzes.</p></a>
-        <a href="https://www.ibm.com/employment/vault/" target="_blank" rel="noopener"><b>IBM Vault Challenge</b><span>2018 · Winner, top 2% of 3000+</span><p>Ciphers, site code and passwords across 6 levels.</p></a>
-        <a href="https://devpost.com/software/hackprinceton-njw1bq" target="_blank" rel="noopener"><b>LiveNote</b><span>HackPrinceton 2017</span><p>Students' lecture notes merged in real time.</p></a>
+        <noscript><p class="state">The list needs JavaScript; every rating is on <a href="https://beliapp.co/app/pshek">Beli</a>.</p></noscript>
+      </div>
+
+      <div class="panel" id="explore-hikes">
+        <h3 class="panel-h">Hikes</h3>
+        <p class="panel-intro">Trails I’ve finished, newest first, each with a short review and a rating out of 10.</p>
+        <div class="places" data-type="hike">
+          <div class="map" role="region" aria-label="Map of the hikes in the list"><p class="map-note">Loading the map…</p></div>
+          <ul class="place-list" aria-label="Hikes"></ul>
+          <div class="state" data-empty="No hikes written up yet. The first few trails are on their way." data-error="Couldn’t load my hikes."></div>
+        </div>
+        <noscript><p class="state">The list of hikes needs JavaScript.</p></noscript>
+      </div>
+
+      <!-- Photography: add photos as <li> items (steps in docs/explore-content.md). 4:5 crop, alt each. -->
+      <div class="panel" id="explore-photography">
+        <h3 class="panel-h">Photography</h3>
+        <p class="panel-intro">Photos I’ve taken and edited in Lightroom.</p>
+        <ul class="photos" aria-label="Photos"></ul>
+        <p class="state empty-photos">No photos up yet. Some of my shots are on <a href="https://instagram.com/iminperu" target="_blank" rel="noopener" aria-describedby="new-tab">Instagram</a>.</p>
+      </div>
+
+      <!-- Music: last played live from Last.fm when this tab opens; top five from music.json,
+           which .github/workflows/music.yml writes to the data branch once a day. -->
+      <div class="panel" id="explore-music">
+        <h3 class="panel-h">Music</h3>
+        <div class="music">
+          <div class="music-last">
+            <h4>Last played</h4>
+            <div class="slot"></div>
+          </div>
+          <div class="music-top">
+            <h4>Most played, last 30 days</h4>
+            <div class="slot"></div>
+          </div>
+          <p class="small credit">Listening data from <a href="https://www.last.fm/user/pshekr" target="_blank" rel="noopener" aria-describedby="new-tab">Last.fm (pshekr)</a>. A GitHub Action rebuilds the top five once a day<span class="age"></span>.</p>
+        </div>
+        <noscript><p class="state">Last played and top tracks need JavaScript; they’re also on <a href="https://www.last.fm/user/pshekr">Last.fm</a>.</p></noscript>
       </div>
     </section>
 
-    <section id="skills">
-      <h2><small>Toolbox</small>Skills</h2>
-      <div class="skills">
-        <div><h3>Frontend</h3><ul><li>TypeScript</li><li>React</li><li>HTML/CSS</li><li>Node</li></ul></div>
-        <div><h3>AWS</h3><ul><li>IoT Core</li><li>CloudWatch</li><li>S3</li><li>Lambda</li><li>CDK</li></ul></div>
-        <div><h3>For Fun</h3><ul><li>Photography</li><li>Lightroom</li><li>Cooking</li><li>Rating food</li></ul></div>
+    <section class="field close" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <h2 id="contact-h">Want to chat?</h2>
+        <p class="say">I’m always happy to talk engineering or IoT.</p>
+        <p class="mail"><a href="mailto:phurushotham@gmail.com" data-goatcounter-click="link-email">phurushotham@gmail.com</a> <button class="copy" type="button" hidden>Copy email</button> <span class="copied" role="status"></span></p>
+        <ul class="elsewhere-links">
+          <li><a href="https://github.com/phurushekar" target="_blank" rel="noopener" aria-describedby="new-tab" data-goatcounter-click="link-github">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/phurushotham-shekar" target="_blank" rel="noopener" aria-describedby="new-tab" data-goatcounter-click="link-linkedin">LinkedIn</a></li>
+          <li><a href="https://devpost.com/phurushekar" target="_blank" rel="noopener" aria-describedby="new-tab">Devpost</a></li>
+          <li><a href="https://instagram.com/iminperu" target="_blank" rel="noopener" aria-describedby="new-tab">Instagram</a></li>
+          <li><a href="https://facebook.com/IminPeru" target="_blank" rel="noopener" aria-describedby="new-tab">Facebook</a></li>
+          <li><a href="assets/Phuru_Shekar_Resume.pdf" data-goatcounter-click="link-resume">Résumé (PDF)</a></li>
+        </ul>
+        <p class="small foot">© 2026 Phurushotham (Phuru) Shekar · built by hand, no frameworks</p>
       </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <h2>Want to chat?</h2>
-      <p>I'm always happy to talk Engineering or IoT!</p>
-      <a class="btn" href="mailto:phurushotham@gmail.com" target="_blank" rel="noopener">Email me</a>
-      <a class="btn alt" href="assets/Phuru_Shekar_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
     </section>
   </main>
 
-  <footer>© 2026 Phurushotham (Phuru) Shekar</footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
