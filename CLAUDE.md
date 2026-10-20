@@ -1,6 +1,10 @@
-## Site
+﻿## Site
 
-Personal portfolio at phurushekar.com: plain `index.html` + `style.css`, no build step or dependencies. Fonts come from Google Fonts and icons from Font Awesome on cdnjs. Images and the résumé PDF live in `assets/`; keep `assets/me.jpg` a 750×750 square.
+Personal portfolio at phurushekar.com: plain `index.html` + `style.css` + `script.js`, no build step or dependencies. `script.js` draws the hero's ASCII mountain from `assets/mtnpix.jpg` (a 960px copy of `mtnpix.png`) on a canvas (needs an http server locally; `file://` falls back to a generated ridge) and handles the theme toggle, project tiles (`/#slug` opens one), scroll entrances and GoatCounter events. Fonts (Bricolage Grotesque, Geist) come from Google Fonts; there is no icon font. Images and the résumé PDF live in `assets/`; keep `assets/me.jpg` a 750×750 square.
+
+## Design rules
+
+UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site's design language is `docs/DESIGN.md`; planned features (analytics, Explore tabs, project tiles) are in `docs/portfolio-ideas.md`. `docs/design-guide.md` is the earlier research behind both.
 
 ## Branches and releasing
 
