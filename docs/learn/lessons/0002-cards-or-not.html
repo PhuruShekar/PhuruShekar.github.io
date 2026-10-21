@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is it a card?</title>
+<link rel="stylesheet" href="../assets/course.css">
+<link rel="stylesheet" href="../assets/mocks.css">
+</head>
+<body>
+<main>
+  <p class="trail"><a href="../reference/course-map.html">Course map</a> · Lesson 2 of 8</p>
+
+  <h1>Is it a card?</h1>
+  <p class="lede">Both of your misses in lesson 1 were about cards. By the end of this one you’ll stop reaching for a card by default: you’ll ask one question about the content and pick the container that answers it.</p>
+
+  <h2>What a card is for</h2>
+  <p>Nielsen Norman Group defines a card as a container for a few short, related pieces of information that links to more detail (<a href="https://www.nngroup.com/articles/cards-component/">NN/g, “Cards”</a>). It works through <strong>common region</strong>: things inside one boundary read as one group, even when they’re far apart.</p>
+  <p>That makes cards good at one job: <strong>browsing a pile of mixed items you pick from</strong>. NN/g’s example is Pinterest, where every pin has a different shape and you’re choosing one to open. Your rules say the same thing more strictly: cards are for objects people pick, move or act on, like photos to open or outfit choices (V4).</p>
+
+  <h2>Why they fail as the default</h2>
+  <p>NN/g names the costs: card layouts play down ranking, and they’re harder to scan than a list. A grid gives every item the same size, so nothing says “this one matters most” and there’s no single column for the eye to run down. Fill each card with an icon, a word and a blurb and you have Taste Skill’s strongest tell: 1% of strong sites against 28% of weak ones.</p>
+
+  <div class="keep"><p>Before drawing a box, ask: <strong>what is the reader doing with these items?</strong> Reading, comparing, scanning, choosing, or browsing to pick? The answer names the container.</p></div>
+
+  <div class="scroll"><table>
+    <thead><tr><th>The reader is…</th><th>Use</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>Scanning alike items by name or date</td><td>List or editorial rows</td><td>V5</td></tr>
+      <tr><td>Following a sequence in time</td><td>Timeline</td><td>V2, D4</td></tr>
+      <tr><td>Comparing items across 3+ attributes</td><td>Table</td><td>V6</td></tr>
+      <tr><td>Looking at one standout among several</td><td>Feature + list</td><td>V2, PT3</td></tr>
+      <tr><td>Reading a few image-led items</td><td>Picture + text rows</td><td>V2</td></tr>
+      <tr><td>Picking or acting on objects</td><td><strong>Cards</strong></td><td>V4</td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta">The whole decision table, with tabs, expandables and dialogs, is on the <a href="../reference/containers.html">containers sheet</a>.</p>
+
+  <h3>Your own projects took this path</h3>
+  <p>Version 1 showed your projects as tiles in a mosaic: the clash with K9 you were asked to settle. Step 2 turned them into an index with a preview panel, and the v2 draft sets the names large in a list. Each step answered the question better: people scan projects <em>by name, newest first</em>, then open one. That’s a list with detail one action away (V5, V7), not a set of objects to pick from.</p>
+  <figure>
+    <div class="mock" aria-label="Mockup: editorial rows">
+      <div class="m-rows">
+        <span class="k">2020</span><span class="t">hARk<span>An AR app and wearable that let you see and feel sound.</span></span>
+        <span class="k">2020</span><span class="t">Minerva<span>Quizzes and feedback on top of existing course sites.</span></span>
+        <span class="k">2019</span><span class="t">Brewba<span>A bubble tea machine on a conveyor belt.</span></span>
+      </div>
+    </div>
+    <figcaption>The same content as three cards, set as editorial rows: one column of years, one of names. The eye runs straight down.</figcaption>
+  </figure>
+
+  <h2>Practice</h2>
+  <p>Pick the container for each piece of content. Your first answer counts.</p>
+  <p class="score" aria-live="polite"></p>
+
+  <div class="q" data-correct="2">
+    <p>1. Your four jobs, with dates, newest first.</p>
+    <ol class="opts"><li>Grid of equal cards</li><li>Tabs, one per job</li><li>Timeline with dates column</li><li>Carousel of job slides</li></ol>
+    <p class="why">A sequence in time wants a timeline: dates in one column, roles in the next (V2, PT2). Tabs and carousels hide all but one job, which breaks Scan (P5).</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>2. Six phones compared on price, battery, camera and weight.</p>
+    <ol class="opts"><li>Table, one row each</li><li>Cards with spec bullets</li><li>Feature plus short list</li><li>Big statement per phone</li></ol>
+    <p class="why">Comparing across three or more attributes is what tables are for (V6): each attribute gets a column you can run your eye down. Six cards make you hold every number in your head.</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <p>3. Thirty hike photos that people open full size.</p>
+    <ol class="opts"><li>Table of photo names</li><li>Editorial rows by year</li><li>Tabs, one per photo</li><li>Cards, each opens photo</li></ol>
+    <p class="why">Here cards are right: each photo is an object you pick and open (V4). It’s what the Photography tab does. Cards aren’t banned; <em>default</em> cards are.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>4. A studio’s three services, each a paragraph with a real project photo.</p>
+    <ol class="opts"><li>Three equal icon cards</li><li>Picture and text rows</li><li>Tabs for each service</li><li>A carousel of services</li></ol>
+    <p class="why">A few image-led items to read: picture beside text, sides alternating (V2). Icon cards would throw away the real photos for a generic icon.</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <p>5. Eight hackathon projects. One won a national award.</p>
+    <ol class="opts"><li>Eight equal project cards</li><li>A table of projects</li><li>Feature plus a list</li><li>Tabs for each project</li></ol>
+    <p class="why">One standout among several: show it large with its picture and story, then the rest as a list (PT3’s default). Equal cards would bury the award at the same size as everything else.</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>6. A settings page with twelve on/off switches.</p>
+    <ol class="opts"><li>List of labeled rows</li><li>Grid of toggle cards</li><li>Tabs, one per setting</li><li>Feature plus a list</li></ol>
+    <p class="why">Alike items scanned by label: rows, label left, switch right (V5). Phone settings screens have looked like this for years.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <div class="mock" aria-label="Mockup: three rounded boxes">
+      <div class="m-cards">
+        <div class="m-card r"><div class="m-ico sq"></div><b>Integrity</b><span>We do the right thing.</span></div>
+        <div class="m-card r"><div class="m-ico sq"></div><b>Curiosity</b><span>We never stop learning.</span></div>
+        <div class="m-card r"><div class="m-ico sq"></div><b>Craft</b><span>We sweat the details.</span></div>
+      </div>
+    </div>
+    <p>7. Back to lesson 1: what’s the main tell here?</p>
+    <ol class="opts"><li>Eyebrow above heading</li><li>Identical icon cards</li><li>Monospace date label</li><li>Decorative index numbers</li></ol>
+    <p class="why">Three equal boxes, each an icon, a word and a blurb, now dressed in soft radius and resting shadows (two more tells). Same pattern as lesson 1’s question 3, in different clothes.</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <p>8. Why are cards weaker than a list when people look for one specific item?</p>
+    <ol class="opts"><li>Cards load slower than plain lists</li><li>Cards break the keyboard focus order</li><li>Cards fail color contrast on mobile</li><li>Cards hide ranking and scan worse</li></ol>
+    <p class="why">NN/g: card layouts play down ranking and are less scannable than lists. The other three aren’t properties of cards at all.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>9. Why did your projects move from tiles to a list?</p>
+    <ol class="opts"><li>Tiles look dated on modern sites now</li><li>People scan projects by name and date</li><li>Lists load much faster on slow phones</li><li>Tiles cannot hold a GitHub link inside</li></ol>
+    <p class="why">Visitors scan projects by name and recency, then open one. The content’s shape chose the container (V2: “let the content’s shape pick the composition”).</p>
+  </div>
+
+  <h2>Make it stick</h2>
+  <details class="recall">
+    <summary>From memory: the question to ask before drawing a card, and the container for each answer. Then open this.</summary>
+    <p>“What is the reader doing with these items?” Scanning → list or rows. A sequence → timeline. Comparing → table. One standout → feature + list. Reading image-led items → picture + text rows. Picking objects → cards.</p>
+  </details>
+  <p>This week, whenever you see a row of cards (on a site, in an app, in something Claude builds), ask what the reader is doing and name the container you’d use instead, or say why cards are right. In three days, take lesson 1’s quiz again without the sheet open.</p>
+
+  <h2>Read next</h2>
+  <p>The primary source is Nielsen Norman Group’s <a href="https://www.nngroup.com/articles/cards-component/">“Cards: UI-Component Definition”</a> (Page Laubheimer): about eight minutes, and its “When cards are useful” section is the core of this lesson. Your own version is <code>2-structure.md</code> V1, V2, V4 and V5.</p>
+
+  <p class="aside">Not convinced, or have a case where cards feel right and the table says no? Ask me in the chat. That kind of disagreement is how rules get sharper.</p>
+
+  <p class="pager"><a href="0001-slop-tells.html">← Lesson 1: Spotting slop tells</a><a href="0003-the-idea.html">Next: the idea sentence →</a></p>
+</main>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+[
+  { "name": "Elk Mountain", "area": "Chilliwack, BC", "coords": [49.1135, -121.8034], "link": "https://www.alltrails.com/trail/canada/british-columbia/elk-mountain--4" },
+  { "name": "Frosty Mountain", "area": "Manning Park, BC", "coords": [49.0107, -120.8376], "link": "https://www.alltrails.com/trail/canada/british-columbia/frosty-mountain-trail" },
+  { "name": "Stawamus Chief (all three peaks)", "area": "Squamish, BC", "coords": [49.6776, -123.1543], "link": "https://www.alltrails.com/trail/canada/british-columbia/three-peaks-of-stawamus-chief" },
+  { "name": "Jurassic Ridge (lower loop)", "area": "Squamish, BC", "coords": [49.6430, -123.2152], "link": "https://www.alltrails.com/trail/canada/british-columbia/browning-lake-and-jurassic-ridge-via-loop-trail" },
+  { "name": "St. Mark’s Summit", "area": "Cypress, BC", "coords": [49.4281, -123.2058], "link": "https://www.alltrails.com/trail/canada/british-columbia/saint-marks-summit" },
+  { "name": "Pump Peak", "area": "Mount Seymour, BC", "coords": [49.3872, -122.9411], "link": "https://www.alltrails.com/trail/canada/british-columbia/pump-peak" },
+  { "name": "Skyline Trail", "area": "Mount Rainier, WA", "coords": [46.8036, -121.7297], "link": "https://www.alltrails.com/trail/us/washington/skyline-trail" },
+  { "name": "Tolmie Peak", "area": "Mount Rainier, WA", "coords": [46.9581, -121.8773], "link": "https://www.alltrails.com/trail/us/washington/tolmie-peak-trail--2" },
+  { "name": "Rattlesnake Ledge", "area": "North Bend, WA", "coords": [47.4360, -121.7785], "link": "https://www.alltrails.com/trail/us/washington/rattlesnake-ledge" },
+  { "name": "Hoh Rain Forest", "area": "Olympic National Park, WA", "coords": [47.8609, -123.9348], "link": "https://www.alltrails.com/trail/us/washington/hoh-rain-forest-hall-of-moss" },
+  { "name": "Mount Storm King", "area": "Olympic National Park, WA", "coords": [48.0554, -123.7408], "link": "https://www.alltrails.com/trail/us/washington/mount-storm-king" },
+  { "name": "Mount Pilchuck", "area": "Granite Falls, WA", "coords": [48.0579, -121.7977], "link": "https://www.alltrails.com/trail/us/washington/mount-pilchuck-trail" },
+  { "name": "Maple Pass", "area": "North Cascades, WA", "coords": [48.5049, -120.7689], "link": "https://www.alltrails.com/trail/us/washington/maple-pass-trail" }
+]

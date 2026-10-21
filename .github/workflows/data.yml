@@ -1,0 +1,21 @@
+# On every push that touches the hand-edited Explore data, check it is valid JSON.
+# A typo turns the push red (and GitHub emails me) before it reaches master.
+name: Data
+
+on:
+  push:
+    paths: ['food.json', 'hikes.json']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: for f in food.json hikes.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done

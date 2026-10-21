@@ -9,7 +9,6 @@
   --text-muted: #5c6a62;
   --primary: #2f6b4f;
   --action: #b25a17;
-  --tile-link: #2f6b4f;       /* orange text fails on mint (B2), so links in tiles use primary */
   --action-fill: #e07a2f;
   --action-fill-hover: #ffc89a;
   --on-action: #0d2419;
@@ -40,7 +39,7 @@
     color-scheme: dark;
     --bg: #0d2419; --surface: #173b2a; --tile: #173b2a; --field: #1f4a36;
     --text: #e8f2ec; --text-muted: #a9bfb2; --primary: #6ee7b7;
-    --action: #f4a261; --tile-link: #f4a261; --on-field: #e8f2ec; --on-field-muted: #a9bfb2;
+    --action: #f4a261; --on-field: #e8f2ec; --on-field-muted: #a9bfb2;
     --border-ui: #5f8a74; --focus: #f4a261;
     --ascii-ink: 232, 242, 236; --ascii-warm: 244, 162, 97;
     --map-tiles: grayscale(.85) invert(1) hue-rotate(180deg) brightness(.8) contrast(.9);
@@ -50,7 +49,7 @@
   color-scheme: dark;
   --bg: #0d2419; --surface: #173b2a; --tile: #173b2a; --field: #1f4a36;
   --text: #e8f2ec; --text-muted: #a9bfb2; --primary: #6ee7b7;
-  --action: #f4a261; --tile-link: #f4a261; --on-field: #e8f2ec; --on-field-muted: #a9bfb2;
+  --action: #f4a261; --on-field: #e8f2ec; --on-field-muted: #a9bfb2;
   --border-ui: #5f8a74; --focus: #f4a261;
   --ascii-ink: 232, 242, 236; --ascii-warm: 244, 162, 97;
   --map-tiles: grayscale(.85) invert(1) hue-rotate(180deg) brightness(.8) contrast(.9);
@@ -109,7 +108,6 @@ a:hover { color: var(--text); text-decoration-thickness: 3px; }
   .top { flex-wrap: wrap; padding-bottom: 0; }
   .theme { margin-left: auto; }
   .top nav { order: 3; width: 100%; margin-left: -8px; justify-content: space-between; }
-  .top nav a[href="#explore"] { display: none; } /* five links don't fit; Explore is opt-in and comes before Contact anyway */
 }
 
 /* Buttons: square, flat action fill (B4). */
@@ -121,21 +119,26 @@ a:hover { color: var(--text); text-decoration-thickness: 3px; }
 .btn:hover { background: var(--action-fill-hover); color: var(--on-action); }
 .btn:active { transform: translateY(1px); }
 
-/* Hero (Glance): name, role, résumé, contact; the ASCII mountain fills the rest. */
-.hero { display: flex; flex-direction: column; min-height: calc(100svh - 64px); }
+/* Hero (Glance): name, role, résumé, contact, set on the ASCII mountain, which fills the whole
+   section. The words sit in its sky; script.js clears the characters around them. */
+.hero { position: relative; min-height: calc(100svh - 64px); }
 .hero-in {
+  position: relative; z-index: 1;
   display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: clamp(16px, 4vw, 64px);
-  align-items: start; padding-top: clamp(24px, 6vw, 80px);
+  align-items: start; padding-top: clamp(24px, 6vw, 80px); padding-bottom: clamp(220px, 36vh, 560px);
 }
+.hero picture { display: contents; } /* the WebP wrapper; the img stays the grid item */
 .photo {
   grid-column: 2; grid-row: 1 / span 3; align-self: start;
-  width: clamp(88px, 18vw, 280px); aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%;
+  width: clamp(88px, 18vw, 280px); aspect-ratio: 1; object-fit: cover; object-position: 50% 30%;
+  /* A circle in a gold ring with a small gap; the ASCII mask follows the curve. */
+  border-radius: 50%; padding: clamp(4px, .6vw, 8px); border: 3px solid var(--highlight);
 }
 h1 { grid-column: 1; font-size: var(--fs-display); line-height: .9; letter-spacing: -0.035em; color: var(--primary); }
 .lede { grid-column: 1; max-width: 40ch; margin-top: clamp(16px, 2vw, 28px); }
 .actions { grid-column: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 28px; }
 .actions a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; }
-#ascii { display: block; flex: 1 1 auto; width: 100%; min-height: clamp(200px, 32vh, 520px); margin-top: clamp(16px, 3vw, 40px); }
+#ascii { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 
 @media (max-width: 639px) {
   .photo { grid-row: 1; align-self: end; }
@@ -170,93 +173,91 @@ h1 { grid-column: 1; font-size: var(--fs-display); line-height: .9; letter-spaci
   .timeline h3 { margin-top: 2px; }
 }
 
-/* Projects: tiles of different sizes (B7); a tile opens downward in its own cell. */
+/* Trail (B4): script.js draws a switchback beside the timeline as you scroll, one waypoint
+   per job; without JS the gold bar above still marks "now". */
+.timeline.trailed { position: relative; }
+.timeline.trailed li { padding-left: 72px; }
+.timeline.trailed li.now::before { content: none; }
+.trail { position: absolute; left: 0; top: 0; width: 64px; height: 100%; overflow: visible; pointer-events: none; }
+.trail .line { fill: none; stroke: var(--peach); stroke-width: 4; stroke-linecap: round; }
+.trail .ahead { fill: none; stroke: var(--peach); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 2 8; opacity: .35; }
+.trail .wp { fill: var(--field); stroke: var(--peach); stroke-width: 3; transition: fill .3s var(--ease); }
+.trail .wp.on { fill: var(--peach); }
+.trail .wp.now { fill: var(--highlight); stroke: var(--highlight); }
+.trail text { font: 500 13px/1 var(--body); fill: var(--highlight); }
+@media (max-width: 639px) {
+  .timeline.trailed li { padding-left: 44px; }
+  .trail .line { stroke-width: 3; }
+}
+
+/* Projects: an index of names beside one project at a time on a surface panel (PT3, B7).
+   Phones, print and no-JS show every project as a row instead. */
+/* Rail (B5): from 1024px the section heading sits in a left column beside its content and
+   stays in view while the section scrolls. Narrower, it stacks and steps up a size so it
+   stays above the project names, which share --fs-h2. */
+@media (min-width: 1024px) {
+  .rail { display: grid; grid-template-columns: clamp(14rem, 21vw, 19rem) minmax(0, 1fr); column-gap: clamp(32px, 4vw, 64px); align-items: start; }
+  .rail > * { grid-column: 2; }
+  .rail > h2 { grid-column: 1; grid-row: 1 / span 20; position: sticky; top: 104px; margin: 0; }
+  .rail > .intro { margin-top: 0; }
+}
+@media (max-width: 1023px) {
+  main h2 { font-size: clamp(3rem, 9vw, 4rem); }
+}
+
 .projects { padding-block: var(--section); }
 .intro { max-width: 52ch; margin: calc(-1 * clamp(16px, 2vw, 32px)) 0 clamp(32px, 4vw, 56px); }
-.tiles { display: grid; gap: clamp(12px, 1.5vw, 20px); }
-.tile { container-type: inline-size; background: var(--tile); padding: clamp(20px, 2.5vw, 32px); scroll-margin-top: 88px; }
-/* When one tile opens, its neighbors keep their own height instead of stretching. */
-.tiles:has(.open) > .tile:not(.open) { align-self: start; }
-.tile-in { display: grid; gap: 0 clamp(16px, 3vw, 48px); align-content: start; }
-.tile h3 { color: var(--primary); }
-/* Pictures: square corners, 3:2, bleeding to the tile's edges at the top (B4). */
-.shot img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.tile-in > .shot { margin: calc(-1 * clamp(20px, 2.5vw, 32px)) calc(-1 * clamp(20px, 2.5vw, 32px)) 20px; }
-.more .shot { margin: 16px 0; }
-@media (max-width: 639px) {
-  /* Phone: compact tile, thumbnail left (B8). */
-  .tile-in:has(> .shot) { grid-template-columns: 6rem minmax(0, 1fr); column-gap: 16px; }
-  .tile-in:has(> .shot) > * { grid-column: 2; }
-  .tile-in > .shot { grid-column: 1; grid-row: 1 / span 4; margin: 0; }
-  .tile-in > .shot img { aspect-ratio: 4 / 5; }
-  .tile-in:has(> .shot) > .more { grid-column: 1 / -1; }
+/* Statement (B4): the Projects and About me intros, set large in Ink so the green heading leads. */
+.rail > .intro { font: 700 clamp(1.75rem, 5vw, 4rem)/1.05 var(--display); letter-spacing: -0.01em; color: var(--text); max-width: 22ch; text-wrap: balance; margin-bottom: clamp(40px, 5vw, 72px); }
+.proj { display: flex; flex-direction: column; gap: 32px; }
+.proj-side { order: 2; }
+.proj-index { display: none; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border-ui); }
+.proj-index li { border-bottom: 1px solid var(--border-ui); }
+.proj-index a {
+  position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  min-height: 64px; padding: 16px 0; color: var(--text); text-decoration: none; transition: color .15s, padding .2s var(--ease);
 }
-.meta { margin-top: 6px; font-size: var(--fs-small); color: var(--text-muted); }
+.proj-index a::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 6px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--ease); }
+.proj-index .n { font: 700 var(--fs-h3)/1.15 var(--display); letter-spacing: -0.01em; }
+.proj-index .m { font-size: var(--fs-small); color: var(--text-muted); white-space: nowrap; }
+.proj-index a:hover, .proj-index a[aria-current] { color: var(--primary); }
+.proj-index a:hover .n { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.proj-index a[aria-current] { padding-left: 22px; }
+.proj-index a[aria-current]::before { transform: none; }
+.elsewhere { max-width: 40ch; }
+
+.project { scroll-margin-top: 88px; padding-block: clamp(24px, 3vw, 32px); border-top: 1px solid var(--border-ui); }
+.project:last-child { border-bottom: 1px solid var(--border-ui); }
+.project h3 { font-size: var(--fs-h2); line-height: 1; letter-spacing: -0.02em; color: var(--primary); }
+/* Picking a project decodes its name (script.js): the real name goes see-through under the scramble. */
+.project h3.decoding { position: relative; color: transparent; }
+.project h3 .dec { position: absolute; inset: 0; color: var(--primary); white-space: nowrap; }
+.project h3 .dec .x { color: rgb(var(--ascii-warm)); }
+.meta { margin-top: 8px; font-size: var(--fs-small); color: var(--text-muted); }
 .meta strong { color: var(--text); font-weight: 500; }
-.line { margin-top: 12px; max-width: 46ch; }
-.links { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 20px; }
+.project .line { margin-top: 20px; max-width: 30ch; font: 700 var(--fs-h3)/1.3 var(--display); }
+.project .line + p { margin-top: 16px; max-width: 60ch; }
+.built { margin-top: 16px; max-width: 60ch; font-size: var(--fs-small); color: var(--text-muted); }
+.built + .built { margin-top: 4px; }
+.built b { font-weight: 500; color: var(--text); }
+.field .built { color: var(--on-field-muted); }
+.field .built b { color: var(--on-field); }
+.links { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 24px; }
 .links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; }
-.tile a { color: var(--tile-link); }
-.tile a:hover { color: var(--text); }
-.more { max-width: 60ch; }
-.more p + p { margin-top: 12px; }
-.more .small { color: var(--text-muted); }
-.more[hidden] { display: none; }
-.more:not([hidden]) { margin-top: 16px; animation: open .25s var(--ease); }
-@keyframes open { from { opacity: 0; transform: translateY(-8px); } }
-.toggle {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 4px; padding: 0;
-  border: 0; background: none; color: var(--text); font: 500 var(--fs-small)/1 var(--body); cursor: pointer;
-}
-.toggle span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.toggle:hover span { text-decoration-thickness: 3px; }
-.toggle svg { width: 12px; height: 12px; transition: transform .2s var(--ease); }
-.toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
 
-/* Wide tiles put the story beside the summary. */
-@container (min-width: 600px) {
-  .tile-in { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .tile-in > * { grid-column: 1; }
-  .tile-in > .more { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
+@media (min-width: 768px) {
+  .proj { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+  .proj-side { order: 0; position: sticky; top: 88px; }
+  .proj-index { display: block; }
+  .elsewhere { margin-top: 32px; }
+  /* The picker (script.js): every project shares one cell, so the panel keeps the tallest one's
+     height and the page doesn't jump when you switch. */
+  .picker .proj-panel { display: grid; background: var(--surface); padding: clamp(24px, 3.5vw, 56px); }
+  .picker .project { grid-area: 1 / 1; padding: 0; border: 0; }
+  .picker .project:not(.sel) { visibility: hidden; }
+  .picker .project.sel { animation: open .3s var(--ease); }
 }
-
-.feature { background: var(--field); color: var(--on-field); --focus: var(--peach); }
-.feature h3 { color: var(--on-field); font-size: var(--fs-h2); line-height: 1; letter-spacing: -0.02em; }
-.feature .meta, .feature .more .small { color: var(--on-field-muted); }
-.feature a { color: var(--peach); }
-.feature a:hover, .feature .toggle { color: var(--on-field); }
-.feature .line { font-size: var(--fs-h3); line-height: 1.3; font-family: var(--display); max-width: 24ch; margin-top: 20px; }
-
-.elsewhere { align-self: center; max-width: 40ch; padding: 8px 0; }
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .tile, .elsewhere { grid-column: 1 / -1; }
-  #gradian, #minerva { grid-column: 1 / 4; }
-  #ibm-vault, #livenote { grid-column: 4 / 7; }
-}
-@media (min-width: 1024px) {
-  .tiles { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-  .tile { grid-column: 1 / -1; }
-  #hark { grid-column: 1 / 8; grid-row: span 2; }
-  #gradian, #ibm-vault { grid-column: 8 / 13; }
-  #brewba { grid-column: 1 / 6; }
-  #minerva { grid-column: 6 / 13; }
-  #livenote { grid-column: 1 / 8; }
-  .elsewhere { grid-column: 8 / 13; padding-left: clamp(0px, 2vw, 32px); }
-  #hark .tile-in { height: 100%; grid-template-rows: auto auto 1fr auto; }
-}
-
-/* Skills: a fact sheet on a surface band, tied to the work (PT4). */
-.skills { background: var(--surface); padding-block: var(--section); }
-.skills dl { margin: 0; display: grid; gap: clamp(24px, 3vw, 40px); }
-.skills dl > div { display: grid; grid-template-columns: 12rem minmax(0, 40rem); column-gap: clamp(16px, 3vw, 48px); }
-.skills dt { font: 700 var(--fs-h3)/1.15 var(--display); color: var(--primary); }
-.skills dd { margin: 0; padding-top: .15em; }
-@media (max-width: 639px) {
-  .skills dl > div { grid-template-columns: 1fr; }
-  .skills dd { margin-top: 6px; }
-}
+@keyframes open { from { opacity: 0; transform: translateY(8px); } }
 
 /* Explore (P5, PT7): tabs in the URL (V3); each panel loads its data when first shown. */
 .vh { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
@@ -280,7 +281,7 @@ h1 { grid-column: 1; font-size: var(--fs-display); line-height: .9; letter-spaci
 @media (max-width: 639px) { .tabs a { font-size: var(--fs-body); } }
 
 .panel { scroll-margin-top: 88px; }
-html:not(.js) .places, html:not(.js) .music { display: none; } /* their <noscript> note shows instead */
+html:not(.js) .places, html:not(.js) .menu, html:not(.js) .music { display: none; } /* their <noscript> note shows instead */
 html:not(.js) .tabs a { color: var(--action); text-decoration: underline; } /* plain jump links */
 .panel + .panel { margin-top: clamp(48px, 6vw, 80px); }
 .tabbed .panel + .panel { margin-top: 0; }
@@ -304,31 +305,40 @@ html:not(.js) .tabs a { color: var(--action); text-decoration: underline; } /* p
   @keyframes breathe { to { opacity: .45; } }
 }
 
-/* Food and Hikes: map + list (D5). The list is the plain version with every fact. */
-.places { display: grid; gap: 24px clamp(24px, 3vw, 48px); align-items: start; }
-.map { position: relative; aspect-ratio: 4 / 3; background: var(--tile); z-index: 0; }
+/* Food: a menu card on the surface tone (B6). Name, dotted leader, score; the review is the
+   menu description. Restaurants are the mains, cafés and desserts follow. */
+.menu { max-width: 56rem; background: var(--surface); padding: clamp(24px, 4vw, 56px); }
+.course + .course { margin-top: clamp(40px, 5vw, 56px); }
+.course h4 { padding-bottom: 12px; border-bottom: 1px solid var(--border-ui); font: 700 var(--fs-h3)/1.15 var(--display); color: var(--primary); }
+.dishes { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 28px; }
+.dish-line { display: flex; align-items: baseline; gap: 12px; }
+.dish .name { font: 700 var(--fs-h3)/1.2 var(--display); }
+.dish .name a { color: var(--text); }
+.leader { flex: 1; min-width: 24px; border-bottom: 2px dotted var(--border-ui); }
+.dish .score { font: 700 var(--fs-h3)/1.2 var(--display); color: var(--primary); }
+.dish .meta { margin-top: 4px; }
+.dish .review { margin-top: 8px; max-width: 60ch; }
+
+/* Hikes: a dot per trail on a wide map, then every hike in a table that scrolls on its own (D5). */
+.places { display: grid; gap: 24px; }
+.map { position: relative; height: clamp(280px, 45vw, 520px); background: var(--tile); z-index: 0; }
+/* The keyboard hint shows while the map or a dot has focus; screen readers always get it. */
+.map-keys { margin-top: -12px; color: var(--text-muted); }
+.map:not(:focus-within) + .map-keys { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .map-note { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; text-align: center; color: var(--text-muted); font-size: var(--fs-small); }
-.places.is-empty .map, .places.is-empty .place-list, .places.is-error .map, .places.is-error .place-list { display: none; }
-.place-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
-/* Row: [thumb] name … score, then meta and review under the name, running under the score too. */
-.place { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; }
-.place > h4 { grid-column: 2; grid-row: 1; }
-.place > .meta, .place > .review, .place > div { grid-column: 2 / -1; }
-.thumb { grid-row: 1 / span 3; width: 4.5rem; margin-right: 16px; aspect-ratio: 4 / 5; object-fit: cover; background: var(--tile); }
-.place h4 { font: 700 var(--fs-h3)/1.15 var(--display); color: var(--primary); }
-.place h4 a { color: inherit; text-decoration-thickness: 1px; }
-.place .meta { margin-top: 4px; }
-.place .review { margin-top: 8px; max-width: 52ch; }
-.place > .score { grid-column: 3; grid-row: 1; margin-left: 16px; font: 700 var(--fs-h3)/1.15 var(--display); white-space: nowrap; }
-.score span { font: 400 var(--fs-small)/1 var(--body); color: var(--text-muted); }
-.place.hot h4 { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.places.is-empty .map, .places.is-empty .hike-table, .places.is-error .map, .places.is-error .hike-table { display: none; }
+.hike-table { max-width: 48rem; max-height: 22rem; overflow-y: auto; border-bottom: 1px solid var(--border-ui); }
+.hike-table table { width: 100%; border-collapse: collapse; }
+.hike-table th, .hike-table td { padding: 12px 16px 12px 0; text-align: left; vertical-align: baseline; border-top: 1px solid var(--border-ui); }
+.hike-table thead th { position: sticky; top: 0; z-index: 1; padding-block: 8px; border-top: 0; background: var(--bg); font: 500 var(--fs-small)/1.3 var(--body); color: var(--text-muted); box-shadow: inset 0 -1px var(--border-ui); }
+.hike-table tbody th { font-weight: 500; }
+.hike-table td { color: var(--text-muted); }
+.place.hot { background: var(--surface); }
+.place.hot a { text-decoration-thickness: 3px; }
 .skel .bone:first-child { height: 1.4rem; width: 60%; }
 .skel .bone + .bone { height: .9rem; width: 85%; margin-top: 10px; }
-@media (min-width: 1024px) {
-  .places { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-  .places .map { position: sticky; top: 88px; }
-  .places .state { grid-column: 1 / -1; }
-}
+.hike-table .skel .bone { width: 60%; height: 1rem; }
+
 /* Map pins and popups: the only floating UI, so the only shadow (B6). */
 .pin { background: var(--primary); border: 3px solid var(--bg); border-radius: 50%; box-shadow: 0 1px 2px rgb(13 36 25 / .3); }
 /* Highlighted pin turns hollow: a shape change, not only a color one (C3, C4). */
@@ -349,46 +359,81 @@ html:not(.js) .tabs a { color: var(--action); text-decoration: underline; } /* p
 .places .map .leaflet-control-attribution { background: var(--bg); color: var(--text-muted); }
 .places .map .leaflet-control-attribution a, .places .map .leaflet-popup a { color: var(--primary); }
 
-/* Photography: the one place a grid is the content (PT7). One 4:5 crop, alt on each. */
-.photos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(8px, 1.2vw, 16px); }
-@media (min-width: 640px) { .photos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 1024px) { .photos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--tile); }
+/* Photography: masonry, each photo in its own shape, columns end unevenly (PT7). Alt on each. */
+.photos { --gap: clamp(8px, 1.2vw, 16px); list-style: none; margin: 0; padding: 0; columns: 2; column-gap: var(--gap); }
+@media (min-width: 900px) { .photos { columns: 3; } }
+.photos li { break-inside: avoid; margin-bottom: var(--gap); }
+.photos img { width: 100%; height: auto; background: var(--tile); }
 .photos .broken { display: grid; place-items: center; aspect-ratio: 4 / 5; padding: 12px; background: var(--tile); color: var(--text-muted); font-size: var(--fs-small); }
-.photos:has(li) + .empty-photos { display: none; }
+.photos:has(li) ~ .empty-photos { display: none; }
+.photos a { display: block; }
+.photos img { transition: opacity .2s; }
+.photos a:hover img { opacity: .85; }
+/* Opened photo: the whole image, on a darkened page. Click outside, × or Esc closes. */
+.lightbox { padding: 0; border: 0; background: none; max-width: none; max-height: none; overflow: visible; }
+.lightbox::backdrop { background: rgb(0 0 0 / .85); }
+.lightbox img { display: block; max-width: calc(100vw - 2 * var(--margin)); max-height: calc(100dvh - 2 * var(--margin) - 48px); width: auto; height: auto; }
+.lightbox button { width: 40px; height: 40px; border: 1px solid rgb(255 255 255 / .35); border-radius: 50%; background: rgb(20 20 20 / .55); color: #fff; font: 400 1.75rem/1 var(--body); cursor: pointer; }
+.lightbox button:hover { background: rgb(80 80 80 / .7); }
+.lightbox button:focus-visible { outline-color: #fff; }
+.lightbox-close { position: absolute; bottom: 100%; right: 0; margin-bottom: 8px; }
+/* Prev/next sit at the screen edges; on phones they overlap the photo's edges. */
+.lightbox-prev, .lightbox-next { position: fixed; top: 50%; translate: 0 -50%; font-size: 2.25rem; padding-bottom: 4px; }
+.lightbox-prev { left: 8px; }
+.lightbox-next { right: 8px; }
+@media (min-width: 640px) { .lightbox img { max-width: calc(100vw - 2 * var(--margin) - 112px); } }
 
-/* Music: last played as a statement, the top five as sorted bars with the count in words (D1). */
-.music { display: grid; gap: clamp(40px, 5vw, 56px) clamp(24px, 4vw, 64px); align-items: start; }
-.music .slot { margin-top: 16px; }
-.track-now { position: relative; }
-.track-now.playing { padding-left: 22px; }
-.track-now.playing::before { content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 6px; background: var(--highlight); }
-.track-now .name { font: 700 var(--fs-h3)/1.15 var(--display); color: var(--primary); }
-.track-now .name a { color: inherit; }
-.track-now .by { margin-top: 4px; }
-.track-now .when { margin-top: 8px; padding: 0; font-size: var(--fs-small); color: var(--text-muted); }
-.track-now.playing .when { color: var(--text); font-weight: 500; }
-.chart { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; counter-reset: rank; }
-.chart li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; align-items: baseline; }
-.chart .name a { font-weight: 500; }
-.chart .by { color: var(--text-muted); }
-.chart .plays { font-size: var(--fs-small); color: var(--text-muted); white-space: nowrap; }
-.chart .bar { grid-column: 1 / -1; height: 6px; margin-top: 6px; background: var(--tile); }
-.chart .bar::before { content: ""; display: block; height: 100%; width: calc(var(--w) * 100%); background: var(--primary); }
+/* Music: one "Wrapped"-style card on the field green (owner, 2026-10-20). Last played and the top
+   artist on the left, the top songs on the right. Gold marks "now" only (B2): the dot and its label. */
+.mcard {
+  display: grid; gap: 32px clamp(24px, 5vw, 80px); align-items: start;
+  background: var(--field); color: var(--on-field); padding: clamp(24px, 4vw, 56px);
+  /* The card's own roles, so states, retry buttons and loading blocks read on the green. */
+  --text: var(--on-field); --text-muted: var(--on-field-muted); --border-ui: var(--on-field-muted);
+  --tile: rgb(255 255 255 / .1); --focus: var(--peach);
+}
+.mcard h4 { font: 500 var(--fs-body)/1.3 var(--body); }
+.mcard .slot { margin-top: 8px; }
+.mcard a { color: var(--peach); }
+.mcard a:hover { color: var(--on-field); }
+.mcard .song a, .mc-artist .big a { color: inherit; text-decoration: none; }
+.mcard .song a:hover, .mc-artist .big a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.mcard .state-act { margin-top: 8px; }
+.mcard .by { margin-top: 4px; font-size: var(--fs-small); color: var(--on-field-muted); }
+.mcard .by a { color: inherit; }
+.mc-last { padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--on-field-muted); }
+.mc-last:has(+ .mc-artist[hidden]) { padding: 0; margin: 0; border: 0; } /* no top artist: no divider */
+.mc-last .slot { margin-top: 0; }
+.mc-last .when { display: flex; align-items: center; gap: 10px; line-height: 1.3; padding-top: 0; color: var(--on-field-muted); }
+.mc-last .when.playing { color: var(--on-field); font-weight: 500; }
+.pulse { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--highlight); }
+.mcard .song { font: 700 var(--fs-h3)/1.2 var(--display); }
+.mc-last .song { margin-top: 8px; }
+.mc-artist .big { font: 700 var(--fs-h2)/1 var(--display); letter-spacing: -0.02em; color: var(--peach); overflow-wrap: anywhere; }
+.mc-artist .big a { color: inherit; }
+.each { font-weight: 400; color: var(--on-field-muted); }
+.songs { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.songs li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); align-items: baseline; }
+.songs .rank { font: 700 var(--fs-h3)/1 var(--display); color: var(--peach); }
+.songs .skel { display: block; }
 .music .skel .bone { height: 1rem; margin-top: 12px; }
 .music .skel .bone:first-child { height: 1.5rem; width: 70%; margin-top: 0; }
-.music .credit { color: var(--text-muted); max-width: 72ch; }
-@media (min-width: 1024px) {
-  .music { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .music .credit { grid-column: 1 / -1; }
+.music .credit { margin-top: 16px; color: var(--text-muted); max-width: 72ch; }
+@media (min-width: 768px) {
+  .mcard { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
 }
 
 /* Close: a field chapter that ends the page (PT8). */
-.close { padding-bottom: clamp(40px, 6vw, 64px); }
-.close h2 { margin-bottom: 16px; }
+.close { position: relative; overflow: hidden; padding-bottom: clamp(40px, 6vw, 64px); }
+.js .close { padding-bottom: clamp(220px, 28vw, 380px); } /* room for the summit; no JS, no summit, no gap */
+/* The hero's mountain again, from under the links to the bottom; script.js sets its height. */
+.summit { position: absolute; left: 0; bottom: 0; width: 100%; pointer-events: none; }
+.close .foot { position: relative; z-index: 1; }
+/* The close ends at the hero name's size, with the email as its big line (PT8). */
+.close h2 { font-size: var(--fs-display); line-height: .95; letter-spacing: -0.03em; margin-bottom: clamp(16px, 2vw, 28px); }
 .say { margin-bottom: clamp(32px, 4vw, 48px); max-width: 40ch; }
-.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font: 700 var(--fs-h3)/1.2 var(--display); }
-.mail a { overflow-wrap: anywhere; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font: 700 clamp(1.5rem, 5vw, 4rem)/1.1 var(--display); }
+.mail a { overflow-wrap: anywhere; text-decoration-thickness: 2px; text-underline-offset: .12em; }
 .copy {
   min-height: 44px; padding: 0 14px; border: 2px solid var(--on-field-muted); background: transparent; color: var(--on-field);
   font: 500 var(--fs-small)/1 var(--body); cursor: pointer; transition: border-color .15s, background-color .15s, color .15s;
@@ -411,8 +456,13 @@ html:not(.js) .tabs a { color: var(--action); text-decoration: underline; } /* p
 }
 
 @media print {
-  .top, #ascii, .toggle, .copy, .tabs, .map, .retry { display: none; }
+  .top, #ascii, .summit, .proj-index, .copy, .tabs, .map, .retry { display: none; }
+  .js .close { padding-bottom: 0; }
   .panel[hidden] { display: block; }
-  .field, .feature { background: none; color: #000; }
-  .more[hidden] { display: block; }
+  .hero { min-height: 0; }
+  .hero-in { padding-bottom: 0; }
+  .field, .mcard { background: none; color: #000; }
+  .trail .line { stroke-dashoffset: 0 !important; }
+  .picker .proj-panel { display: block; background: none; padding: 0; }
+  .picker .proj-panel .project { visibility: visible; padding-block: 16px; }
 }

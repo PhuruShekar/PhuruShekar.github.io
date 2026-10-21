@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color by role</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main>
+  <p class="trail"><a href="../reference/course-map.html">Course map</a> · <a href="../reference/glossary.html">Glossary</a> · Lesson 8 of 8</p>
+
+  <h1>Color by role</h1>
+  <p class="lede">A palette is a set of jobs, not a set of favorite colors. By the end you’ll name each color by its job, check every pair it touches, and keep meanings readable for people who don’t see red and green apart.</p>
+
+  <h2>Name the job, not the color</h2>
+  <p>Components never use a raw hex value. They use a role token, like <code>--action</code> or <code>--muted</code>, and only the token block knows the hex (C1). Change one value and every link updates; dark mode becomes a swap of values under the same names. Your v2 roles (B2):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Role</th><th>Its job</th></tr></thead>
+    <tbody>
+      <tr><td>Ground</td><td>The page itself, most of what people see</td></tr>
+      <tr><td>Field</td><td>Whole chapters in dark green (Journey, the close)</td></tr>
+      <tr><td>Surface</td><td>A small tone step that groups things without a box</td></tr>
+      <tr><td>Ink</td><td>Everything people read in sentences</td></tr>
+      <tr><td>Muted</td><td>Captions, notes, rail labels</td></tr>
+      <tr><td>Primary</td><td>Identity: your name, statements</td></tr>
+      <tr><td>Action</td><td>Links, and the one filled button per screen</td></tr>
+      <tr><td>Highlight, Peach</td><td>“Now” on the trail; text and the trail line on Field</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Proportions, then colors</h2>
+  <p>Plan how much of each, not just which (T5, C5). Ground is most of the page; your draft gives about 60% to Ground and 30% to Field. Ink carries the reading. Each accent gets exactly one job, and Action plus Highlight together stay under about 5% of a screen. That’s why a page with three orange things reads as noisy even when each one passes contrast.</p>
+
+  <h2>Contrast is about light, not hue</h2>
+  <p>WCAG measures contrast from luminance, how light a color is, because that works whatever hues a person can tell apart. The numbers come from vision research (<a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">W3C, “Understanding 1.4.3”</a>):</p>
+  <ul>
+    <li><strong>3:1</strong> is the older standards’ minimum for text with typical vision.</li>
+    <li><strong>4.5:1</strong> is 3 × 1.5: it makes up for the contrast lost with 20/40 vision, which W3C notes is typical around age 80.</li>
+    <li><strong>7:1</strong> covers about 20/80 vision (<a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html">1.4.6</a>).</li>
+  </ul>
+  <p>Your rules ask for more than the legal floor: body text 7:1, other text 4.5:1, large text (24px, or about 19px bold) and interface marks like icons, focus rings and control edges 3:1 (C2, P2). Two details people miss: ratios are never rounded, so 4.499:1 fails 4.5, and you never fade text with <code>opacity</code>. Use the Muted token, whose ratio you checked.</p>
+
+  <h2>When two colors must mean different things</h2>
+  <p>Red-green color blindness flattens greens and oranges toward the same brownish hue; what survives is lightness (C4). Your own green <code>#2f6b4f</code> and orange <code>#b25a17</code> measure 1.0:1 apart under protanopia, which means no difference at all. So two rules:</p>
+  <ul>
+    <li><strong>Never color alone (C3).</strong> Every meaning color carries also has a word, icon, shape or position: links underlined, status as icon + word, a selected tab with weight and a bar. W3C’s <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">“Use of Color”</a> is the source.</li>
+    <li><strong>Split by lightness (C4).</strong> Two colors that sit side by side as different meanings stay 3:1 apart under protanopia and deuteranopia simulation: a dark green with a light peach works; a medium green with a medium orange doesn’t.</li>
+  </ul>
+
+  <div class="keep"><p>Name each color by its job, check every pair it touches in both themes, and never let hue alone carry a meaning.</p></div>
+
+  <h2>Try it</h2>
+  <p>Start from <strong>Broken start</strong> and make all seven pairs pass using the color pickers. Then load <strong>Your v2 light</strong> and switch the preview to Protanopia: look at the Done and Paused labels, and read the line under the checks.</p>
+  <div class="contrastlab" data-presets='[{"name":"Broken start","bg":"#ffffff","text":"#6b7280","muted":"#a3a3a3","primary":"#22c55e","action":"#f97316","field":"#2f6b4f","onfield":"#ffffff","peach":"#ffc89a","highlight":"#fbbf24"},{"name":"Your v2 light","bg":"#fffdf8","text":"#1d2621","muted":"#5c6a62","primary":"#2f6b4f","action":"#b25a17","field":"#173b2a","onfield":"#fffdf8","peach":"#ffc89a","highlight":"#fbbf24"},{"name":"Your v2 dark","bg":"#0d2419","text":"#e8f2ec","muted":"#a9bfb2","primary":"#6ee7b7","action":"#f4a261","field":"#1f4a36","onfield":"#fffdf8","peach":"#ffc89a","highlight":"#fbbf24"}]'></div>
+
+  <h2>Practice</h2>
+  <p class="score" aria-live="polite"></p>
+
+  <div class="q" data-correct="2">
+    <p>1. Body text is <code>#6b7280</code> on white: 4.83:1.</p>
+    <ol class="opts"><li>Fine: it passes AA everywhere</li><li>Fails: gray is never allowed</li><li>Fails your 7:1 body rule</li><li>Fails: it is under 3:1</li></ol>
+    <p class="why">It passes WCAG AA’s 4.5:1, but your rule asks 7:1 for body text (C2, P2). Gray is fine for captions, at 4.5:1.</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>2. Why does WCAG ask for 4.5:1 rather than 3:1?</p>
+    <ol class="opts"><li>Covers contrast lost to 20/40 vision</li><li>Matches how print looks on paper</li><li>Makes colorful brand palettes look calmer</li><li>Screens in sunlight need double contrast</li></ol>
+    <p class="why">3:1 for typical vision, times 1.5 for the contrast lost with 20/40 vision, common in older readers.</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <p>3. A link color measures 4.496:1 against its background.</p>
+    <ol class="opts"><li>Passes: it rounds up</li><li>Passes if hovered first</li><li>Passes in light theme</li><li>Fails: ratios never round</li></ol>
+    <p class="why">W3C is explicit: no rounding. Nudge the color darker (or lighter, on dark) until it clears 4.5.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>4. You make a caption muted with <code>opacity: 0.6</code> on Ink.</p>
+    <ol class="opts"><li>Fine if it measures 4.5</li><li>Use the Muted token instead</li><li>Lower it to 0.4 instead</li><li>Add a text shadow behind</li></ol>
+    <p class="why">C2 bans fading text with opacity: the result changes with whatever is behind it, so its ratio is never checked. A Muted token has one checked ratio.</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>5. A green dot means “live”; an orange dot means “paused”.</p>
+    <ol class="opts"><li>Add a word beside each</li><li>Make the dots slightly bigger</li><li>Swap to red and green</li><li>Brighten both colors a bit</li></ol>
+    <p class="why">C3: the meaning needs a second cue. For a protanope these two dots can look identical.</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <p>6. Peach passes on Field, so you also use it for links on the cream Ground.</p>
+    <ol class="opts"><li>Fine: Peach already passed once</li><li>Add an underline to fix</li><li>Light accents fail on light</li><li>Use it only for headings</li></ol>
+    <p class="why">A ratio belongs to a pair, not a color. Peach on cream is far below 3:1; C5 bans light accents as text on light grounds.</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <p>7. One screen has two orange filled buttons and an orange headline.</p>
+    <ol class="opts"><li>Orange needs a darker shade</li><li>Underline the orange headline too</li><li>Add a third orange element</li><li>One accent job, one button</li></ol>
+    <p class="why">C5: Action means “click this”, so a headline in it lies, and one filled button per view keeps the main action obvious.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>8. The selected tab differs from the others only by turning green.</p>
+    <ol class="opts"><li>Use a brighter green instead</li><li>Add weight and a bar</li><li>Make unselected tabs light gray</li><li>Animate the color change slowly</li></ol>
+    <p class="why">C3: weight plus an indicator bar survive any color vision. (Light gray tabs would also fail contrast.)</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <p>9. From lesson 7: you press “Send message” and nothing changes for six seconds.</p>
+    <ol class="opts"><li>Consistency and standards</li><li>Help and documentation</li><li>Shows system status</li><li>Prevents errors early</li></ol>
+    <p class="why">H1: past one second, show that work is happening; keep the label and add a spinner (I2).</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>10. From lesson 6: which outer margins pass?</p>
+    <ol class="opts"><li>24px left, 24px right</li><li>32px left, 48px right</li><li>12px left, 12px right</li><li>64px left, 64px right</li></ol>
+    <p class="why">An equal pair between 16 and 32px (T4, P6).</p>
+  </div>
+
+  <h2>Your turn</h2>
+  <p>Paste your answers in the chat:</p>
+  <ol>
+    <li><strong>A palette from your own idea.</strong> In lesson 3 you wrote that an EDM site would be welcoming, free and colorful. In the lab, build its nine roles: get all seven checks passing, then make Primary and Action pass the colorblind line too, or say which second cue would carry the difference (C3). Paste the nine hex values.</li>
+    <li><strong>Simulate your site.</strong> On phurushekar.com, open DevTools → ⋮ → More tools → Rendering → “Emulate vision deficiencies”. Try Protanopia, then Achromatopsia (no color at all). Does anything mean something by color alone?</li>
+  </ol>
+
+  <details class="recall">
+    <summary>From memory: the four contrast numbers and what each is for, the two rules for meanings, and what ratios never do. Then open this.</summary>
+    <p>Body text 7:1 (your rule), other text 4.5:1, large text and interface marks 3:1. Never color alone: add a word, icon, shape or position. Different meanings side by side differ in lightness, 3:1 under protanopia and deuteranopia. Ratios never round; never fade text with opacity.</p>
+  </details>
+
+  <h2>Read next</h2>
+  <p>The primary source is W3C’s <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">“Understanding Success Criterion 1.4.3: Contrast (Minimum)”</a>: read the “Rationale” section, about ten minutes. Then <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">“Use of Color”</a> for C3. Your own rules are C1–C5 and T5 in <code>3-look.md</code>.</p>
+
+  <p class="aside">Want a second pair of eyes on a palette, or the math behind a ratio? Ask me in the chat.</p>
+
+  <p class="pager"><a href="0007-usability-heuristics.html">← Lesson 7: Ten usability heuristics</a><a href="../reference/course-map.html">End of the course · Course map →</a></p>
+</main>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/contrastlab.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+[
+  {
+    "type": "food",
+    "name": "Butagumi",
+    "area": "Tokyo, Japan",
+    "date": "2025-10-10",
+    "rating": 10.0,
+    "review": "Best katsu I’ve ever had in my life, and every little side dish was so flavorful and made with so much thought!",
+    "link": "https://www.google.com/maps/search/?api=1&query=Butagumi+2-24-9+Nishi-Azabu+Minato+Tokyo"
+  },
+  {
+    "type": "food",
+    "name": "Taneda",
+    "area": "Seattle, WA",
+    "date": "2023-11-01",
+    "rating": 10.0,
+    "review": "Best omakase I’ve ever been to. Other places have had higher highs, but there were absolutely no misses: every dish was incredible. The experience itself is great, and Chef Taneda was a pleasure to talk to.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Taneda+Sushi+in+Kaiseki+219+Broadway+E+Seattle+WA"
+  },
+  {
+    "type": "food",
+    "name": "Soothr",
+    "area": "New York, NY",
+    "date": "2024-12-20",
+    "rating": 9.9,
+    "review": "SUCH good khao soi; the curry was on a level I don’t think it could get to. The chicken skin was still crispy and so juicy.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Soothr+204+E+13th+St+New+York+NY"
+  },
+  {
+    "type": "food",
+    "name": "Homer",
+    "area": "Seattle, WA",
+    "date": "2021-02",
+    "rating": 9.8,
+    "review": "Really cool flavors; I hadn’t had Middle Eastern cuisine explored this way before. I want to go back for sure!",
+    "link": "https://www.google.com/maps/search/?api=1&query=Homer+3013+Beacon+Ave+S+Seattle+WA"
+  },
+  {
+    "type": "food",
+    "name": "Unchai",
+    "area": "Vancouver, BC",
+    "date": "Too many times",
+    "rating": 9.7,
+    "review": "My favorite Thai place in Vancouver, small and family owned. Their fish curry is absolutely one of my favorites, and I always go back for it.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Unchai+Thai+Restaurant+2351+Burrard+St+Vancouver+BC"
+  },
+  {
+    "type": "sweet",
+    "name": "Yunomi.Cafe",
+    "area": "Tokyo, Japan",
+    "date": "2025-10",
+    "rating": 10.0,
+    "review": "The staff were extremely friendly and knowledgeable! The teas we tried were amazing, and they put me onto hojicha strawberry lattes.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Yunomi+Cafe+2-7-21+Koyama+Shinagawa+Tokyo"
+  },
+  {
+    "type": "sweet",
+    "name": "Nakatanidou",
+    "area": "Nara, Japan",
+    "rating": 9.9,
+    "review": "Best mochi I’ve had in my life. Perfect texture!",
+    "link": "https://www.google.com/maps/search/?api=1&query=Nakatanidou+29+Hashimotocho+Nara+Japan"
+  },
+  {
+    "type": "sweet",
+    "name": "Saint Bread",
+    "area": "Seattle, WA",
+    "rating": 9.8,
+    "review": "Great options, and I loved both their savory bakes and their pastries. It’s in such a great spot to walk around, too.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Saint+Bread+1421+NE+Boat+St+Seattle+WA"
+  },
+  {
+    "type": "sweet",
+    "name": "Hiroki",
+    "area": "Seattle, WA",
+    "rating": 9.8,
+    "review": "Best bakery in Seattle. The chai is great, and so was the matcha cake.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Hiroki+2224+N+56th+St+Seattle+WA"
+  },
+  {
+    "type": "sweet",
+    "name": "Chicha San Chen",
+    "area": "Numerous locations",
+    "rating": 9.5,
+    "review": "I LOVE their teas: amazing flavors, and worth paying a premium over the other chains.",
+    "link": "https://www.google.com/maps/search/?api=1&query=Chicha+San+Chen"
+  }
+]

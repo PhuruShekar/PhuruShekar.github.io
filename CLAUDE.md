@@ -1,10 +1,10 @@
 ﻿## Site
 
-Personal portfolio at phurushekar.com: plain `index.html` + `style.css` + `script.js`, no build step or dependencies. `script.js` draws the hero's ASCII mountain from `assets/mtnpix.jpg` (a 960px copy of `mtnpix.png`) on a canvas (needs an http server locally; `file://` falls back to a generated ridge) and handles the theme toggle, project tiles (`/#slug` opens one), scroll entrances and GoatCounter events. Fonts (Bricolage Grotesque, Geist) come from Google Fonts; there is no icon font. Images and the résumé PDF live in `assets/`; keep `assets/me.jpg` a 750×750 square.
+Personal portfolio at phurushekar.com: plain `index.html` + `style.css` + `script.js`, no build step or dependencies. `script.js` draws the hero's ASCII mountain from `assets/mtnpix.jpg` (a 960px copy of `mtnpix.png`) on a canvas (needs an http server locally; `file://` falls back to a generated ridge) and handles the theme toggle, the project index (`/#slug` opens one), the Explore tabs, scroll entrances and GoatCounter events. The Explore tabs read hand-edited `food.json` and `hikes.json` (format and how to add entries: `docs/explore-content.md`; a push with invalid JSON fails the Data workflow) and a `music.json` that a daily Action builds from Last.fm (`docs/music-pipeline.html`). Fonts (Bricolage Grotesque, Geist) come from Google Fonts; there is no icon font. Images and the résumé PDF live in `assets/`; keep `assets/me.jpg` a 750×750 square, with a 560×560 `assets/me.webp` copy that browsers load first.
 
 ## Design rules
 
-UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site's design language is `docs/DESIGN.md`; planned features (analytics, Explore tabs, project tiles) are in `docs/portfolio-ideas.md`. `docs/design-guide.md` is the earlier research behind both.
+UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site's design language is `docs/DESIGN.md`. Earlier research and the first feature plan (now built) are in `docs/archive/`.
 
 ## Branches and releasing
 

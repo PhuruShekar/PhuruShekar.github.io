@@ -52,7 +52,7 @@ Four tabs, the open one in the URL (`#explore/hikes`) (Q48).
 - **Food:** map + list of favorite restaurants in places I've been, plus a link to my Beli
   profile (`pshek`).
 - **Hikes:** same map + list component, my completed hikes with a short review and photo.
-  AllTrails has no API, so both tabs read a hand-written `places.json`.
+  AllTrails has no API, so the tabs read hand-written `food.json` and `hikes.json`.
 - **Photography:** a grid of compressed photos that load as you scroll.
 - **Music:** "last played" at the top, fetched from Last.fm only when the tab opens, then my
   top 5 for the month from `music.json`, which a daily GitHub Action builds (Q44). Keep

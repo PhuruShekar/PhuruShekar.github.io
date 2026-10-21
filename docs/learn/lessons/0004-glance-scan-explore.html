@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glance, Scan, Explore</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main>
+  <p class="trail"><a href="../reference/course-map.html">Course map</a> · Lesson 4 of 8</p>
+
+  <h1>Glance, Scan, Explore</h1>
+  <p class="lede">You already had the instinct: the hard climb first, then the view. This lesson turns it into rules. By the end you’ll sort any page’s content into three layers and catch anything that makes a visitor work too hard to reach it.</p>
+
+  <h2>Three layers, in order</h2>
+  <p>Every page is ordered by importance (your rule P5). The layers are about priority, not separate pages:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Layer</th><th>What it is</th><th>Cost to the visitor</th></tr></thead>
+    <tbody>
+      <tr><td>Glance</td><td>The first screen. It answers the main question: who is this, what do they do, how do I reach them.</td><td>Zero actions</td></tr>
+      <tr><td>Scan</td><td>What most visitors need, most important first.</td><td>Scrolling only (free)</td></tr>
+      <tr><td>Explore</td><td>The playful, interactive part: maps, games, tabs of hobbies, scroll-drawn trails. Opt-in, after the rest.</td><td>One action, never required</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Why this order</h2>
+  <p>Jakob Nielsen’s research on <strong>progressive disclosure</strong>: show the few most important things first, and the rest on request. Whatever appears first tells people it matters. And designs with more than two levels of disclosure lose people, who get lost moving between them (<a href="https://www.nngroup.com/articles/progressive-disclosure/">NN/g, “Progressive Disclosure”</a>). That’s where your one-action budget comes from.</p>
+
+  <div class="keep"><p>Answer first, detail next, play last. Essentials take zero actions; everything else takes at most one.</p></div>
+
+  <h2>The action budget</h2>
+  <p>Rule P4 spells out what counts as making people work:</p>
+  <ul>
+    <li><strong>No gates:</strong> no splash screen, intro animation, newsletter pop-up or “enter site” button before the content.</li>
+    <li><strong>Scrolling is free, scroll-jacking isn’t:</strong> a page that takes over the scroll or reveals one fact per screen costs actions.</li>
+    <li><strong>Hover may preview, never hide:</strong> anything shown on hover is also reachable by focus and tap.</li>
+    <li><strong>Every view has a URL:</strong> an open tab or project restores when you reload or share the link.</li>
+    <li><strong>The five-second test:</strong> a stranger can say what this is and what to do next.</li>
+  </ul>
+  <p>And one rule for the fun part: every Explore experience needs a plain Scan version with the same facts. That’s why the v2 trail line is only decoration: the timeline beside it carries every job.</p>
+
+  <h3>Your page, by layer</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Layer</th><th>On phurushekar.com</th></tr></thead>
+    <tbody>
+      <tr><td>Glance</td><td>Name, role sentence, portrait, ASCII mountain, résumé button, email, GitHub, LinkedIn</td></tr>
+      <tr><td>Scan</td><td>Journey, Projects (each story one click away, with its own <code>/#slug</code>), the close</td></tr>
+      <tr><td>Explore</td><td>About me: Food, Hikes, Photography, Music tabs, each in the URL</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Practice</h2>
+  <p>First, sort each piece of your site into its layer. Then catch the broken budgets.</p>
+  <p class="score" aria-live="polite"></p>
+
+  <div class="q" data-correct="0">
+    <p>1. Your name and “Software Development Engineer at AWS IoT”.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">Who and what: the main question. It must answer with zero actions.</p>
+  </div>
+  <div class="q" data-correct="2">
+    <p>2. Your top five songs this month.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">Fun and personal, but nobody needs it to decide whether to contact you. Opt-in, after the rest.</p>
+  </div>
+  <div class="q" data-correct="1">
+    <p>3. Your four jobs, with dates.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">What most visitors came for after the first screen, readable by scrolling alone.</p>
+  </div>
+  <div class="q" data-correct="1">
+    <p>4. The story behind hARk: what it did, the team, the stack.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">Scan content one action away: the project name is visible by scrolling, and the story opens with one click (and has its own URL).</p>
+  </div>
+  <div class="q" data-correct="0">
+    <p>5. A link to email you.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">“How to act or get in touch” is an essential (P4). It belongs on the first screen, not only at the bottom.</p>
+  </div>
+  <div class="q" data-correct="2">
+    <p>6. A map with a dot for every trail you’ve hiked.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">Interactive and playful: Explore. And it comes with a plain table of the same trails, so the facts never depend on the map.</p>
+  </div>
+  <div class="q" data-correct="0">
+    <p>7. The résumé button.</p>
+    <ol class="opts"><li>Glance</li><li>Scan</li><li>Explore</li></ol>
+    <p class="why">The one primary action on the first screen.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>8. Your site plays a three-second animated intro before your name appears. Which rule breaks?</p>
+    <ol class="opts"><li>Every state gets URL</li><li>No gates before content</li><li>Hover may only preview</li><li>One wow per page</li></ol>
+    <p class="why">An intro animation is a gate: the essentials take a wait instead of zero actions. Text must be readable at first paint (P8).</p>
+  </div>
+  <div class="q" data-correct="3">
+    <p>9. A visitor opens the Hikes tab, reloads, and lands back on Food.</p>
+    <ol class="opts"><li>Hover may only preview</li><li>One wow per page</li><li>No gates before content</li><li>Every state gets URL</li></ol>
+    <p class="why">The view wasn’t in the URL, so it can’t be reloaded or shared. <code>#explore/hikes</code> fixes it (I1).</p>
+  </div>
+  <div class="q" data-correct="2">
+    <p>10. Project stories appear only while you hover a project name.</p>
+    <ol class="opts"><li>One wow per page</li><li>Every state gets URL</li><li>Hover may only preview</li><li>No gates before content</li></ol>
+    <p class="why">On a phone there’s no hover, and keyboards can’t hover. Focus and tap must reach the same story.</p>
+  </div>
+  <div class="q" data-correct="0">
+    <p>11. Your journey is only a scroll-drawn trail that reveals one job per screen.</p>
+    <ol class="opts"><li>Explore needs a plain alternative</li><li>Trails must use peach color</li><li>Journey belongs in the Glance</li><li>Scroll animations are always banned</li></ol>
+    <p class="why">Fun, but slow to read, and the only way to the facts. Keep the plain timeline; the trail can sit beside it.</p>
+  </div>
+  <div class="q" data-correct="2">
+    <p>12. The five-second test: what must a stranger be able to say?</p>
+    <ol class="opts"><li>Your full name and your title</li><li>Which hike the mountain is from</li><li>What this is and what next</li><li>How many projects you have built</li></ol>
+    <p class="why">What the page is and what to do next. Your name and title are part of the answer, not all of it.</p>
+  </div>
+  <div class="q" data-correct="1">
+    <p>13. Why keep disclosure to one extra level?</p>
+    <ol class="opts"><li>Browsers limit how deep pages nest</li><li>People get lost between more levels</li><li>Screen readers skip the third level</li><li>Search engines index only two levels</li></ol>
+    <p class="why">NN/g: designs beyond two levels usually test badly because people get lost moving between them.</p>
+  </div>
+
+  <h2>Your turn</h2>
+  <p>Paste your answers in the chat:</p>
+  <ol>
+    <li><strong>Check your climb.</strong> Your parked idea puts About me last, as the view. Walk down your page: does anything a visitor needs in five seconds wait until the climb is over?</li>
+    <li><strong>Test a site you use.</strong> Open any site, look for five seconds, close it. Write what it is, what you’d do next, and which layer each thing you remember came from.</li>
+  </ol>
+
+  <details class="recall">
+    <summary>From memory: the three layers, what each costs, and the five budget rules. Then open this.</summary>
+    <p>Glance (zero actions), Scan (scrolling only), Explore (one action, opt-in, with a plain alternative). No gates; scrolling free but no scroll-jacking; hover previews but never hides; every view has a URL; the five-second test.</p>
+  </details>
+
+  <h2>Read next</h2>
+  <p>The primary source is Jakob Nielsen’s <a href="https://www.nngroup.com/articles/progressive-disclosure/">“Progressive Disclosure”</a> (NN/g): about seven minutes, with the print dialog as the classic example. Your own version is <code>2-structure.md</code> P4 and P5.</p>
+
+  <p class="aside">Not sure which layer something belongs in? Ask me in the chat. Borderline cases are the best ones to argue.</p>
+
+  <p class="pager"><a href="0003-the-idea.html">← Lesson 3: The idea sentence</a><a href="0005-type.html">Next: type that does the work →</a></p>
+</main>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

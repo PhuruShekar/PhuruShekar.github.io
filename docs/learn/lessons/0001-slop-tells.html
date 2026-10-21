@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotting slop tells</title>
+<link rel="stylesheet" href="../assets/course.css">
+<link rel="stylesheet" href="../assets/mocks.css">
+</head>
+<body>
+<main>
+  <p class="trail"><a href="../reference/course-map.html">Course map</a> · Lesson 1 of 8</p>
+
+  <h1>Spotting slop tells</h1>
+  <p class="lede">By the end you’ll be able to look at any page, name its slop tells, and say what goes in their place. It’s the skill you’ll use most: on your own work, on what AI tools hand you, and on the component libraries you browse.</p>
+
+  <h2>The average of every page</h2>
+  <p>Ask a model for a landing page and you get the average of the pages it has seen: a centered headline, a small label above it, a row of icon cards, a soft gradient, thin lines, a monospace caption. Taste Skill’s author sums it up as <q>Nothing in it is wrong and nothing in it was decided.</q> (<a href="https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md">Taste Skill</a>). That’s what a <strong>tell</strong> is: not an error, a default nobody chose.</p>
+
+  <p>Taste Skill’s author had a panel score 247 real sites, then compared how often the strong and weak ones used each habit:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Habit</th><th>Sites scored 7.5+</th><th>Sites under 6.5</th></tr></thead>
+    <tbody>
+      <tr><td>Icon-topped feature cards</td><td>1%</td><td>28%</td></tr>
+      <tr><td>Tiny uppercase tracked labels</td><td>16%</td><td>57%</td></tr>
+      <tr><td>Gradients</td><td>22%</td><td>52%</td></tr>
+      <tr><td>Shadows</td><td>24%</td><td>48%</td></tr>
+      <tr><td>Pill badges</td><td>14%</td><td>34%</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>The twist: monospace labels, “01 / 02” numbering and hairline grids are <em>more</em> common on award-winning sites than weak ones. That’s exactly why generators copy them, and why they now read as costume. They’re banned because they’re borrowed, not because they’re ugly.</p>
+
+  <div class="keep"><p>Removing a tell is half the job. In blind tests, jurors preferred a rich page with tells over an empty page without them. Fill the space with substance: bigger type, the full content, real pictures, a field of color.</p></div>
+
+  <p>You’ve already caught this yourself: on 2026-10-19 you called the first overview page “slop” for its tile grid, mono eyebrows and numbered sections, and those became rules T2 and K9. The whole list, with replacements, is on the <a href="../reference/slop-tells.html">slop tells sheet</a>. Skim it once, then close it and try the questions from memory.</p>
+
+  <h2>Practice</h2>
+  <p>Name the tell in each mockup. Your first answer counts.</p>
+  <p class="score" aria-live="polite"></p>
+
+  <div class="q" data-correct="1">
+    <div class="mock" aria-label="Mockup: a hero section">
+      <p class="m-eyebrow">Our services</p>
+      <p class="m-h">Everything your team needs</p>
+      <p class="m-p">Plan, build and ship from one place.</p>
+    </div>
+    <p>1. What’s the tell?</p>
+    <ol class="opts"><li>Styled accent word</li><li>Eyebrow above heading</li><li>Centered everything layout</li><li>Soft rounded corners</li></ol>
+    <p class="why">The small tracked caps above the heading. Put “services” into the heading or the first sentence, or cut it.</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <div class="mock" aria-label="Mockup: a headline">
+      <p class="m-h">Ship your work with <span class="m-accent">clarity</span></p>
+      <p class="m-p">The all-in-one workspace for modern teams.</p>
+    </div>
+    <p>2. What’s the tell?</p>
+    <ol class="opts"><li>Styled accent word</li><li>Hairline outlined boxes</li><li>Eyebrow above heading</li><li>Monospace date label</li></ol>
+    <p class="why">“Clarity” switches face, style and color. One face, one color per headline; let the words carry the emphasis. (The body line is also a stock phrase.)</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <div class="mock" aria-label="Mockup: three feature boxes">
+      <div class="m-cards">
+        <div class="m-card"><div class="m-ico"></div><b>Fast</b><span>Built for speed at every step.</span></div>
+        <div class="m-card"><div class="m-ico"></div><b>Secure</b><span>Your data, protected always.</span></div>
+        <div class="m-card"><div class="m-ico"></div><b>Simple</b><span>Easy to use from day one.</span></div>
+      </div>
+    </div>
+    <p>3. What’s the tell?</p>
+    <ol class="opts"><li>Floating glass navigation</li><li>Decorative index numbers</li><li>Assistant cream palette</li><li>Identical icon cards</li></ol>
+    <p class="why">Three equal boxes, each an icon, a word and a blurb. The study’s strongest signal: 1% of strong sites against 28% of weak ones.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <div class="mock" aria-label="Mockup: a process list">
+      <div class="m-steps"><div><i>01</i>Discover</div><div><i>02</i>Design</div><div><i>03</i>Deliver</div></div>
+    </div>
+    <p>4. What’s the tell?</p>
+    <ol class="opts"><li>Monospace date label</li><li>Decorative index numbers</li><li>Styled accent word</li><li>Soft rounded corners</li></ol>
+    <p class="why">The numbers add nothing the position doesn’t already say. Show order by position and words; use a real <code>&lt;ol&gt;</code> only when order matters.</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <div class="mock" aria-label="Mockup: a blog post heading">
+      <p class="m-h">What we learned shipping v2</p>
+      <p class="m-mono">2026.10.20 · 5 MIN READ</p>
+    </div>
+    <p>5. What’s the tell?</p>
+    <ol class="opts"><li>Hairline outlined boxes</li><li>Eyebrow above heading</li><li>Monospace date label</li><li>Identical icon cards</li></ol>
+    <p class="why">Monospace for “techy” flavor on something that isn’t code. Use the text face with tabular figures.</p>
+  </div>
+
+  <div class="q" data-correct="3">
+    <div class="mock" aria-label="Mockup: a navigation bar over a picture">
+      <div class="m-photo"><div class="m-pill"><span>Work</span><span>About</span><span>Contact</span></div></div>
+    </div>
+    <p>6. What’s the tell?</p>
+    <ol class="opts"><li>Centered everything layout</li><li>Assistant cream palette</li><li>Decorative index numbers</li><li>Floating glass navigation</li></ol>
+    <p class="why">A translucent pill floating over the page. Use a plain bar: wordmark, three to five links, one action. (Skiper UI’s site uses this.)</p>
+  </div>
+
+  <h2>What goes in their place</h2>
+
+  <div class="q" data-correct="0">
+    <p>7. You delete a row of three identical icon cards. What fills the space?</p>
+    <ol class="opts"><li>A different composition with content</li><li>Three cards with new icons</li><li>A soft gradient background band</li><li>Thin divider lines between items</li></ol>
+    <p class="why">A list, a table, a statement, a picture beside text: a composition chosen for the content. The other three swap one ornament for another.</p>
+  </div>
+
+  <div class="q" data-correct="1">
+    <p>8. An eyebrow reads “Selected work” above the heading “Projects”. The fix?</p>
+    <ol class="opts"><li>Make the eyebrow monospace instead</li><li>Fold it into the heading</li><li>Turn the eyebrow into pill</li><li>Center it above the heading</li></ol>
+    <p class="why">“Selected projects” says both in one heading. Or drop the qualifier: the list shows they’re selected.</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <p>9. Monospace labels are more common on award sites than on weak ones. Why ban them anyway?</p>
+    <ol class="opts"><li>They fail contrast checks on light grounds</li><li>Monospace fonts load far slower than others</li><li>Generators imitate them, so they look borrowed</li><li>Screen readers announce monospace text much slower</li></ol>
+    <p class="why">Generators copy what award sites do, so the habit now signals “template”. It’s taste, stated honestly, not a measured penalty.</p>
+  </div>
+
+  <div class="q" data-correct="2">
+    <p>10. In blind tests, which change alone made pages lose?</p>
+    <ol class="opts"><li>Using two typefaces, not one</li><li>Setting body text at 18px</li><li>Removing ornament without adding substance</li><li>Keeping square corners on pictures</li></ol>
+    <p class="why">An emptied page reads thin. Jurors preferred a rich page with tells over a bare page without them.</p>
+  </div>
+
+  <div class="q" data-correct="0">
+    <p>11. Your v2 draft puts each section’s name in a small serif label in a left column. Why isn’t that an eyebrow?</p>
+    <ol class="opts"><li>It is the heading, not above one</li><li>It uses a serif face, not sans</li><li>It is muted gray instead of accent</li><li>It sits on the field color band</li></ol>
+    <p class="why">An eyebrow is a small label <em>above another heading</em>. The rail label is the section’s only heading, in sentence case, beside its content. Uppercase tracking would turn it back into one.</p>
+  </div>
+
+  <h2>Make it stick</h2>
+  <details class="recall">
+    <summary>From memory: list five tells and what replaces each. Then open this.</summary>
+    <p>Check yourself against the <a href="../reference/slop-tells.html">slop tells sheet</a>. Any you missed are the ones to watch for this week.</p>
+  </details>
+  <p>In two days, open any AI-made landing page (or the <a href="https://ui.watermelon.sh">Watermelon UI</a> home page) and list every tell you see, with its replacement. Bring the list back here and we’ll compare.</p>
+
+  <h2>Read next</h2>
+  <p>The primary source is Taste Skill’s <a href="https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md">“House rules” and “Laws of the craft”</a> sections: about ten minutes, and the numbers above come from there. Your own version is <code>3-look.md</code> T2 in <code>~/code/design-principles</code>.</p>
+
+  <p class="aside">Stuck on anything, or disagree with a rule? Ask me in the chat. I’m your teacher here, and a good argument against a rule can become an entry in <code>learnings.md</code>.</p>
+
+  <p class="pager"><a href="../reference/course-map.html">← Course map</a><a href="0002-cards-or-not.html">Next: is it a card? →</a></p>
+</main>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
