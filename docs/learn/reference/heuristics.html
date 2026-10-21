@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usability heuristics</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="wide">
+  <p class="trail"><a href="course-map.html">Course map</a> · <a href="../lessons/0007-usability-heuristics.html">Lesson 7</a> · <a href="glossary.html">Glossary</a> · Heuristics</p>
+
+  <h1>Usability heuristics</h1>
+  <p class="lede">Jakob Nielsen’s ten, with the question each one asks and where your rules already cover it. Full rules: H1–H10 in the stage files, H11 in <code>5-ship.md</code>. Source: <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g, “10 Usability Heuristics for User Interface Design”</a>.</p>
+
+  <div class="keep"><p>Rules of thumb, not laws. A break needs a reason, and a review never replaces watching real people use the thing.</p></div>
+
+  <h2>The ten</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Heuristic</th><th>Ask</th><th>Fails like</th><th>Also in</th></tr></thead>
+    <tbody>
+      <tr><td>H1 Visibility of system status</td><td>Does every action show a result? Does anything slow show progress?</td><td>A Copy button that copies but shows nothing</td><td>I2, ST2, ST6</td></tr>
+      <tr><td>H2 Match the real world</td><td>Would someone outside the team understand every word and the order of steps?</td><td>“ValidationException” as the whole message</td><td>P9, I7</td></tr>
+      <tr><td>H3 User control and freedom</td><td>Can I back out of anything with one obvious action?</td><td>A lightbox with no Close that Esc and Back don’t close</td><td>I1, I5, P3</td></tr>
+      <tr><td>H4 Consistency and standards</td><td>One name, look and place per thing? Works like other sites?</td><td>A tab called “Hikes” whose heading says “Trails”</td><td>DESIGN.md, V10</td></tr>
+      <tr><td>H5 Error prevention</td><td>What slip or mistake is easy here, and can the design stop it?</td><td>A date field that rejects 10/21/2026</td><td>I3, I5</td></tr>
+      <tr><td>H6 Recognition over recall</td><td>Is anything I need only in my memory?</td><td>An icon-only toolbar</td><td>P4, V7</td></tr>
+      <tr><td>H7 Flexibility and efficiency</td><td>Is there a faster path for people who come back?</td><td>Three menus deep, every time, no shortcut</td><td>I1, I6</td></tr>
+      <tr><td>H8 Aesthetic and minimalist design</td><td>Does every element do a job for this reader?</td><td>Badges and a carousel burying the price</td><td>T2, T9, P5</td></tr>
+      <tr><td>H9 Recover from errors</td><td>When it fails, does it say what, why and what next, next to the cause?</td><td>“Something went wrong” and the form cleared</td><td>ST3, I3, C3</td></tr>
+      <tr><td>H10 Help and documentation</td><td>Is help where the question comes up, as concrete steps?</td><td>A seven-screen tour you can’t skip</td><td>ST1, I4</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Three ideas worth keeping</h2>
+  <ul>
+    <li><strong>Response-time limits (H1):</strong> under 0.1 s feels instant; past 1 s show that work is happening; past 10 s show percent done and a way to stop (<a href="https://www.nngroup.com/articles/response-times-3-important-limits/">Nielsen</a>).</li>
+    <li><strong><a href="glossary.html#slip">Slips</a> and <a href="glossary.html#mistake">mistakes</a> (H5):</strong> slips are autopilot errors, fixed with constraints, defaults and spacing. Mistakes come from a wrong mental model, fixed with clearer words and feedback.</li>
+    <li><strong>Minimalist isn’t sparse (H8):</strong> a dense page passes if everything is relevant; a sparse one fails if something essential is missing.</li>
+  </ul>
+
+  <h2>Running a review (H11)</h2>
+  <ol>
+    <li>Scope it: one task, one kind of user, one device.</li>
+    <li>Walk the task once to learn it, then again to log problems.</li>
+    <li>Log each: where · heuristic · what goes wrong · severity · fix.</li>
+    <li>Best with 3–5 reviewers working alone, then merged; one reviewer misses many problems.</li>
+  </ol>
+  <div class="scroll"><table>
+    <thead><tr><th>Severity</th><th>Meaning</th><th>Do</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Not a usability problem</td><td>Nothing</td></tr>
+      <tr><td>1</td><td>Cosmetic</td><td>Fix if there’s time</td></tr>
+      <tr><td>2</td><td>Minor</td><td>Low priority</td></tr>
+      <tr><td>3</td><td>Major</td><td>High priority</td></tr>
+      <tr><td>4</td><td>Catastrophe</td><td>Fix before release</td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta">Rate by how often it happens, how hard it is to get past, and whether it bites once or every time (<a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/">Nielsen, 1994</a>).</p>
+</main>
+</body>
+</html>

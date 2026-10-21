@@ -162,7 +162,7 @@ Each one is a single self-contained `index.html` in [`docs/samples/`](samples/).
 | 4 | **Summit** | Contour-line hero + a trail that climbs the mountain as you scroll through the journey | Lando Norris, The Cosmic Stage, the mountain photo |
 | 5 | **Kinetic** | Giant name that reacts to scroll speed and the cursor, marquee rows of huge mixed type | Mat Voyce, Lando's type rows, Koto |
 
-Preview locally from the repo root with any static server, then open `/docs/samples/<name>/`. `docs/` is excluded from the published site by `_config.yml`, so the samples won't go live by accident.
+Preview locally from the repo root with any static server, then open `/docs/archive/samples/<name>/`. `docs/` is excluded from the published site by `_config.yml`, so the samples won't go live by accident.
 
 ---
 

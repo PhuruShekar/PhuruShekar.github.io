@@ -61,7 +61,7 @@
 <body>
 <main>
   <h1>How the Music tab gets its data</h1>
-  <p class="lede">Once a day a GitHub Action asks Last.fm for my top five tracks and writes them to <code>music.json</code>. The site reads that file. “Last played” is the only part fetched live, straight from Last.fm, when someone opens the tab.</p>
+  <p class="lede">Once a day a GitHub Action asks Last.fm for my top five tracks and top artists and writes them to <code>music.json</code>. The site reads that file. “Last played” is the only part fetched live, straight from Last.fm, when someone opens the tab.</p>
   <p class="small">For me only. This page lives in <code>docs/</code>, which <code>_config.yml</code> keeps off phurushekar.com, and nothing links to it.</p>
 
   <figure class="flow">
@@ -81,7 +81,7 @@
         </g>
         <text x="16" y="72" font-weight="500">GitHub Actions</text><text x="16" y="96" opacity=".8">09:17 UTC, music.yml</text>
         <text x="266" y="72" font-weight="500">Last.fm API</text><text x="266" y="96" opacity=".8">secret key</text>
-        <text x="516" y="72" font-weight="500">music.json</text><text x="516" y="96" opacity=".8">top 5 + last played</text>
+        <text x="516" y="72" font-weight="500">music.json</text><text x="516" y="96" opacity=".8">top 5, top artist, last played</text>
         <text x="766" y="72" font-weight="500">data branch</text><text x="766" y="96" opacity=".8">one commit, force-pushed</text>
         <text x="0" y="192" fill="#ffc89a" font-weight="500">When someone opens the tab</text>
         <g stroke="#ffc89a" stroke-width="2" fill="none">
@@ -103,12 +103,13 @@
   <ol>
     <li><strong>09:17 UTC.</strong> GitHub starts <code>.github/workflows/music.yml</code>. Scheduled workflows only run from the repository’s default branch, which is <code>gh-pages</code>, so the file has to be pushed there. The odd minute avoids the top of the hour, when GitHub’s queue is busiest; a run can still start a few minutes late.</li>
     <li><strong>Checkout.</strong> It checks out only <code>.github/scripts</code>, the one folder it needs.</li>
-    <li><strong>Pull from Last.fm.</strong> <code>node .github/scripts/music.mjs</code> makes two calls with the key from the <code>LASTFM_API_KEY</code> secret:
+    <li><strong>Pull from Last.fm.</strong> <code>node .github/scripts/music.mjs</code> makes three calls with the key from the <code>LASTFM_API_KEY</code> secret:
       <ul>
         <li><code>user.getrecenttracks</code>, limit 1: what I played last, or what’s playing right now.</li>
         <li><code>user.gettoptracks</code>, period <code>1month</code>, limit 5. Last.fm’s “1month” means the last 30 days, not the calendar month, so the tab says “last 30 days”.</li>
+        <li><code>user.gettopartists</code>, period <code>1month</code>, limit 5: the top artist counted across every track I played, not just the top five songs. Five, so the page can name everyone tied for first.</li>
       </ul>
-      It writes the answer to <code>music.json</code>. If either call fails, the script throws, the run goes red, nothing is pushed, and GitHub emails me.</li>
+      It writes the answer to <code>music.json</code>. If any call fails, the script throws, the run goes red, nothing is pushed, and GitHub emails me.</li>
     <li><strong>Publish.</strong> A fresh git repository is made around that one file, committed as <code>github-actions[bot]</code> and force-pushed to the <code>data</code> branch. The branch only ever holds one commit, so it never grows.</li>
     <li><strong>Read.</strong> When the Music tab opens, <code>script.js</code> fetches <code>https://raw.githubusercontent.com/PhuruShekar/PhuruShekar.github.io/data/music.json</code>. GitHub caches raw files for about five minutes, so a new file can take that long to show up.</li>
   </ol>
@@ -143,6 +144,9 @@
   },
   "top": [                                 // most played first, up to 5
     { "track": "…", "artist": "…", "url": "…", "plays": 42 }
+  ],
+  "topArtists": [                          // most played first, up to 5; a tie for first shows as a tie
+    { "artist": "…", "url": "https://www.last.fm/music/…", "plays": 57 }
   ]
 }</code></pre>
 

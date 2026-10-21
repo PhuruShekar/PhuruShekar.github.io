@@ -15,9 +15,10 @@ async function lastfm(method, params) {
   return body;
 }
 
-const [recent, top] = await Promise.all([
+const [recent, top, artists] = await Promise.all([
   lastfm('user.getrecenttracks', { limit: '1' }),
   lastfm('user.gettoptracks', { period: '1month', limit: '5' }), // Last.fm's "1month" = the last 30 days
+  lastfm('user.gettopartists', { period: '1month', limit: '5' }), // five, so the page can name a tie for first
 ]);
 
 const now = new Date().toISOString();
@@ -40,7 +41,13 @@ const music = {
     url: t.url,
     plays: Number(t.playcount),
   })),
+  // Counted across every track, not just the top five songs.
+  topArtists: [].concat(artists.topartists?.artist ?? []).map(a => ({
+    artist: a.name,
+    url: a.url,
+    plays: Number(a.playcount),
+  })),
 };
 
 await writeFile('music.json', JSON.stringify(music, null, 2) + '\n');
-console.log(`music.json: ${music.top.length} top tracks; last played: ${music.recent ? `${music.recent.track} by ${music.recent.artist}` : 'nothing'}`);
+console.log(`music.json: ${music.top.length} top tracks; top artist: ${music.topArtists[0]?.artist ?? 'none'}; last played: ${music.recent ? `${music.recent.track} by ${music.recent.artist}` : 'nothing'}`);

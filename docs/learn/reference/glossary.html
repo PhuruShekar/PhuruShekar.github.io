@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="wide">
+  <p class="trail"><a href="course-map.html">Course map</a> · <a href="slop-tells.html">Slop tells</a> · <a href="containers.html">Containers</a> · <a href="heuristics.html">Heuristics</a> · Glossary</p>
+
+  <h1>Glossary</h1>
+  <p class="lede">The words this course uses, each in one or two plain sentences, with the rule that owns it. Lessons use these words and only these meanings.</p>
+  <p class="meta">Rule files live in <code>~/code/design-principles</code>: T taste, P floor, C color, V views, I interaction, ST states, H usability (letters name the kind of rule; <code>SKILL.md</code> says which stage file holds each), B this site’s <code>DESIGN.md</code>. Jump to: <a href="#a">A–C</a> · <a href="#d">D–F</a> · <a href="#g">G–L</a> · <a href="#m">M–P</a> · <a href="#r">R–S</a> · <a href="#t">T–Z</a></p>
+
+  <div class="scroll"><table class="gloss">
+    <thead><tr><th>Term</th><th>Meaning</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr id="a"><td id="accelerator">Accelerator</td><td>A faster second way to do something (shortcut, deep link, batch action) that experts find and novices never trip on.</td><td>H7, I6</td></tr>
+      <tr><td id="accent">Accent</td><td>The one loud color, kept for the action and at most one other thing. On this site, orange, under about 5% of a screen.</td><td>T5, C5</td></tr>
+      <tr><td id="action-budget">Action budget</td><td>Essentials cost zero actions; everything else costs at most one. Scrolling is free; scroll-jacking isn’t.</td><td>P4</td></tr>
+      <tr><td id="aesthetic-usability">Aesthetic-usability effect</td><td>People rate attractive designs as easier to use and forgive their problems, which can hide problems in testing.</td><td>H8</td></tr>
+      <tr><td id="card">Card</td><td>A bordered or shadowed box around one item. Right only when people pick or act on objects; otherwise a list, table or section reads better.</td><td>V1, V4</td></tr>
+      <tr><td id="clamp">clamp()</td><td>A CSS size with a floor, a preferred value that grows with the screen, and a ceiling, so one headline fits a phone and a wide screen.</td><td>P7, T3</td></tr>
+      <tr><td id="cognitive-load">Cognitive load</td><td>The mental effort a page asks for. Every surprise, unknown word or thing to remember adds to it.</td><td>H4, H6</td></tr>
+      <tr><td id="cvd">Color vision deficiency</td><td>Seeing some hues as the same. Protanopia and deuteranopia (red-green) flatten greens and oranges; lightness still shows. Simulate it in DevTools Rendering.</td><td>C3, C4</td></tr>
+      <tr><td id="competitor-test">Competitor test</td><td>Put the nearest competitor into your idea sentence. If it still works, you’ve described the category, not the subject.</td><td>T1</td></tr>
+      <tr><td id="composition">Composition</td><td>How one section is laid out: statement, split, feature + list, editorial rows, index with preview, timeline, fact sheet, full-bleed picture, field chapter, table.</td><td>V2</td></tr>
+      <tr><td id="consistency">Consistency, internal and external</td><td>Internal: one meaning per word, icon and place inside a product. External: working like the rest of the web and the platform.</td><td>H4</td></tr>
+      <tr><td id="container">Container</td><td>What holds a set of items: section, list, table, tabs, expandable, dialog, row, or cards. Picked by what the reader is doing.</td><td>V1</td></tr>
+      <tr><td id="contrast-ratio">Contrast ratio</td><td>How far apart two colors are in lightness, 1:1 to 21:1. Your floors: body 7:1, other text 4.5:1, large text and interface marks 3:1. Never rounded.</td><td>C2, P2</td></tr>
+      <tr id="d"><td id="deliberate-rest">Deliberate rest</td><td>The one quiet stretch a page may have: a placed picture or a field of color. Two near-empty screens is underbuilt, not calm.</td><td>T4</td></tr>
+      <tr><td id="editorial-rows">Editorial rows</td><td>A list aligned to shared columns, like year · title · one sentence. The usual replacement for a card grid.</td><td>V2, V5</td></tr>
+      <tr><td id="eyebrow">Eyebrow</td><td>A small uppercase, widely tracked label or pill above a heading. A slop tell: put the words in the heading or drop them.</td><td>T2</td></tr>
+      <tr><td id="field">Field</td><td>The dark green ground of a whole chapter (Journey, the close). A color change instead of a box.</td><td>T5, B2</td></tr>
+      <tr><td id="five-second-test">Five-second test</td><td>Look at the first screen for five seconds. A stranger must be able to say what it is and what to do next: both halves.</td><td>P4</td></tr>
+      <tr id="g"><td id="glance">Glance, Scan, Explore</td><td>The three layers of a page. Glance: the first screen, zero actions. Scan: what most people need, by scrolling. Explore: the playful part, opt-in, with a plain version.</td><td>P5</td></tr>
+      <tr><td id="ground">Ground</td><td>The page’s main background, about 60–70% of what people see.</td><td>T5, B2</td></tr>
+      <tr><td id="heuristic">Heuristic</td><td>A rule of thumb for judging a design. Nielsen’s ten are the standard set; breaking one needs a reason.</td><td>H1–H10</td></tr>
+      <tr><td id="heuristic-review">Heuristic review</td><td>Walking a task twice and logging each place it breaks a heuristic, with a severity and a fix. Best done by 3–5 people alone, then merged.</td><td>H11</td></tr>
+      <tr><td id="hover-preview">Hover preview</td><td>Something shown while pointing at an item. Allowed only as a preview: focus and tap must reach the same thing.</td><td>P4, V11</td></tr>
+      <tr><td id="idea-sentence">Idea sentence</td><td>“On this page, [something that belongs to the subject] becomes [a design device].” Written before building.</td><td>T1</td></tr>
+      <tr><td id="ink">Ink</td><td>The full-strength text color, for everything people read in sentences. Gray is only for notes.</td><td>T3, B2</td></tr>
+      <tr><td id="jakobs-law">Jakob’s Law</td><td>People spend most of their time on other sites, so they expect yours to work like those.</td><td>H4</td></tr>
+      <tr><td id="edges">Left edges</td><td>The vertical lines text blocks start on. Two or three shared edges read as one page; six reads as ad hoc.</td><td>T4, K10</td></tr>
+      <tr><td id="leading">Line spacing (leading)</td><td>Space between lines, as a multiple of the font size. Running text 1.5–1.7; big headlines 0.85–1.05.</td><td>T3, P7</td></tr>
+      <tr id="m"><td id="measure">Measure</td><td>Line length in characters. Running text 45–75, often capped with <code>max-width: 65ch</code>.</td><td>P7</td></tr>
+      <tr><td id="mental-model">Mental model</td><td>What someone believes about how a thing works, built from everything they’ve used before.</td><td>H2, H5</td></tr>
+      <tr><td id="mistake">Mistake</td><td>A conscious error from a wrong mental model. Fixed with clearer words and feedback, not just guard rails. Compare <a href="#slip">slip</a>.</td><td>H5</td></tr>
+      <tr><td id="motion-layer">Motion layer</td><td>The quiet motion around the one wow: entrances and control feedback, all off or short under reduced motion.</td><td>T8, P8</td></tr>
+      <tr><td id="mapping">Natural mapping</td><td>Controls placed like their effect: increase above decrease, back on the left.</td><td>H2</td></tr>
+      <tr><td id="one-live-thing">One live thing</td><td>Something the visitor can do, or that changes each visit, made from the idea.</td><td>T1</td></tr>
+      <tr><td id="one-wow">One wow</td><td>The page’s single signature interaction. On this site, the ASCII mountain.</td><td>P8</td></tr>
+      <tr><td id="outer-margins">Outer margins</td><td>The pair of gaps between content and the screen’s sides: equal, 16–32px, everywhere. Big pictures may bleed past them.</td><td>T4, P6</td></tr>
+      <tr><td id="disclosure">Progressive disclosure</td><td>Show the few most important things first and the rest on request. More than two levels and people get lost.</td><td>P5, V7</td></tr>
+      <tr><td id="proximity">Proximity</td><td>Things near each other read as related. So a heading sits closer to its own text than to the section above.</td><td>T4, H8</td></tr>
+      <tr><td id="pull-help">Pull and push help</td><td>Pull help appears from the person’s context (a hint by the control). Push help interrupts regardless (launch tours) and is mostly dismissed.</td><td>H10</td></tr>
+      <tr id="r"><td id="rail">Rail</td><td>In v2, the 12rem left column holding each section’s label, beside the content. Stacks above the content on phones.</td><td>B4, B5</td></tr>
+      <tr><td id="recognition">Recognition over recall</td><td>Spotting the right option is easier than remembering it. Show options, labels and recent items instead.</td><td>H6</td></tr>
+      <tr><td id="role-token">Role token</td><td>A color named by its job (<code>--action</code>, <code>--muted</code>) instead of its value. Components use tokens; only the token block holds hex.</td><td>C1</td></tr>
+      <tr><td id="verify">Rule strengths (MUST, SHOULD, CONSIDER, Verify)</td><td>Rule strengths: required; the default unless you state a reason; an idea. Verify says how to prove it.</td><td>SKILL.md</td></tr>
+      <tr><td id="section-gap">Section gap</td><td>Space between sections: clearly larger than space inside one, about 120–240px on desktop.</td><td>T4</td></tr>
+      <tr><td id="severity">Severity</td><td>How bad a usability problem is, 0–4: not a problem, cosmetic, minor, major, catastrophe. Judged by frequency, impact and persistence.</td><td>H11</td></tr>
+      <tr><td id="signal-noise">Signal and noise</td><td>Signal carries information the reader needs; noise is decoration, jargon and clutter that competes with it.</td><td>H8, T2</td></tr>
+      <tr><td id="slip">Slip</td><td>An autopilot error, like clicking the button next to the one you meant. Experts make them too. Fixed with constraints, defaults and spacing.</td><td>H5</td></tr>
+      <tr><td id="slop-tell">Slop tell</td><td>A habit that makes a page look generated: icon feature cards, eyebrows, gradients, glow, decorative numbering. Each has a replacement.</td><td>T2</td></tr>
+      <tr><td id="statement">Statement</td><td>One sentence set large, about 25 words and 36px or less on desktop. Bigger reads as a headline that’s too long.</td><td>T3, V2</td></tr>
+      <tr><td id="surface">Surface</td><td>A small tone step from the ground that groups content without a border or shadow.</td><td>T5, B2</td></tr>
+      <tr><td id="status">System status</td><td>What the system is doing right now. People must see the result of every action, and progress for anything slow.</td><td>H1, I2</td></tr>
+      <tr id="t"><td id="tracking">Tracking</td><td>Letter spacing. Big type tightens to −0.02 to −0.05em; wide tracking in caps is the eyebrow look.</td><td>T3</td></tr>
+      <tr><td id="trail">Trail</td><td>In v2, the Peach line drawn down the Journey’s rail. Decoration only: the timeline beside it carries every fact.</td><td>B4, P5</td></tr>
+      <tr><td id="undo">Undo and exits</td><td>Back, Close, Cancel and Undo: the clearly marked ways out of something people didn’t mean to do.</td><td>H3, I5</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="aside">A word missing, or used differently in a lesson? Tell me in the chat and I’ll fix whichever is wrong.</p>
+</main>
+</body>
+</html>
