@@ -21,8 +21,7 @@ space: { margin: "clamp(16px, 4vw, 32px)", rail: "clamp(14rem, 21vw, 19rem)", se
 # Portfolio design language
 
 Rules come from `~/code/design-principles` (IDs like T2, C4, PT3 point there); this file
-only picks values for phurushekar.com. IDs: B1–B9. Earlier research and plans: `archive/`;
-what was taken from outside sites and why: `redesign-sources.md`.
+only picks values for phurushekar.com. IDs: B1–B9.
 
 Version 2 (owner 2026-10-20) keeps the palette, the ASCII mountain and the content, and
 changes the layout from a chunky poster to an **editorial page**: a
@@ -158,7 +157,7 @@ Unchanged from version 1.
 - Don't use eyebrow labels, "01 / 02" numbering, mono labels or uppercase tracking.
 - Don't italicize or color one word of a headline or statement.
 - Don't add gradients, glows, outlined boxes, glass headers, cursor-following pictures or
-  preloaders (see `redesign-sources.md`, Skip).
+  preloaders.
 - Don't use orange text on light backgrounds except Action `#b25a17`.
 
 ## B8 Responsive behavior

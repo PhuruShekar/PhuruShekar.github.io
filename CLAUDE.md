@@ -4,7 +4,7 @@ Personal portfolio at phurushekar.com: plain `index.html` + `style.css` + `scrip
 
 ## Design rules
 
-UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site's design language is `docs/DESIGN.md`. Earlier research and the first feature plan (now built) are in `docs/archive/`.
+UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site's design language is `docs/DESIGN.md`.
 
 ## Branches and releasing
 
@@ -14,12 +14,3 @@ UI work follows `~/code/design-principles` (start at its `SKILL.md`). This site'
 - `_config.yml` keeps `CLAUDE.md`, `README.md` and `docs/` out of the published site.
 - Only commit or push when the owner asks.
 
-## Agent skills
-
-### Issue tracker
-
-Issues are tracked as local markdown files under `.scratch/<feature>/`. See `docs/agents/issue-tracker.md`.
-
-### Domain docs
-
-Single-context: one `CONTEXT.md` plus `docs/adr/` at the repo root. See `docs/agents/domain.md`.

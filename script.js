@@ -2,7 +2,7 @@
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const osDark = matchMedia('(prefers-color-scheme: dark)');
-  // GoatCounter counts features, never people (portfolio-ideas.md). Safe when the script is blocked.
+  // GoatCounter counts features, never people. Safe when the script is blocked.
   const count = path => { try { window.goatcounter && goatcounter.count && goatcounter.count({ path, event: true }); } catch {} };
 
   /* ---------- theme: OS by default, toggle overrides and is remembered (C6) ---------- */
