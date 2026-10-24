@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-10-24T13:22:57.046Z",
+  "period": "1month",
+  "recent": {
+    "track": "headrush",
+    "artist": "Łaszewo",
+    "url": "https://www.last.fm/music/%C5%81aszewo/_/headrush",
+    "nowPlaying": false,
+    "playedAt": "2026-10-22T03:34:55.000Z"
+  },
+  "top": [
+    {
+      "track": "Summer's Gone",
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin/_/Summer%27s+Gone",
+      "plays": 5
+    },
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 3
+    },
+    {
+      "track": "Run Like Hell",
+      "artist": "Bixby",
+      "url": "https://www.last.fm/music/Bixby/_/Run+Like+Hell",
+      "plays": 2
+    },
+    {
+      "track": "Right About Love",
+      "artist": "Kevin Chung",
+      "url": "https://www.last.fm/music/Kevin+Chung/_/Right+About+Love",
+      "plays": 2
+    },
+    {
+      "track": "What I Need",
+      "artist": "Lockbox",
+      "url": "https://www.last.fm/music/Lockbox/_/What+I+Need",
+      "plays": 2
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin",
+      "plays": 8
+    },
+    {
+      "artist": "ALLEYCVT",
+      "url": "https://www.last.fm/music/ALLEYCVT",
+      "plays": 4
+    },
+    {
+      "artist": "Blanke",
+      "url": "https://www.last.fm/music/Blanke",
+      "plays": 3
+    },
+    {
+      "artist": "Illenium",
+      "url": "https://www.last.fm/music/Illenium",
+      "plays": 3
+    },
+    {
+      "artist": "Kevin Chung",
+      "url": "https://www.last.fm/music/Kevin+Chung",
+      "plays": 3
+    }
+  ]
+}
