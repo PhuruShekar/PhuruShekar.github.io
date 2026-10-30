@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-10-30T15:58:39.205Z",
+  "period": "1month",
+  "recent": {
+    "track": "thinkin bout u",
+    "artist": "Falling North",
+    "url": "https://www.last.fm/music/Falling+North/_/thinkin+bout+u",
+    "nowPlaying": false,
+    "playedAt": "2026-10-29T21:16:01.000Z"
+  },
+  "top": [
+    {
+      "track": "Summer's Gone",
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin/_/Summer%27s+Gone",
+      "plays": 8
+    },
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 7
+    },
+    {
+      "track": "Always Almost",
+      "artist": "Rosie Darling",
+      "url": "https://www.last.fm/music/Rosie+Darling/_/Always+Almost",
+      "plays": 5
+    },
+    {
+      "track": "headrush",
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo/_/headrush",
+      "plays": 4
+    },
+    {
+      "track": "silhouette",
+      "artist": "Minh",
+      "url": "https://www.last.fm/music/Minh/_/silhouette",
+      "plays": 4
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Lorien Testard",
+      "url": "https://www.last.fm/music/Lorien+Testard",
+      "plays": 20
+    },
+    {
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin",
+      "plays": 11
+    },
+    {
+      "artist": "Illenium",
+      "url": "https://www.last.fm/music/Illenium",
+      "plays": 11
+    },
+    {
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo",
+      "plays": 8
+    },
+    {
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv",
+      "plays": 7
+    }
+  ]
+}
