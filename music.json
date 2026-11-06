@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-11-06T16:48:17.195Z",
+  "period": "1month",
+  "recent": {
+    "track": "Higher",
+    "artist": "Sarah de Warren",
+    "url": "https://www.last.fm/music/Sarah+de+Warren/_/Higher",
+    "nowPlaying": true,
+    "playedAt": "2026-11-06T16:48:17.195Z"
+  },
+  "top": [
+    {
+      "track": "Summer's Gone",
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin/_/Summer%27s+Gone",
+      "plays": 9
+    },
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 9
+    },
+    {
+      "track": "Always Almost",
+      "artist": "Rosie Darling",
+      "url": "https://www.last.fm/music/Rosie+Darling/_/Always+Almost",
+      "plays": 6
+    },
+    {
+      "track": "ALL THE TIME",
+      "artist": "John Summit",
+      "url": "https://www.last.fm/music/John+Summit/_/ALL+THE+TIME",
+      "plays": 5
+    },
+    {
+      "track": "headrush",
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo/_/headrush",
+      "plays": 5
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Lorien Testard",
+      "url": "https://www.last.fm/music/Lorien+Testard",
+      "plays": 20
+    },
+    {
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin",
+      "plays": 12
+    },
+    {
+      "artist": "Illenium",
+      "url": "https://www.last.fm/music/Illenium",
+      "plays": 11
+    },
+    {
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo",
+      "plays": 10
+    },
+    {
+      "artist": "William Black",
+      "url": "https://www.last.fm/music/William+Black",
+      "plays": 10
+    }
+  ]
+}
