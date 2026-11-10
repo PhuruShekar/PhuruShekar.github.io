@@ -65,6 +65,11 @@ Photos are plain HTML so they show without JavaScript. In the `<ul class="photos
 
 - Put the full photo (Lightroom export, ~2048px long side) in `assets/photos/`. Clicking a
   grid photo opens it in a pop-up over a darkened page; without JavaScript the link opens the file.
+- Watermark the full photo before committing it:
+  `powershell -File docs/watermark.ps1 assets/photos/rainier.jpg`. It adds "© Phuru Shekar ·
+  phurushekar.com" in the bottom-right corner plus copyright tags, and skips photos it has
+  already marked. Thumbnails stay unmarked. `robots.txt` keeps search engines and AI crawlers
+  out of `assets/photos/`.
 - Put a small copy with the same name in `assets/photos/thumbs/`: scaled so it covers 800×1000,
   JPEG quality ~78 (about 100–200 KB). The gallery shows it uncropped, and the pop-up
   shows it while the full photo loads. `width`/`height` are the thumbnail's real size.

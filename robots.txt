@@ -1,0 +1,14 @@
+# Search engines may index the site but not the photography files.
+User-agent: *
+Disallow: /assets/photos/
+
+# AI training crawlers: none of the site. (Their search bots, e.g. OAI-SearchBot and
+# Claude-SearchBot, still follow the rule above.)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: meta-externalagent
+Disallow: /
