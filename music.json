@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-11-14T15:51:11.999Z",
+  "period": "1month",
+  "recent": {
+    "track": "Time - feat. Sarah de Warren",
+    "artist": "Nifra",
+    "url": "https://www.last.fm/music/Nifra/_/Time+-+feat.+Sarah+de+Warren",
+    "nowPlaying": false,
+    "playedAt": "2026-11-12T23:31:45.000Z"
+  },
+  "top": [
+    {
+      "track": "Summer's Gone",
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin/_/Summer%27s+Gone",
+      "plays": 11
+    },
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 11
+    },
+    {
+      "track": "Always Almost",
+      "artist": "Rosie Darling",
+      "url": "https://www.last.fm/music/Rosie+Darling/_/Always+Almost",
+      "plays": 8
+    },
+    {
+      "track": "silhouette",
+      "artist": "Minh",
+      "url": "https://www.last.fm/music/Minh/_/silhouette",
+      "plays": 7
+    },
+    {
+      "track": "In Every Life",
+      "artist": "Audien",
+      "url": "https://www.last.fm/music/Audien/_/In+Every+Life",
+      "plays": 6
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Sarah de Warren",
+      "url": "https://www.last.fm/music/Sarah+de+Warren",
+      "plays": 22
+    },
+    {
+      "artist": "Lorien Testard",
+      "url": "https://www.last.fm/music/Lorien+Testard",
+      "plays": 20
+    },
+    {
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin",
+      "plays": 14
+    },
+    {
+      "artist": "William Black",
+      "url": "https://www.last.fm/music/William+Black",
+      "plays": 13
+    },
+    {
+      "artist": "Illenium",
+      "url": "https://www.last.fm/music/Illenium",
+      "plays": 12
+    }
+  ]
+}
