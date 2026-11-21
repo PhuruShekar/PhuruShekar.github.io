@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-11-21T16:49:24.346Z",
+  "period": "1month",
+  "recent": {
+    "track": "Act Of God",
+    "artist": "Layton Giordani",
+    "url": "https://www.last.fm/music/Layton+Giordani/_/Act+Of+God",
+    "nowPlaying": false,
+    "playedAt": "2026-11-21T06:42:52.000Z"
+  },
+  "top": [
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 11
+    },
+    {
+      "track": "In Every Life",
+      "artist": "Audien",
+      "url": "https://www.last.fm/music/Audien/_/In+Every+Life",
+      "plays": 9
+    },
+    {
+      "track": "Summer's Gone",
+      "artist": "Dabin",
+      "url": "https://www.last.fm/music/Dabin/_/Summer%27s+Gone",
+      "plays": 9
+    },
+    {
+      "track": "AFTER:HRS",
+      "artist": "Joyce Tan",
+      "url": "https://www.last.fm/music/Joyce+Tan/_/AFTER:HRS",
+      "plays": 8
+    },
+    {
+      "track": "headrush",
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo/_/headrush",
+      "plays": 8
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Sarah de Warren",
+      "url": "https://www.last.fm/music/Sarah+de+Warren",
+      "plays": 23
+    },
+    {
+      "artist": "Lorien Testard",
+      "url": "https://www.last.fm/music/Lorien+Testard",
+      "plays": 20
+    },
+    {
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo",
+      "plays": 14
+    },
+    {
+      "artist": "William Black",
+      "url": "https://www.last.fm/music/William+Black",
+      "plays": 14
+    },
+    {
+      "artist": "Audien",
+      "url": "https://www.last.fm/music/Audien",
+      "plays": 13
+    }
+  ]
+}
