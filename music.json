@@ -1,0 +1,71 @@
+{
+  "user": "pshekr",
+  "updated": "2026-11-28T17:36:36.384Z",
+  "period": "1month",
+  "recent": {
+    "track": "HARLEY FVCKING QUINN",
+    "artist": "Sarah de Warren",
+    "url": "https://www.last.fm/music/Sarah+de+Warren/_/HARLEY+FVCKING+QUINN",
+    "nowPlaying": false,
+    "playedAt": "2026-11-28T06:13:11.000Z"
+  },
+  "top": [
+    {
+      "track": "In Every Life",
+      "artist": "Audien",
+      "url": "https://www.last.fm/music/Audien/_/In+Every+Life",
+      "plays": 10
+    },
+    {
+      "track": "Act Of God",
+      "artist": "Layton Giordani",
+      "url": "https://www.last.fm/music/Layton+Giordani/_/Act+Of+God",
+      "plays": 10
+    },
+    {
+      "track": "Heatwave (feat. More Giraffes)",
+      "artist": "Melvv",
+      "url": "https://www.last.fm/music/Melvv/_/Heatwave+(feat.+More+Giraffes)",
+      "plays": 9
+    },
+    {
+      "track": "All The Things She Said (Culture Shock Version)",
+      "artist": "Culture Shock",
+      "url": "https://www.last.fm/music/Culture+Shock/_/All+The+Things+She+Said+(Culture+Shock+Version)",
+      "plays": 7
+    },
+    {
+      "track": "Cry",
+      "artist": "Adventure Club",
+      "url": "https://www.last.fm/music/Adventure+Club/_/Cry",
+      "plays": 6
+    }
+  ],
+  "topArtists": [
+    {
+      "artist": "Sarah de Warren",
+      "url": "https://www.last.fm/music/Sarah+de+Warren",
+      "plays": 28
+    },
+    {
+      "artist": "Jigitz",
+      "url": "https://www.last.fm/music/Jigitz",
+      "plays": 26
+    },
+    {
+      "artist": "Rosie Darling",
+      "url": "https://www.last.fm/music/Rosie+Darling",
+      "plays": 14
+    },
+    {
+      "artist": "Audien",
+      "url": "https://www.last.fm/music/Audien",
+      "plays": 11
+    },
+    {
+      "artist": "Łaszewo",
+      "url": "https://www.last.fm/music/%C5%81aszewo",
+      "plays": 10
+    }
+  ]
+}
